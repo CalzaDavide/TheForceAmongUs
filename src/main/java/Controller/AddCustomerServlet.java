@@ -18,15 +18,27 @@ public class AddCustomerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading parameters from the request
-        String cognome = request.getParameter("cognome");
         String nome = request.getParameter("nome");
+        String cognome = request.getParameter("cognome");
+        String pswd = request.getParameter("pswd");
+        String email = request.getParameter("email");
         double saldo = Double.parseDouble(request.getParameter("saldo"));
+        String indirizzo_Via = request.getParameter("indirizzo_via");
+        int codicePostale = Integer.parseInt(request.getParameter("codice_Postale"));
+        int n_Civico = Integer.parseInt(request.getParameter("numero_Civico"));
 
         // instantiating the javabean to be given in input to doSave
         Cliente cliente = new Cliente();
         cliente.setNome(nome);
         cliente.setCognome(cognome);
+        cliente.setPswd(pswd);
+        cliente.setEmail(email);
         cliente.setSaldo(saldo);
+        cliente.setIndirizzo_Via(indirizzo_Via);
+        cliente.setCodice_Postale(codicePostale);
+        cliente.setN_Civico(n_Civico);
+
+
 
         // instantiating a Model class to interact with the db
         ClienteDAO service = new ClienteDAO();
@@ -35,11 +47,11 @@ public class AddCustomerServlet extends HttpServlet {
         service.doSave(cliente);
 
         //storing the javabean in the "request" object
-        request.setAttribute("customer", cliente);
+        request.setAttribute("cliente", cliente);
 
 
         RequestDispatcher dispatcher =
-                request.getRequestDispatcher("WEB-INF/results/db-insert-success.jsp");
+                request.getRequestDispatcher("WEB-INF/AggiugiUtente.html");
         dispatcher.forward(request, response);
     }
 

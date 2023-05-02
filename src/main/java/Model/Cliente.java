@@ -26,6 +26,8 @@ public class Cliente {
         this.n_Civico = n_Civico;
         this.totale_Carrello = 0;
     }
+    public Cliente() {
+    }
 
 
     //------------------------------------------------Getter----------------------------------------------------------//
