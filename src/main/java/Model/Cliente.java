@@ -8,18 +8,24 @@ public class Cliente {
     private String nome;
     private String cognome;
     private String email;
-    private String password;
-    private String indirizzo;
+    private String pswd;
     private double saldo;
+    private String indirizzo_Via;
+    private int codice_Postale;
+    private int n_Civico;
+    private double totale_Carrello;
 
-    public Cliente(String nome, String cognome, String email, String password, String indirizzo, double saldo) {
+    public Cliente(String nome, String cognome, String email, String password, double saldo, String indirizzo_Via, int codice_Postale, int n_Civico) {
         this.id = lastID++;
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
-        this.password = password;
-        this.indirizzo = indirizzo;
+        this.pswd = password;
+        this.indirizzo_Via = indirizzo_Via;
         this.saldo = saldo;
+        this.codice_Postale = codice_Postale;
+        this.n_Civico = n_Civico;
+        this.totale_Carrello = 0;
     }
 
 
@@ -44,12 +50,12 @@ public class Cliente {
         return email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPswd() {
+        return pswd;
     }
 
-    public String getIndirizzo() {
-        return indirizzo;
+    public String getIndirizzo_Via() {
+        return indirizzo_Via;
     }
 
     public double getSaldo() {
@@ -74,12 +80,12 @@ public class Cliente {
         this.email = email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPswd(String password) {
+        this.pswd = password;
     }
 
-    public void setIndirizzo(String indirizzo) {
-        this.indirizzo = indirizzo;
+    public void setIndirizzo_Via(String indirizzo) {
+        this.indirizzo_Via = indirizzo_Via;
     }
 
     public void setSaldo(double saldo) {
