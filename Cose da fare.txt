@@ -1,3 +1,7 @@
 
 
 Funzioni da implementare
+-Pagina login
+-Carrello
+-Pagina amministratore
+-Homepage
