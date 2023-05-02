@@ -13,8 +13,8 @@ import Model.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "AddCustomerServlet", value = "/add-customer")
-public class AddCustomerServlet extends HttpServlet {
+@WebServlet(name = "AggiungiClienteServlet", value = "/aggiungi-cliente")
+public class AggiungiClienteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading parameters from the request
@@ -23,7 +23,7 @@ public class AddCustomerServlet extends HttpServlet {
         String pswd = request.getParameter("pswd");
         String email = request.getParameter("email");
         double saldo = Double.parseDouble(request.getParameter("saldo"));
-        String indirizzo_Via = request.getParameter("indirizzo_via");
+        String indirizzo_via = request.getParameter("indirizzo_via");
         int codicePostale = Integer.parseInt(request.getParameter("codice_Postale"));
         int n_Civico = Integer.parseInt(request.getParameter("numero_Civico"));
 
@@ -34,7 +34,7 @@ public class AddCustomerServlet extends HttpServlet {
         cliente.setPswd(pswd);
         cliente.setEmail(email);
         cliente.setSaldo(saldo);
-        cliente.setIndirizzo_Via(indirizzo_Via);
+        cliente.setIndirizzo_Via(indirizzo_via);
         cliente.setCodice_Postale(codicePostale);
         cliente.setN_Civico(n_Civico);
 
@@ -51,7 +51,7 @@ public class AddCustomerServlet extends HttpServlet {
 
 
         RequestDispatcher dispatcher =
-                request.getRequestDispatcher("WEB-INF/AggiugiUtente.html");
+                request.getRequestDispatcher("index.html");
         dispatcher.forward(request, response);
     }
 

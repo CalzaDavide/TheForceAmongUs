@@ -8,19 +8,19 @@ public class Cliente {
     private String email;
     private String pswd;
     private double saldo;
-    private String indirizzo_Via;
+    private String indirizzo_via;
     private int codice_Postale;
     private int n_Civico;
     private double totale_Carrello;
 
 
-    public Cliente(String nome, String cognome, String email, String password, double saldo, String indirizzo_Via, int codice_Postale, int n_Civico) {
+    public Cliente(String nome, String cognome, String email, String password, double saldo, String indirizzo_via, int codice_Postale, int n_Civico) {
         this.id = lastID++;
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
         this.pswd = password;
-        this.indirizzo_Via = indirizzo_Via;
+        this.indirizzo_via = indirizzo_via;
         this.saldo = saldo;
         this.codice_Postale = codice_Postale;
         this.n_Civico = n_Civico;
@@ -56,7 +56,7 @@ public class Cliente {
     }
 
     public String getIndirizzo_Via() {
-        return indirizzo_Via;
+        return indirizzo_via;
     }
 
     public double getSaldo() {
@@ -98,7 +98,7 @@ public class Cliente {
     }
 
     public void setIndirizzo_Via(String indirizzo) {
-        this.indirizzo_Via = indirizzo_Via;
+        this.indirizzo_via = indirizzo_via;
     }
 
     public void setSaldo(double saldo) {
