@@ -15,6 +15,7 @@ public class Cliente {
     private int n_Civico;
     private double totale_Carrello;
 
+
     public Cliente(String nome, String cognome, String email, String password, double saldo, String indirizzo_Via, int codice_Postale, int n_Civico) {
         this.id = lastID++;
         this.nome = nome;
@@ -62,6 +63,18 @@ public class Cliente {
         return saldo;
     }
 
+    public int getCodice_Postale() {
+        return codice_Postale;
+    }
+
+    public int getN_Civico() {
+        return n_Civico;
+    }
+
+    public double getTotale_Carrello() {
+        return totale_Carrello;
+    }
+
 
     //------------------------------------------------Setter----------------------------------------------------------//
     public void setId(int id) {
@@ -90,6 +103,18 @@ public class Cliente {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public void setCodice_Postale(int codice_Postale) {
+        this.codice_Postale = codice_Postale;
+    }
+
+    public void setN_Civico(int n_Civico) {
+        this.n_Civico = n_Civico;
+    }
+
+    public void setTotale_Carrello(double totale_Carrello) {
+        this.totale_Carrello = totale_Carrello;
     }
 
 }
