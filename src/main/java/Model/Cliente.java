@@ -1,7 +1,7 @@
 package Model;
 
 public class Cliente {
-    private static int lastID = 0;
+    private static int lastID;
     private int id;
     private String nome;
     private String cognome;
@@ -14,26 +14,14 @@ public class Cliente {
     private double totale_Carrello;
 
 
-    public Cliente(String nome, String cognome, String email, String password, double saldo, String indirizzo_via, int codice_Postale, int n_Civico) {
-        this.id = lastID++;
-        this.nome = nome;
-        this.cognome = cognome;
-        this.email = email;
-        this.pswd = password;
-        this.indirizzo_via = indirizzo_via;
-        this.saldo = saldo;
-        this.codice_Postale = codice_Postale;
-        this.n_Civico = n_Civico;
-        this.totale_Carrello = 0;
-    }
     public Cliente() {
     }
 
 
     //------------------------------------------------Getter----------------------------------------------------------//
-    public static int generateID(){
-        return lastID++;
-    }
+    public static int generateID() {
+        lastID++;
+        return lastID; }
 
     public int getId() {
         return id;
@@ -97,7 +85,7 @@ public class Cliente {
         this.pswd = password;
     }
 
-    public void setIndirizzo_Via(String indirizzo) {
+    public void setIndirizzo_Via(String indirizzo_via) {
         this.indirizzo_via = indirizzo_via;
     }
 

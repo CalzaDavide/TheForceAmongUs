@@ -29,6 +29,7 @@ public class AggiungiClienteServlet extends HttpServlet {
 
         // instantiating the javabean to be given in input to doSave
         Cliente cliente = new Cliente();
+        cliente.setId(Cliente.generateID());
         cliente.setNome(nome);
         cliente.setCognome(cognome);
         cliente.setPswd(pswd);
