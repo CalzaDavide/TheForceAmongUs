@@ -1,14 +1,15 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-<head><title>MVC Examples</title>
+<head><title>Yeees</title>
 </head>
 <body>
 <table class="title">
-  <tr><th>MVC Examples</th></tr>
+  <tr><th>Yeees</th></tr>
 </table>
 <br/>
 <fieldset>
-  <legend>Add New Customer</legend>
+  <legend>Registrazione</legend>
 
   <form action="aggiungi-cliente">
 
@@ -30,11 +31,11 @@
     <label for="indirizzo_via">Indirizzo:</label><br>
     <input type="text" id="indirizzo_via" name="indirizzo_via" value="Via dal culo"><br><br>
 
-    <label for="codice_Postale">Codice Postale:</label><br>
-    <input type="number" id="codice_Postale" name="codice_Postale" value="34123"><br><br>
+    <label for="codice_postale">Codice Postale:</label><br>
+    <input type="number" id="codice_postale" name="codice_postale" value="34123"><br><br>
 
-    <label for="numero_Civico">Codice Postale:</label><br>
-    <input type="number" id="numero_Civico" name="numero_Civico" value="34"><br><br>
+    <label for="numero_civico">Numero Civico:</label><br>
+    <input type="number" id="numero_civico" name="numero_civico" value="34"><br><br>
 
 
     <input type="submit" value="aggiungi cliente">
