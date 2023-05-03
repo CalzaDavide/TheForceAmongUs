@@ -17,6 +17,7 @@ import java.io.IOException;
 public class AggiungiClienteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         // reading parameters from the request
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
@@ -24,20 +25,20 @@ public class AggiungiClienteServlet extends HttpServlet {
         String email = request.getParameter("email");
         double saldo = Double.parseDouble(request.getParameter("saldo"));
         String indirizzo_via = request.getParameter("indirizzo_via");
-        int codicePostale = Integer.parseInt(request.getParameter("codice_Postale"));
-        int n_Civico = Integer.parseInt(request.getParameter("numero_Civico"));
+        int codice_postale = Integer.parseInt(request.getParameter("codice_postale"));
+        int n_civico = Integer.parseInt(request.getParameter("numero_civico"));
 
         // instantiating the javabean to be given in input to doSave
         Cliente cliente = new Cliente();
+        cliente.setId(Cliente.generateID());
         cliente.setNome(nome);
         cliente.setCognome(cognome);
         cliente.setPswd(pswd);
         cliente.setEmail(email);
         cliente.setSaldo(saldo);
         cliente.setIndirizzo_Via(indirizzo_via);
-        cliente.setCodice_Postale(codicePostale);
-        cliente.setN_Civico(n_Civico);
-
+        cliente.setCodice_Postale(codice_postale);
+        cliente.setN_Civico(n_civico);
 
 
         // instantiating a Model class to interact with the db
@@ -51,7 +52,7 @@ public class AggiungiClienteServlet extends HttpServlet {
 
 
         RequestDispatcher dispatcher =
-                request.getRequestDispatcher("index.html");
+                request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);
     }
 
