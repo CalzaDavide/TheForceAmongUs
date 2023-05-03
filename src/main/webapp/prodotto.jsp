@@ -15,13 +15,7 @@
 
     <form action="aggiungi-prodotto">
 
-        prodotto.setCosto(Double.parseDouble(req.getParameter("costo")));
-        prodotto.setEspansione(req.getParameter("espansione"));
-
-        <label for="id_prodotto">Nome:</label><br>
-        <input type="number" id="id_prodotto" name="id_prodotto" value="0"><br><br>
-
-        <label for="nome">Cognome:</label><br>
+        <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" value="pacchetto"><br><br>
 
         <label for="quantita">Quantità:</label><br>
@@ -35,6 +29,9 @@
 
         <label for="espansione">espansione:</label><br>
         <input type="text" id="espansione" name="espansione" value="yees"><br><br>
+
+        <label for="tipologia">espansione:</label><br>
+        <input type="text" id="tipologia" name="tipologia" value="noooon"><br><br>
 
         <input type="submit" value="aggiungi prodotto">
     </form>

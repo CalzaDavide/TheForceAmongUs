@@ -27,12 +27,12 @@ public class AggiungiProdottoServlet extends HttpServlet {
         prodotto.setPercentuale_sconto(Double.parseDouble(req.getParameter("percentuale_sconto")));
         prodotto.setCosto(Double.parseDouble(req.getParameter("costo")));
         prodotto.setEspansione(req.getParameter("espansione"));
-        prodotto.setTipologia(req.getParameter(prodotto.getTipologia()));
+        prodotto.setTipologia(req.getParameter("tipologia"));
 
         ProdottoDAO prodottoDAO = new ProdottoDAO();
         prodottoDAO.doSave(prodotto);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
         dispatcher.forward(req, resp);
     }
 }

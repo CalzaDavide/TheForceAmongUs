@@ -20,8 +20,8 @@ public class Cliente {
 
     //------------------------------------------------Getter----------------------------------------------------------//
     public static int generateID() {
-        lastID++;
-        return lastID; }
+        return lastID++;
+    }
 
     public int getId() {
         return id;

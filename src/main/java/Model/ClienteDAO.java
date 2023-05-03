@@ -15,7 +15,7 @@ public class ClienteDAO {
             PreparedStatement ps = con.prepareStatement(
                     "INSERT INTO cliente (account_ID, nome, cognome, pswd, Email, Saldo, indirizzo_via, Codice_Postale, N_civico, Totale_carrello) VALUES(?,?,?,?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, cliente.getId());
+            ps.setInt(1, Cliente.generateID());
             ps.setString(2, cliente.getNome());
             ps.setString(3, cliente.getCognome());
             ps.setString(4, cliente.getPswd());

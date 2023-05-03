@@ -41,6 +41,6 @@
     <input type="submit" value="aggiungi cliente">
   </form>
 </fieldset>
-<a href="WEB-INF/prodotto.jsp">Aggiungi Prodotto</a>
+<a href="prodotto.jsp">Aggiungi Prodotto</a>
 
 </body></html>
