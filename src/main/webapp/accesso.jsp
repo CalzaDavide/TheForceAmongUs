@@ -11,12 +11,14 @@
 
   <form action="aggiungi-cliente">
 
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome" value="John"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" value="John@john.com"><br><br>
+    <label for="pswd">Password:</label><br>
+    <input type="text" id="pswd" name="pswd" value="pswd"><br><br>
 
     <input type="submit" value="aggiungi cliente">
   </form>
 </fieldset>
-<a href="prodotto.jsp">Aggiungi Prodotto</a>
+<a href="index.jsp">Home page</a>
 
 </body></html>
