@@ -1,7 +1,9 @@
 
 
 Funzioni da implementare
--Pagina login
+-Pagina Login
+-Pagina Registrazione
+    Sistemare html
 -Carrello
 -Pagina amministratore
 -Homepage
