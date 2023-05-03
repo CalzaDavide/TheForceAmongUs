@@ -35,7 +35,7 @@ public class Prodotto {
         return costo;
     }
 
-    public int getPercentuale_sconto() {
+    public double getPercentuale_sconto() {
         return percentuale_sconto;
     }
 
