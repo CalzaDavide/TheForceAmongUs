@@ -11,8 +11,9 @@ public class Prodotto {
     double percentuale_sconto;
     int quantita;
 
-    public static int generateID(){
-        return lastID++;
+    public static int generateID() {
+        lastID++;
+        return lastID;
     }
 
     public int getId() {

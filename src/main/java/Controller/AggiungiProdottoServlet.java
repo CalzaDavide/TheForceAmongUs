@@ -14,25 +14,27 @@ import java.io.IOException;
 @WebServlet(name = "AggiungiProdottoServlet", value = "/aggiungi-prodotto")
 public class AggiungiProdottoServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req, resp);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Prodotto prodotto = new Prodotto();
-        prodotto.setId(Integer.parseInt(req.getParameter("id_prodotto")));
-        prodotto.setNome(req.getParameter("nome"));
-        prodotto.setQuantita(Integer.parseInt(req.getParameter("quantita")));
-        prodotto.setPercentuale_sconto(Double.parseDouble(req.getParameter("percentuale_sconto")));
-        prodotto.setCosto(Double.parseDouble(req.getParameter("costo")));
-        prodotto.setEspansione(req.getParameter("espansione"));
-        prodotto.setTipologia(req.getParameter("tipologia"));
+        prodotto.setId(Prodotto.generateID());
+        prodotto.setNome(request.getParameter("nome"));
+        prodotto.setQuantita(Integer.parseInt(request.getParameter("quantita")));
+        prodotto.setPercentuale_sconto(Double.parseDouble(request.getParameter("percentuale_sconto")));
+        prodotto.setCosto(Double.parseDouble(request.getParameter("costo")));
+        prodotto.setEspansione(request.getParameter("espansione"));
+        prodotto.setTipologia(request.getParameter("tipologia"));
 
         ProdottoDAO prodottoDAO = new ProdottoDAO();
         prodottoDAO.doSave(prodotto);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
-        dispatcher.forward(req, resp);
+        request.setAttribute("prodotto", prodottoDAO);
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        dispatcher.forward(request, response);
     }
 }

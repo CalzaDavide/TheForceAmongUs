@@ -27,10 +27,10 @@
         <label for="costo">Saldo:</label><br>
         <input type="number" id="costo" name="costo" value="10"><br><br>
 
-        <label for="espansione">espansione:</label><br>
+        <label for="espansione">Espansione:</label><br>
         <input type="text" id="espansione" name="espansione" value="yees"><br><br>
 
-        <label for="tipologia">espansione:</label><br>
+        <label for="tipologia">Tipologia:</label><br>
         <input type="text" id="tipologia" name="tipologia" value="noooon"><br><br>
 
         <input type="submit" value="aggiungi prodotto">

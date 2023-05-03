@@ -13,6 +13,7 @@
 
         <label for="email">E-mail:</label><br>
         <input type="email" id="email" name="email" value="John@doe.com"><br><br>
+
         <label for="pswd">Password:</label><br>
         <input type="text" id="pswd" name="pswd" value="pswd"><br><br>
 
@@ -37,9 +38,8 @@
 
         <label for="numero_civico">Numero Civico:</label><br>
         <input type="number" id="numero_civico" name="numero_civico" value="34"><br><br>
+        <input type="submit" value="aggiungi cliente">
     </fieldset>
-
-    <input type="submit" value="aggiungi cliente">
     </fieldset>
 </form>
 <a href="index.jsp">Home page</a>

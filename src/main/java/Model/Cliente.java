@@ -1,7 +1,7 @@
 package Model;
 
 public class Cliente {
-    private static int lastID;
+    private static int lastID = 0;
     private int id;
     private String nome;
     private String cognome;
@@ -20,7 +20,8 @@ public class Cliente {
 
     //------------------------------------------------Getter----------------------------------------------------------//
     public static int generateID() {
-        return lastID++;
+        lastID++;
+        return lastID;
     }
 
     public int getId() {

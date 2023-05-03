@@ -11,7 +11,7 @@ public class ProdottoDAO {
             PreparedStatement ps = con.prepareStatement(
                     "INSERT INTO Prodotto (ID_Prodotto, Nome, Quantita, percentuale_Sconto, Costo, Espansione, Tipologia) VALUES(?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, Prodotto.generateID());
+            ps.setInt(1, prodotto.getId());
             ps.setString(2, prodotto.getNome());
             ps.setInt(3, prodotto.getQuantita());
             ps.setDouble(4, prodotto.getPercentuale_sconto());

@@ -17,6 +17,7 @@ import java.io.IOException;
 public class AggiungiClienteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         // reading parameters from the request
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
