@@ -36,7 +36,7 @@ public class ClienteDAO {
         }
     }
 
-    public List<Cliente> doRetrieveAll(){
+    public ArrayList<Cliente> doRetrieveAll(){
 
         ArrayList<Cliente> clienti = new ArrayList<>();
 
