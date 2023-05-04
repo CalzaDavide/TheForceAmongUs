@@ -11,7 +11,6 @@ import Model.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet(urlPatterns = {"/mostra-utenti"})
 public class MostraUtentiServlet extends HttpServlet {
