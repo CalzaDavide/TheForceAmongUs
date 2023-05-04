@@ -21,10 +21,10 @@
         <label for="quantita">Quantità:</label><br>
         <input type="number" id="quantita" name="quantita" value="12"><br><br>
 
-        <label for="percentuale_sconto">percentuale sconto:</label><br>
+        <label for="percentuale_sconto">Percentuale sconto:</label><br>
         <input type="number" id="percentuale_sconto" name="percentuale_sconto" value="15"><br><br>
 
-        <label for="costo">Saldo:</label><br>
+        <label for="costo">Costo:</label><br>
         <input type="number" id="costo" name="costo" value="10"><br><br>
 
         <label for="espansione">Espansione:</label><br>

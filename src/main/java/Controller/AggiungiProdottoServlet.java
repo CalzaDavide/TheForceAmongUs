@@ -20,8 +20,11 @@ public class AggiungiProdottoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ProdottoDAO pd = new ProdottoDAO();
         Prodotto prodotto = new Prodotto();
-        prodotto.setId(Prodotto.generateID());
+        do {
+            prodotto.setId(Prodotto.generateID());
+        }while(pd.doRetrieveById(prodotto.getId()) != null);
         prodotto.setNome(request.getParameter("nome"));
         prodotto.setQuantita(Integer.parseInt(request.getParameter("quantita")));
         prodotto.setPercentuale_sconto(Double.parseDouble(request.getParameter("percentuale_sconto")));
