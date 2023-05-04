@@ -27,6 +27,7 @@ public class AggiungiClienteServlet extends HttpServlet {
         String indirizzo_via = request.getParameter("indirizzo_via");
         int codice_postale = Integer.parseInt(request.getParameter("codice_postale"));
         int n_civico = Integer.parseInt(request.getParameter("numero_civico"));
+        boolean adminValue = Boolean.parseBoolean(request.getParameter("adminValue"));
 
         // instantiating the javabean to be given in input to doSave
         Cliente cliente = new Cliente();
@@ -39,6 +40,7 @@ public class AggiungiClienteServlet extends HttpServlet {
         cliente.setIndirizzo_Via(indirizzo_via);
         cliente.setCodice_Postale(codice_postale);
         cliente.setN_Civico(n_civico);
+        cliente.setAdminValue(adminValue);
 
 
         // instantiating a Model class to interact with the db

@@ -1,7 +1,7 @@
 package Model;
 
 public class Cliente {
-    private static int lastID = 0;
+    private static int lastID = 100;
     private int id;
     private String nome;
     private String cognome;
@@ -12,6 +12,7 @@ public class Cliente {
     private int codice_Postale;
     private int n_Civico;
     private double totale_Carrello;
+    private boolean adminValue;
 
 
     public Cliente() {
@@ -64,6 +65,10 @@ public class Cliente {
         return totale_Carrello;
     }
 
+    public boolean getAdminValue() {
+        return adminValue;
+    }
+
 
     //------------------------------------------------Setter----------------------------------------------------------//
     public void setId(int id) {
@@ -106,4 +111,7 @@ public class Cliente {
         this.totale_Carrello = totale_Carrello;
     }
 
+    public void setAdminValue(boolean adminValue) {
+        this.adminValue = adminValue;
+    }
 }
