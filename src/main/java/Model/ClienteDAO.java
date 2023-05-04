@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 public class ClienteDAO {
     public void doSave(Cliente cliente) {
         try (Connection con = ConPool.getConnection()) {
@@ -31,6 +32,48 @@ public class ClienteDAO {
             }
 
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<Cliente> doRetrieveAll(){
+
+        ArrayList<Cliente> customers = new ArrayList<>();
+
+        Statement st;
+
+        ResultSet rs;
+
+        Cliente c;
+
+        try (Connection con = ConPool.getConnection()) {
+
+            st = con.createStatement();
+
+            rs = st.executeQuery("SELECT * FROM Cliente WHERE 1=1");
+
+            while(rs.next()) {
+
+                c = new Cliente();
+
+                c.setId(rs.getInt(1));
+
+                c.setNome(rs.getString(2));
+
+                c.setCognome(rs.getString(3));
+
+                c.setSaldo(rs.getDouble(4));
+
+                customers.add(c);
+            }
+
+            con.close();
+
+            return customers;
+        }
+
+        catch (SQLException e) {
+
             throw new RuntimeException(e);
         }
     }
