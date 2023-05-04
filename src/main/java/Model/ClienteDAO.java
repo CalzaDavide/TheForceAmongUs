@@ -14,7 +14,7 @@ public class ClienteDAO {
     public void doSave(Cliente cliente) {
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO cliente (account_ID, nome, cognome, pswd, Email, Saldo, indirizzo_via, Codice_Postale, N_civico, Totale_carrello) VALUES(?,?,?,?,?,?,?,?,?,?)",
+                    "INSERT INTO cliente (account_ID, nome, cognome, pswd, Email, Saldo, indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, cliente.getId());
             ps.setString(2, cliente.getNome());
@@ -26,6 +26,7 @@ public class ClienteDAO {
             ps.setInt(8, cliente.getCodice_Postale());
             ps.setInt(9, cliente.getN_Civico());
             ps.setDouble(10, cliente.getTotale_Carrello());
+            ps.setBoolean(11, cliente.getAdminValue());
 
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
@@ -36,7 +37,7 @@ public class ClienteDAO {
         }
     }
 
-    public ArrayList<Cliente> doRetrieveAll(){
+    public ArrayList<Cliente> doRetrieveAll() {
 
         ArrayList<Cliente> clienti = new ArrayList<>();
 
@@ -52,7 +53,7 @@ public class ClienteDAO {
 
             resultSet = statement.executeQuery("SELECT * FROM Cliente");
 
-            while(resultSet.next()) {
+            while (resultSet.next()) {
 
                 c = new Cliente();
 
@@ -76,6 +77,8 @@ public class ClienteDAO {
 
                 c.setTotale_Carrello(resultSet.getInt(10));
 
+                c.setAdminValue(resultSet.getBoolean(11));
+
 
                 clienti.add(c);
             }
@@ -83,9 +86,7 @@ public class ClienteDAO {
             con.close();
 
             return clienti;
-        }
-
-        catch (SQLException e) {
+        } catch (SQLException e) {
 
             throw new RuntimeException(e);
         }
