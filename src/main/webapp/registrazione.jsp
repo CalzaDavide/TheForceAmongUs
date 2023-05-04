@@ -39,7 +39,10 @@
         <label for="numero_civico">Numero Civico:</label><br>
         <input type="number" id="numero_civico" name="numero_civico" value="34"><br><br>
 
-        <input type="submit" value="aggiungi cliente">
+        <label for="adminValue">Admin:</label><br>
+        <input type="text" id="adminValue" name="adminValue" value="false"><br><br>
+
+        <input type="submit" value="aggiungi cliente" >
     </fieldset>
     </fieldset>
 </form>

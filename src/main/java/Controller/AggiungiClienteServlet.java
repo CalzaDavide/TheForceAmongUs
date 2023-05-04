@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.ClienteDAO;
-import com.oracle.wls.shaded.org.apache.xpath.operations.Bool;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
