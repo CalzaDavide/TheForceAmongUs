@@ -38,38 +38,51 @@ public class ClienteDAO {
 
     public List<Cliente> doRetrieveAll(){
 
-        ArrayList<Cliente> customers = new ArrayList<>();
+        ArrayList<Cliente> clienti = new ArrayList<>();
 
-        Statement st;
+        Statement statement;
 
-        ResultSet rs;
+        ResultSet resultSet;
 
         Cliente c;
 
         try (Connection con = ConPool.getConnection()) {
 
-            st = con.createStatement();
+            statement = con.createStatement();
 
-            rs = st.executeQuery("SELECT * FROM Cliente WHERE 1=1");
+            resultSet = statement.executeQuery("SELECT * FROM Cliente");
 
-            while(rs.next()) {
+            while(resultSet.next()) {
 
                 c = new Cliente();
 
-                c.setId(rs.getInt(1));
+                c.setId(resultSet.getInt(1));
 
-                c.setNome(rs.getString(2));
+                c.setNome(resultSet.getString(2));
 
-                c.setCognome(rs.getString(3));
+                c.setCognome(resultSet.getString(3));
 
-                c.setSaldo(rs.getDouble(4));
+                c.setPswd(resultSet.getString(4));
 
-                customers.add(c);
+                c.setEmail(resultSet.getString(5));
+
+                c.setSaldo(resultSet.getDouble(6));
+
+                c.setIndirizzo_Via(resultSet.getString(7));
+
+                c.setCodice_Postale(resultSet.getInt(8));
+
+                c.setN_Civico(resultSet.getInt(9));
+
+                c.setTotale_Carrello(resultSet.getInt(10));
+
+
+                clienti.add(c);
             }
 
             con.close();
 
-            return customers;
+            return clienti;
         }
 
         catch (SQLException e) {

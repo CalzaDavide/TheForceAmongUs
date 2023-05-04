@@ -12,8 +12,8 @@ import Model.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/show-all"})
-public class ShowAll extends HttpServlet {
+@WebServlet(urlPatterns = {"/mostra-utenti"})
+public class MostraUtentiServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,13 +28,13 @@ public class ShowAll extends HttpServlet {
 
         ClienteDAO  cd = new ClienteDAO();
 
-        String address = "/WEB-INF/results/showAll.jsp";
+        String address = "mostraUtenti.jsp";
 
         RequestDispatcher rd;
 
         clienti = cd.doRetrieveAll();
 
-        request.setAttribute("customers", clienti);
+        request.setAttribute("clienti", clienti);
 
         rd = request.getRequestDispatcher(address);
 
