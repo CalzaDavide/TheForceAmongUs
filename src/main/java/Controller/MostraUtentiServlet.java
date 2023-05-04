@@ -12,7 +12,7 @@ import Model.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet(urlPatterns = {"/mostra-utenti"})
+@WebServlet("/mostra-utenti")
 public class MostraUtentiServlet extends HttpServlet {
 
     @Override

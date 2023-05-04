@@ -6,7 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class ClienteDAO {
@@ -49,7 +50,7 @@ public class ClienteDAO {
 
             statement = con.createStatement();
 
-            resultSet = statement.executeQuery("SELECT * FROM cliente WHERE 1=1");
+            resultSet = statement.executeQuery("SELECT * FROM Cliente");
 
             while(resultSet.next()) {
 

@@ -11,6 +11,7 @@
 <h1>Elenco clienti:</h1><br>
 <%
   ArrayList<Cliente> clienti = (ArrayList<Cliente>)request.getAttribute("clienti");
+
   for(Cliente c : clienti){%>
     <%=c.getId() + " / " + c.getNome()  + " / " + c.getCognome() + " / " + c.getEmail()%><br><br>
   <%}%>

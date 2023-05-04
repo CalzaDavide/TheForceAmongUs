@@ -9,7 +9,9 @@
 <a href="accesso.jsp">Log-in</a><br>
 <a href="registrazione.jsp">Registrazione</a><br>
 <a href="prodotto.jsp">Aggiungi Prodotto</a><br>
-<a href="mostraUtenti.jsp">Mostra Utenti</a><br>
+<form action="mostra-utenti">
+    <input type = submit value="Mostra Utenti">
+</form>
 
 </body>
 </html>
