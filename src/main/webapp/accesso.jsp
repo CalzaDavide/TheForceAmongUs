@@ -19,6 +19,6 @@
     <input type="submit" value="aggiungi cliente">
   </form>
 </fieldset>
-<a href="../index.jsp">Home page</a>
+<a href="index.jsp">Home page</a>
 
 </body></html>

@@ -42,7 +42,7 @@
     </fieldset>
     </fieldset>
 </form>
-<a href="../index.jsp">Home page</a>
+<a href="index.jsp">Home page</a>
 
 </body>
 </html>
