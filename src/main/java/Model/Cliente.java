@@ -1,7 +1,7 @@
 package Model;
 
 public class Cliente {
-    private static int lastID = 100;
+    private static int lastID = 0;
     private int id;
     private String nome;
     private String cognome;

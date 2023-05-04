@@ -75,8 +75,6 @@ public class ProdottoDAO {
 
     public Prodotto doRetrieveById(int id){
 
-        Statement statement;
-
         ResultSet resultSet;
 
         Prodotto p = null;

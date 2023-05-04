@@ -6,8 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+
 
 
 public class ClienteDAO {
@@ -87,6 +86,56 @@ public class ClienteDAO {
 
             return clienti;
         } catch (SQLException e) {
+
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Cliente doRetrieveById(int id){
+
+        ResultSet resultSet;
+
+        Cliente c = null;
+
+        try (Connection con = ConPool.getConnection()) {
+
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM cliente WHERE account_ID = ?");
+            ps.setInt(1, id);
+            resultSet = ps.executeQuery();
+
+            if(resultSet.next()) {
+
+                c = new Cliente();
+
+                c.setId(resultSet.getInt(1));
+
+                c.setNome(resultSet.getString(2));
+
+                c.setCognome(resultSet.getString(3));
+
+                c.setPswd(resultSet.getString(4));
+
+                c.setEmail(resultSet.getString(5));
+
+                c.setSaldo(resultSet.getDouble(6));
+
+                c.setIndirizzo_Via(resultSet.getString(7));
+
+                c.setCodice_Postale(resultSet.getInt(8));
+
+                c.setN_Civico(resultSet.getInt(9));
+
+                c.setTotale_Carrello(resultSet.getInt(10));
+
+                c.setAdminValue(resultSet.getBoolean(11));
+            }
+
+            con.close();
+
+            return c;
+        }
+
+        catch (SQLException e) {
 
             throw new RuntimeException(e);
         }
