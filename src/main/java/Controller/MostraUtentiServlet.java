@@ -10,6 +10,7 @@ import Model.*;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/mostra-utenti"})
@@ -24,7 +25,7 @@ public class MostraUtentiServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Cliente> clienti;
+        ArrayList<Cliente> clienti;
 
         ClienteDAO  cd = new ClienteDAO();
 
