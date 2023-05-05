@@ -1,5 +1,10 @@
 package Model;
 
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 public class Cliente {
     private static int lastID = 0;
     private int id;
@@ -87,8 +92,15 @@ public class Cliente {
         this.email = email;
     }
 
-    public void setPswd(String password) {
-        this.pswd = password;
+    public void setPswd(String password) { // password è inserita dall’utente
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-1");
+            digest.reset();
+            digest.update(password.getBytes(StandardCharsets.UTF_8));
+            this.pswd = String.format("%040x", new BigInteger(1, digest.digest()));
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void setIndirizzo_Via(String indirizzo_via) {

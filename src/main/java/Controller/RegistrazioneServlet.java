@@ -14,7 +14,7 @@ import Model.*;
 import java.io.IOException;
 
 @WebServlet(name = "AggiungiClienteServlet", value = "/aggiungi-cliente")
-public class AggiungiClienteServlet extends HttpServlet {
+public class RegistrazioneServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -34,7 +34,7 @@ public class AggiungiClienteServlet extends HttpServlet {
         ClienteDAO cd = new ClienteDAO();
         do {
             cliente.setId(Cliente.generateID());
-        }while(cd.doRetrieveById(cliente.getId()) != null);
+        } while (cd.doRetrieveById(cliente.getId()) != null);
         cliente.setNome(nome);
         cliente.setCognome(cognome);
         cliente.setPswd(pswd);
@@ -54,6 +54,7 @@ public class AggiungiClienteServlet extends HttpServlet {
 
         //storing the javabean in the "request" object
         request.setAttribute("cliente", cliente);
+        request.getSession().setAttribute("email", email);
 
 
         RequestDispatcher dispatcher =

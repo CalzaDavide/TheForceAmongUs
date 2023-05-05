@@ -13,7 +13,7 @@ public class ClienteDAO {
     public void doSave(Cliente cliente) {
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO cliente (account_ID, Nome, Cognome, Pswd, Email, Saldo, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+                    "INSERT INTO amongus.cliente (account_ID, Nome, Cognome, Pswd, Email, Saldo, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, cliente.getId());
             ps.setString(2, cliente.getNome());
@@ -50,7 +50,7 @@ public class ClienteDAO {
 
             statement = con.createStatement();
 
-            resultSet = statement.executeQuery("SELECT * FROM Cliente");
+            resultSet = statement.executeQuery("SELECT * FROM amongus.cliente");
 
             while (resultSet.next()) {
 
@@ -99,7 +99,7 @@ public class ClienteDAO {
 
         try (Connection con = ConPool.getConnection()) {
 
-            PreparedStatement  ps = con.prepareStatement("SELECT * FROM cliente WHERE account_ID = ?");
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM amongus.cliente WHERE account_ID = ?");
             ps.setInt(1, id);
             resultSet = ps.executeQuery();
 
@@ -149,7 +149,7 @@ public class ClienteDAO {
 
         try (Connection con = ConPool.getConnection()) {
 
-            PreparedStatement  ps = con.prepareStatement("SELECT * FROM cliente WHERE Email = ?");
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM amongus.cliente WHERE Email=? AND Pswd=SHA1(?)");
             ps.setString(1, email);
             resultSet = ps.executeQuery();
 
@@ -190,4 +190,5 @@ public class ClienteDAO {
             throw new RuntimeException(e);
         }
     }
+
 }
