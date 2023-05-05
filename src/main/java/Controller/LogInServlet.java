@@ -1,17 +1,16 @@
-/*
+
 package Controller;
 
 import Model.Cliente;
 import Model.ClienteDAO;
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
+
 
 @WebServlet("login")
 public class LogInServlet extends HttpServlet {
@@ -22,20 +21,24 @@ public class LogInServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         ClienteDAO cd = new ClienteDAO();
-        String email = req.getParameter("email");
-        String pswd = req.getParameter("pswd");
+        HttpSession sessioneAttuale = request.getSession();
+
+
+        String email = request.getParameter("email");
+        String pswd = request.getParameter("pswd");
         Cliente utente = cd.doRetrieveByEmail(email);
 
         HttpSession session;
         if(utente != null && utente.getPswd().equals(pswd)) {
-            session = req.getSession();
+            session = request.getSession();
             session.setAttribute("utente", utente);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
-            dispatcher.forward(req, resp);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+            dispatcher.forward(request, response);
         }
 
     }
 }
-*/
+
