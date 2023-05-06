@@ -148,8 +148,7 @@ public class ClienteDAO {
         Cliente c = null;
 
         try (Connection con = ConPool.getConnection()) {
-
-            PreparedStatement  ps = con.prepareStatement("SELECT * FROM amongus.cliente WHERE Email=? AND Pswd=SHA1(?)");
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM amongus.cliente WHERE Email=?");
             ps.setString(1, email);
             resultSet = ps.executeQuery();
 

@@ -12,7 +12,7 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 
 
-@WebServlet("login")
+@WebServlet("/login")
 public class LogInServlet extends HttpServlet {
 
     @Override
@@ -35,10 +35,9 @@ public class LogInServlet extends HttpServlet {
         if(utente != null && utente.getPswd().equals(pswd)) {
             session = request.getSession();
             session.setAttribute("utente", utente);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
-            dispatcher.forward(request, response);
         }
-
+        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        dispatcher.forward(request, response);
     }
 }
 
