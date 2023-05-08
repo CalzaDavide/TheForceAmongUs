@@ -30,10 +30,10 @@
         <td><%= c.getNome() + " " + c.getCognome()%></td>
         <td><%=c.getEmail() %></td>
         <td><%=c.getPswd() %></td>
-        <%if (c.getAdminValue()){%>
+        <%if (c.isAdmin()){%>
             <td style="background-color: green"></td>
         <%}%>
-        <% if (!c.getAdminValue()){%>
+        <% if (!c.isAdmin()){%>
             <td style="background-color: red"></td>
         <%}%>
     </tr>

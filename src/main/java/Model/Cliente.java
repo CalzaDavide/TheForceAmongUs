@@ -1,10 +1,5 @@
 package Model;
 
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 public class Cliente {
     private static int lastID = 0;
     private int id;
@@ -70,7 +65,7 @@ public class Cliente {
         return totale_Carrello;
     }
 
-    public boolean getAdminValue() {
+    public boolean isAdmin() {
         return adminValue;
     }
 

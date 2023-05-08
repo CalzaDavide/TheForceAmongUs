@@ -25,7 +25,7 @@ public class ClienteDAO {
             ps.setInt(8, cliente.getCodice_Postale());
             ps.setInt(9, cliente.getN_Civico());
             ps.setDouble(10, cliente.getTotale_Carrello());
-            ps.setBoolean(11, cliente.getAdminValue());
+            ps.setBoolean(11, cliente.isAdmin());
 
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
