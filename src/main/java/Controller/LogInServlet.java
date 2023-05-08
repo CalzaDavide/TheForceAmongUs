@@ -31,7 +31,7 @@ public class LogInServlet extends HttpServlet {
         Cliente utente = cd.doRetrieveByEmail(email);
 
         HttpSession session;
-        if(utente != null && utente.getPswd().equals(pswd)) {
+        if (utente != null && utente.getPswd().equals(pswd)) {
             session = request.getSession();
             session.setAttribute("utente", utente);
         }

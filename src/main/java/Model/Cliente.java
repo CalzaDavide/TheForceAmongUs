@@ -92,7 +92,7 @@ public class Cliente {
         this.email = email;
     }
 
-    public void setPswd(String password) { // password è inserita dall’utente
+    /*public void setPswd(String password) { // password è inserita dall’utente
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-1");
             digest.reset();
@@ -101,6 +101,11 @@ public class Cliente {
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
+    }
+    */
+
+    public void setPswd(String password) { // password è inserita dall’utente
+        this.pswd = password;
     }
 
     public void setIndirizzo_Via(String indirizzo_via) {
