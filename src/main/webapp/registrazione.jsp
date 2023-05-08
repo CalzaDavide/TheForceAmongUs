@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head><title>Registrazione</title>
@@ -22,25 +22,24 @@
     <fieldset>
         <legend>Dati Spedizione</legend>
         <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" value="John"><br><br>
+        <input type="text" id="nome" name="nome" value="Mario"><br><br>
 
         <label for="cognome">Cognome:</label><br>
-        <input type="text" id="cognome" name="cognome" value="Doe"><br><br>
+        <input type="text" id="cognome" name="cognome" value="Balotelli"><br><br>
 
         <label for="saldo">Saldo:</label><br>
-        <input type="number" id="saldo" name="saldo" value="10000"><br><br>
+        <input type="number" id="saldo" name="saldo" value="1000"><br><br>
 
         <label for="indirizzo_via">Indirizzo:</label><br>
-        <input type="text" id="indirizzo_via" name="indirizzo_via" value="Via dal culo"><br><br>
+        <input type="text" id="indirizzo_via" name="indirizzo_via" value="Via Diego Armando Maradona"><br><br>
 
         <label for="codice_postale">Codice Postale:</label><br>
         <input type="number" id="codice_postale" name="codice_postale" value="34123"><br><br>
 
         <label for="numero_civico">Numero Civico:</label><br>
-        <input type="number" id="numero_civico" name="numero_civico" value="34"><br><br>
+        <input type="number" id="numero_civico" name="numero_civico" value="69"><br><br>
 
         <input type="submit" value="aggiungi cliente" >
-    </fieldset>
     </fieldset>
 </form>
 <a href="index.jsp">Home page</a>
