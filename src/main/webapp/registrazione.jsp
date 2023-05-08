@@ -12,7 +12,7 @@
         <legend>Dati utente</legend>
 
         <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" value="John@doe.com"><br><br>
+        <input type="email" id="email" name="email" value="Mario.Rossi@gmail.com"><br><br>
 
         <label for="pswd">Password:</label><br>
         <input type="text" id="pswd" name="pswd" value="pswd"><br><br>
@@ -25,7 +25,7 @@
         <input type="text" id="nome" name="nome" value="Mario"><br><br>
 
         <label for="cognome">Cognome:</label><br>
-        <input type="text" id="cognome" name="cognome" value="Balotelli"><br><br>
+        <input type="text" id="cognome" name="cognome" value="Rossi"><br><br>
 
         <label for="saldo">Saldo:</label><br>
         <input type="number" id="saldo" name="saldo" value="1000"><br><br>
