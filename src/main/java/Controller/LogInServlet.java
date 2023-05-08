@@ -1,4 +1,3 @@
-
 package Controller;
 
 import Model.Cliente;
@@ -40,4 +39,3 @@ public class LogInServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 }
-
