@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
 <%
     Cliente cliente = (Cliente) session.getAttribute("utente");
     if (cliente == null) {
@@ -18,7 +17,7 @@
 <%} else {%>
 <h1>Benvenuto, <%= cliente.getNome()%>!</h1>
 <%}
-    if(cliente.isAdmin()){%>
+    if(cliente != null && cliente.isAdmin()){%>
 <form action="mostra-utenti">
     <input type=submit value="Mostra Utenti">
 </form>

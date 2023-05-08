@@ -43,7 +43,7 @@ public class RegistrazioneServlet extends HttpServlet {
         cliente.setIndirizzo_Via(indirizzo_via);
         cliente.setCodice_Postale(codice_postale);
         cliente.setN_Civico(n_civico);
-        cliente.setAdminValue(adminValue);
+        cliente.setAdminValue(false);
 
 
         // instantiating a Model class to interact with the db
