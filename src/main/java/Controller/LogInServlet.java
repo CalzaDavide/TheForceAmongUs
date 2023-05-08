@@ -25,17 +25,25 @@ public class LogInServlet extends HttpServlet {
         ClienteDAO cd = new ClienteDAO();
         HttpSession sessioneAttuale = request.getSession();
 
-
         String email = request.getParameter("email");
         String pswd = request.getParameter("pswd");
         Cliente utente = cd.doRetrieveByEmail(email);
 
+        String address;
+        boolean logInStatus;
+
         HttpSession session;
+
         if (utente != null && utente.getPswd().equals(pswd)) {
             session = request.getSession();
+            address = "index.jsp";
             session.setAttribute("utente", utente);
+
+        } else {
+            session = request.getSession();
+            address = "accesso.jsp";
         }
-        RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher(address);
         dispatcher.forward(request, response);
     }
 }
