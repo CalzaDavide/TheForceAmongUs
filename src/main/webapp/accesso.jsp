@@ -5,8 +5,11 @@
 </head>
 <body>
 
-<br/>
+<%  String logInStatus = (String) session.getAttribute("logInStatus");
+    if(logInStatus != null && logInStatus.equals("errato")){%>
+    <h1>Credenziali Errate</h1><%}%>
 
+<br/>
 
 <form action="login" method="post">
 

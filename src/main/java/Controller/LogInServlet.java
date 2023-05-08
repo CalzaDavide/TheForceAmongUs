@@ -3,7 +3,6 @@ package Controller;
 import Model.Cliente;
 import Model.ClienteDAO;
 import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
@@ -30,20 +29,20 @@ public class LogInServlet extends HttpServlet {
         Cliente utente = cd.doRetrieveByEmail(email);
 
         String address;
-        boolean logInStatus;
+        String logInStatus;
 
-        HttpSession session;
 
         if (utente != null && utente.getPswd().equals(pswd)) {
-            session = request.getSession();
             address = "index.jsp";
-            session.setAttribute("utente", utente);
+            sessioneAttuale.setAttribute("utente", utente);
+            logInStatus = "accesso";
 
         } else {
-            session = request.getSession();
             address = "accesso.jsp";
+            logInStatus = "errato";
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+        sessioneAttuale.setAttribute("logInStatus", logInStatus);
         dispatcher.forward(request, response);
     }
 }
