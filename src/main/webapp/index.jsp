@@ -16,6 +16,9 @@
 <a href="registrazione.jsp">Registrazione</a><br>
 <%} else {%>
 <h1>Benvenuto, <%= cliente.getNome()%>!</h1>
+<form action="logout">
+    <input type="submit" value="Log out">
+</form>
 <%}
     if(cliente != null && cliente.isAdmin()){%>
 <form action="mostra-utenti">
