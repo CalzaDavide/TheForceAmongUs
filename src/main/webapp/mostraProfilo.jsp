@@ -20,8 +20,7 @@
     <p>Password: <%= cliente.getPswd()%>    (Aggiungere pulsante modifica password)</p>
     <p>Saldo: <%= cliente.getSaldo()%> SusCoins </p>
     <form action="ricarica-saldo">
-
-        <label for="ricarica">Ricarica saldo:</label><br>
+        <label for="ricarica">Ricarica saldo:</label>
         <input type="number" id="ricarica" name="ricarica" value="10"><br><br>
         <input type="submit" value="ricarica saldo">
     </form>
