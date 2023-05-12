@@ -19,6 +19,7 @@
 <form action="logout">
     <input type="submit" value="Log out">
 </form>
+<a href="mostraProfilo.jsp">Mostra profilo</a>
 <%}
     if(cliente != null && cliente.isAdmin()){%>
 <form action="mostra-utenti">
