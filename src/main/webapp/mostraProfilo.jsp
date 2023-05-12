@@ -17,7 +17,9 @@
 <fieldset>
     <legend>Dati personali</legend>
     <p>Email: <%= cliente.getEmail()%></p>
-    <p>Password: <%= cliente.getPswd()%>    (Aggiungere pulsante modifica password)</p>
+    <p>Password: <%= cliente.getPswd()%> (inoltro ad una jsp con form modifica password)</p>
+
+
     <p>Saldo: <%= cliente.getSaldo()%> SusCoins </p>
     <form action="ricarica-saldo">
         <label for="ricarica">Ricarica saldo:</label>

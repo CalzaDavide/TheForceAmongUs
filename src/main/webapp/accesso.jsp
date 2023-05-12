@@ -14,9 +14,9 @@
 <form action="login" method="post">
 
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" value="John@john.com"><br><br>
+    <input required type="email" id="email" name="email" value="John@john.com"><br><br>
     <label for="pswd">Password:</label><br>
-    <input type="password" id="pswd" name="pswd" value="Pswd"><br><br>
+    <input required type="password" id="pswd" name="pswd" value="Pswd"><br><br>
 
     <input type="submit" value="Log in">
 </form>
