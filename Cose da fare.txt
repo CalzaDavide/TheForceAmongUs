@@ -10,3 +10,5 @@ Funzioni da implementare
 
 -Pagina area personale (pulsante aggiungi credito)
     -Pagina acquista sus coins
+
+Modificare nuova pagina di login
