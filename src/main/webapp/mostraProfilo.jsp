@@ -8,9 +8,7 @@
 </head>
 
 <body>
-<%
-    Cliente cliente = (Cliente) session.getAttribute("utente");
-%>
+<% Cliente cliente = (Cliente) session.getAttribute("utente"); %>
 
 <h1>Benvenuto, <%= cliente.getNome()%>!</h1>
 
@@ -23,7 +21,7 @@
     <p>Saldo: <%= cliente.getSaldo()%> SusCoins </p>
     <form action="ricarica-saldo">
         <label for="ricarica">Ricarica saldo:</label>
-        <input type="number" id="ricarica" name="ricarica" value="10">
+        <input required type="number" id="ricarica" name="ricarica" value="">
         <input type="submit" value="ricarica saldo">
     </form>
 </fieldset>
