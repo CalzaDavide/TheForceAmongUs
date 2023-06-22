@@ -1,0 +1,14 @@
+#searchbar, #account{
+    height: 90px;
+    background-color: black;
+    padding-left: 50px;
+    padding-top: 32px;
+}
+#welcome{
+    float:left;
+    padding-right: 30px;
+}
+h1 {
+    color: white;
+    font-size: 30px;
+}
