@@ -3,7 +3,12 @@
 Funzioni da implementare
 -Pagina Login
 -Pagina Registrazione
-    Sistemare html
+-Sistemare html
 -Carrello
 -Pagina amministratore
 -Homepage
+
+-Pagina area personale (pulsante aggiungi credito)
+    -Pagina acquista sus coins
+
+Modificare nuova pagina di login
