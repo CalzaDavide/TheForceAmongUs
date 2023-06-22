@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<%  String logInStatus = (String) session.getAttribute("logInStatus");
+<%  String logInStatus = (String) request.getAttribute("logInStatus");
     if(logInStatus != null && logInStatus.equals("errato")){%>
     <h1>Credenziali Errate</h1><%}%>
 
@@ -16,7 +16,7 @@
     <label for="email">Email:</label><br>
     <input required type="email" id="email" name="email" value="John@john.com"><br><br>
     <label for="pswd">Password:</label><br>
-    <input required type="password" id="pswd" name="pswd" value="Pswd"><br><br>
+    <input required type="password" id="pswd" name="pswd" value="pswd"><br><br>
 
     <input type="submit" value="Log in">
 </form>

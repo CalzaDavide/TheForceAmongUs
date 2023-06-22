@@ -42,7 +42,7 @@ public class LogInServlet extends HttpServlet {
             logInStatus = "errato";
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher(address);
-        sessioneAttuale.setAttribute("logInStatus", logInStatus);
+        request.setAttribute("logInStatus", logInStatus);
         dispatcher.forward(request, response);
     }
 }
