@@ -28,7 +28,7 @@ public class MostraProdottiServlet extends HttpServlet {
 
         ProdottoDAO  pd = new ProdottoDAO();
 
-        String address = "WEB-INF/mostraProdotti.jsp";
+        String address = "mostraProdotti.jsp";
 
         RequestDispatcher rd;
 
