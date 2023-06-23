@@ -16,10 +16,10 @@
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <header class="row">
-    <div id="searchbar" class="col-md-6">
-        <input type="button" value="CERCA">
-        <input type="text" width="200px">
-    </div>
+    <form action="mostra-prodotti" id="searchbar" class="col-md-6">
+        <input type="submit" value="CERCA">
+        <input type="text" width="200px" name="ricerca">
+    </form>
     <div id="account" class="col-md-6">
         <%
         Cliente cliente = (Cliente) session.getAttribute("utente");
@@ -48,5 +48,22 @@
         <input type=submit value="Mostra Prodotti">
     </form>
 <br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+<h2>sasa</h2><br>
+
+
 </body>
 </html>

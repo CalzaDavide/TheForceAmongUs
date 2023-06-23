@@ -71,4 +71,12 @@ public class Prodotto {
     public void setQuantita(int quantita) {
         this.quantita = quantita;
     }
+
+    /*@Override
+    public boolean equals(Object o){
+        Prodotto p = (Prodotto) o;
+        if(p.id == id)
+            return true;
+        return false;
+    }*/
 }

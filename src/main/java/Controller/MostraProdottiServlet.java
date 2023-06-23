@@ -33,6 +33,12 @@ public class MostraProdottiServlet extends HttpServlet {
         RequestDispatcher rd;
 
         prodotti = pd.doRetrieveAll();
+        String ricerca = request.getParameter("ricerca");
+        if(ricerca != null && !ricerca.equals(""))
+            for (Prodotto p : prodotti){
+                if(!p.getNome().contains(ricerca))
+                    prodotti.remove(p);
+            }
 
         request.setAttribute("prodotti", prodotti);
 
