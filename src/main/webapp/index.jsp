@@ -33,6 +33,10 @@
                 <form action="logout">
                     <input type="submit" value="Log out">
                 </form>
+                <form action="mostra-carrello">
+                    <input type="hidden" name="idUtente" value=<%=cliente.getId()%>
+                            <input type="submit" value="Carrello">
+                </form>
             </div>
         <%}%>
     </div>
