@@ -15,6 +15,7 @@
 </style>
 
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
     function aggiungiCarrello(idProdotto, idUtente){
         $.post("aggiungi-carrello",
@@ -47,7 +48,7 @@
         <td><%=p.getEspansione()%></td>
         <td><%=p.getTipologia() %></td>
         <%if(utente != null){%>
-        <td onclick="aggiungiCarrello(<%=p.getId()%>, <%=utente.getId()%>)">Aggiungi al carrello</td>
+        <td onclick="aggiungiCarrello(<%=p.getId()%>, <%=utente.getId()%>)"><input type="button" value = "Aggiungi al carrello"></td>
         <%}%>
     </tr>
     <%}%>
