@@ -25,17 +25,17 @@
         Cliente cliente = (Cliente) session.getAttribute("utente");
         if (cliente == null){
         %>
-            <a href="accesso.jsp"><input type="button" value="Accedi"></a>
-            <a href="registrazione.jsp"><input type="button" value="Registrati"></a>
+            <a href="accesso.jsp"  class="col-md-3"><input type="button" value="Accedi"></a>
+            <a href="registrazione.jsp" class="col-md-3"><input type="button" value="Registrati"></a>
             <%} else {%>
-            <div>
-                <h1 id="welcome">Benvenuto, <%= cliente.getNome()%>!</h1>
-                <form action="logout">
+            <div class="row">
+                <h1 class="col">Benvenuto, <%= cliente.getNome()%>!</h1>
+                <form action="logout" class="col">
                     <input type="submit" value="Log out">
                 </form>
-                <form action="mostra-carrello">
-                    <input type="hidden" name="idUtente" value=<%=cliente.getId()%>
-                            <input type="submit" value="Carrello">
+                <form action="mostra-carrello" class="col">
+                    <input type="hidden" name="idUtente" value=<%=cliente.getId()%>>
+                    <input type="submit" value="Carrello">
                 </form>
             </div>
         <%}%>
@@ -48,9 +48,7 @@
         </form>
         <a href="prodotto.jsp">aggiungi prodotto</a><br>
     <%}%>
-    <form action="mostra-prodotti">
-        <input type=submit value="Mostra Prodotti">
-    </form>
+
 <br>
 <h2>sasa</h2><br>
 <h2>sasa</h2><br>

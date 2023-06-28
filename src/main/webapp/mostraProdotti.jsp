@@ -19,8 +19,8 @@
     function aggiungiCarrello(idProdotto, idUtente){
         $.post("aggiungi-carrello",
             {utente: idUtente, prodotto: idProdotto},
-            function(){alert("aggiunto al carrello!");
-        })
+            function(){alert(`aggiunto al carrello!`);}
+        )
     }
 </script>
 
