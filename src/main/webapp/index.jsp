@@ -49,23 +49,6 @@
         <a href="prodotto.jsp">aggiungi prodotto</a><br>
     <%}%>
 
-<br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-<h2>sasa</h2><br>
-
 
 </body>
 </html>
