@@ -25,6 +25,11 @@ public class MostraCarrelloServlet extends HttpServlet {
         CarrelloDAO carrelloDAO = new CarrelloDAO();
         ArrayList<OggettoQuantita> carrello = carrelloDAO.doRetriveByCliente(id);
         req.setAttribute("carrello", carrello);
+        float totale = 0;
+        for(OggettoQuantita oq : carrello){
+            totale += oq.getProdotto().getCosto() * oq.getQuantita();
+        }
+        req.setAttribute("totale", totale);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("carrello.jsp");
         dispatcher.forward(req, resp);
