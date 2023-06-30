@@ -19,16 +19,31 @@
     </style>
 </head>
 <body>
-    <%Cliente utente = (Cliente) session.getAttribute("utente");%>
+    <%Cliente utente = (Cliente) session.getAttribute("utente");
+    float totale = (float)request.getAttribute("totale");
+    %>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
-        function rimuoviCarrello(idProdotto){
+        var tot = <%=totale%>;
+
+        function rimuoviCarrello(idProdotto, quantita, costo){
             $.post("rimuovi-carrello",
                 {utente: <%=utente.getId()%>, prodotto: idProdotto},
                 function(){
                     $("." + idProdotto).remove();
-                    alert("Prodotto rimosso!");
+                    tot -= quantita*costo;
+                    $("#totale").text("TOTALE: " + tot + "€");
+                }
+            )
+        }
+
+        function acquisto(){
+            $.post("acquisto",
+                {utente: <%=utente.getId()%>},
+                function(){
+                    tot = 0;
+                    $("#totale").text("TOTALE: 0€");
                 }
             )
         }
@@ -40,9 +55,10 @@
         <% for(OggettoQuantita oq : carrello){
         int id = oq.getProdotto().getId();%>
             <li class="<%=id%>"><%=oq.getProdotto().getNome()%> (<%=oq.getQuantita()%>)</li>
-            <input type="button" value="RIMUOVI" class="<%=id%>" onclick="rimuoviCarrello(<%=id%>)"><br>
+            <input type="button" value="RIMUOVI" class="<%=id%>" onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getCosto()%>)"><br>
         <%}%>
     </ul>
-    <h1>TOTALE: <%=request.getAttribute("totale")%>€</h1>
+    <h1 id="totale">TOTALE: <%=totale%>€</h1>
+    <input type = "button" value="PROCEDI ALL'ACQUISTO" onclick="acquisto()">
 </body>
 </html>

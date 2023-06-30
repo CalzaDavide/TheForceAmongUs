@@ -22,7 +22,6 @@
     function aggiungiCarrello(idProdotto){
         $.post("aggiungi-carrello",
             {utente: <%=utente.getId()%>, prodotto: idProdotto},
-            function(){alert(`aggiunto al carrello!`);}
         )
     }
 </script>
