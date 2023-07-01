@@ -74,7 +74,7 @@ public class CarrelloDAO {
             ps.setInt(2, idCliente);
 
             if (ps.executeUpdate() != 1) {
-                throw new RuntimeException("DELEET error.");
+                throw new RuntimeException("DELETE error.");
             }
 
         }catch(SQLException e){
@@ -88,9 +88,7 @@ public class CarrelloDAO {
             PreparedStatement ps = con.prepareStatement("DELETE FROM oggetto_carrello WHERE ID_Cliente =?");
             ps.setInt(1, idCliente);
 
-            if (ps.executeUpdate() != 1) {
-                throw new RuntimeException("DELEET error.");
-            }
+            ps.executeUpdate();
 
         }catch(SQLException e){
             throw new RuntimeException(e);

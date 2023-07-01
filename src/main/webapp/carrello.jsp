@@ -42,6 +42,7 @@
             $.post("acquisto",
                 {utente: <%=utente.getId()%>},
                 function(){
+                    $("ul *").remove();
                     tot = 0;
                     $("#totale").text("TOTALE: 0€");
                 }
