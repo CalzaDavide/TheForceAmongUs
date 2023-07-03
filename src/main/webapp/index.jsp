@@ -37,6 +37,9 @@
                     <input type="hidden" name="idUtente" value=<%=cliente.getId()%>>
                     <input type="submit" value="Carrello">
                 </form>
+                <form action="mostra-acquisti" class="col">
+                    <input type="submit" value="Visualizza acquisti">
+                </form>
             </div>
         <%}%>
     </div>
