@@ -114,5 +114,52 @@ public class ProdottoDAO {
             throw new RuntimeException(e);
         }
     }
+
+    public ArrayList<Prodotto> doRetrieveByName(String ricerca){
+
+        ResultSet resultSet;
+
+        ArrayList<Prodotto> risultati = new ArrayList<>();
+
+        try (Connection con = ConPool.getConnection()) {
+
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM Prodotto");
+            resultSet = ps.executeQuery();
+
+            while(resultSet.next()) {
+
+                String nome = resultSet.getString(2);
+                if(!nome.contains(ricerca)){
+                    continue;
+                }
+                Prodotto p = new Prodotto();
+
+                p.setId(resultSet.getInt(1));
+
+                p.setNome(nome);
+
+                p.setQuantita(resultSet.getInt(3));
+
+                p.setPercentuale_sconto(resultSet.getInt(4));
+
+                p.setCosto(resultSet.getDouble(5));
+
+                p.setEspansione(resultSet.getString(6));
+
+                p.setTipologia(resultSet.getString(7));
+
+                risultati.add(p);
+            }
+
+            con.close();
+
+            return risultati;
+        }
+
+        catch (SQLException e) {
+
+            throw new RuntimeException(e);
+        }
+    }
 }
 

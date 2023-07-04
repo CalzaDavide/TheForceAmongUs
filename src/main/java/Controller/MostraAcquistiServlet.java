@@ -22,7 +22,7 @@ public class MostraAcquistiServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AcquistoDAO acquistoDAO = new AcquistoDAO();
         CoinvolgimentoDAO coinvolgimentoDAO = new CoinvolgimentoDAO();
-        int utente = (int)req.getSession().getAttribute("utente");
+        int utente = ((Cliente)req.getSession().getAttribute("utente")).getId();
 
         ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = new ArrayList<>();
         ArrayList<Acquisto> acquisti = acquistoDAO.doRetriveByIdCliente(utente);
@@ -34,7 +34,7 @@ public class MostraAcquistiServlet extends HttpServlet {
         }
         req.setAttribute("acquisti", acquistoCoinvolgimentoLista);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/mostraAcquisti");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/mostraAcquisti.jsp");
         dispatcher.forward(req, resp);
     }
 }

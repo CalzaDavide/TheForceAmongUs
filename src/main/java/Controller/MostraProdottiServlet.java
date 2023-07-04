@@ -24,21 +24,13 @@ public class MostraProdottiServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        ArrayList<Prodotto> prodotti;
-
         ProdottoDAO  pd = new ProdottoDAO();
 
         String address = "mostraProdotti.jsp";
 
         RequestDispatcher rd;
 
-        prodotti = pd.doRetrieveAll();
-        String ricerca = request.getParameter("ricerca");
-        if(ricerca != null && !ricerca.equals(""))
-            for (Prodotto p : prodotti){
-                if(!p.getNome().contains(ricerca))
-                    prodotti.remove(p);
-            }
+        ArrayList<Prodotto> prodotti = pd.doRetrieveByName(request.getParameter("ricerca"));
 
         request.setAttribute("prodotti", prodotti);
 

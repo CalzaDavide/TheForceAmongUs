@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.ArrayList;
 
 @WebServlet("/acquisto")
@@ -28,7 +27,8 @@ public class AcquistoServlet extends HttpServlet {
 
         Acquisto acquisto = new Acquisto();
         acquisto.setId(Acquisto.generateId());
-        acquisto.setData(new Date());
+        java.util.Date utilDate = new java.util.Date();
+        acquisto.setData(new java.sql.Date(utilDate.getTime()));
         ArrayList<OggettoQuantita> carrello = carrelloDAO.doRetriveByCliente(utente);
         float totale = 0f;
         for(OggettoQuantita oq : carrello){
