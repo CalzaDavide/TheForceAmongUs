@@ -33,7 +33,6 @@
     <tr>
         <th>Id</th>
         <th>Nome</th>
-        <th>Quantità</th>
         <th>Percentuale sconto</th>
         <th>Costo</th>
         <th>Espansione</th>
@@ -43,7 +42,6 @@
     <tr>
         <td><%=p.getId()%></td>
         <td><%=p.getNome()%></td>
-        <td><%=p.getQuantita()%></td>
         <td><%=p.getPercentuale_sconto() + "%"%></td>
         <td><%=p.getCosto()%></td>
         <td><%=p.getEspansione()%></td>

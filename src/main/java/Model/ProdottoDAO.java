@@ -7,7 +7,7 @@ public class ProdottoDAO {
     public void doSave(Prodotto prodotto) {
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO Prodotto (ID_Prodotto, Nome, percentuale_Sconto, Costo, Espansione, Tipologia) VALUES(?,?,?,?,?,?,?)",
+                    "INSERT INTO Prodotto (ID_Prodotto, Nome, percentuale_Sconto, Costo, Espansione, Tipologia) VALUES(?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, prodotto.getId());
             ps.setString(2, prodotto.getNome());
