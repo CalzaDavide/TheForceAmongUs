@@ -26,7 +26,6 @@ public class AggiungiProdottoServlet extends HttpServlet {
             prodotto.setId(Prodotto.generateID());
         }while(pd.doRetrieveById(prodotto.getId()) != null);
         prodotto.setNome(request.getParameter("nome"));
-        prodotto.setQuantita(Integer.parseInt(request.getParameter("quantita")));
         prodotto.setPercentuale_sconto(Double.parseDouble(request.getParameter("percentuale_sconto")));
         prodotto.setCosto(Double.parseDouble(request.getParameter("costo")));
         prodotto.setEspansione(request.getParameter("espansione"));

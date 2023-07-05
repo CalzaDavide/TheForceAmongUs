@@ -9,7 +9,6 @@ public class Prodotto {
     String espansione;
     double costo;
     double percentuale_sconto;
-    int quantita;
 
     public static int generateID() {
         lastID++;
@@ -40,9 +39,6 @@ public class Prodotto {
         return percentuale_sconto;
     }
 
-    public int getQuantita() {
-        return quantita;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -68,15 +64,4 @@ public class Prodotto {
         this.percentuale_sconto = percentuale_sconto;
     }
 
-    public void setQuantita(int quantita) {
-        this.quantita = quantita;
-    }
-
-    /*@Override
-    public boolean equals(Object o){
-        Prodotto p = (Prodotto) o;
-        if(p.id == id)
-            return true;
-        return false;
-    }*/
 }

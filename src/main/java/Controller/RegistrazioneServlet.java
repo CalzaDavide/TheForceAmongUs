@@ -21,7 +21,7 @@ public class RegistrazioneServlet extends HttpServlet {
         // reading parameters from the request
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
-        String pswd = request.getParameter("pswd");
+        String Pswd = request.getParameter("pswd");
         String email = request.getParameter("email");
         double saldo = Double.parseDouble(request.getParameter("saldo"));
         String indirizzo_via = request.getParameter("indirizzo_via");
@@ -37,7 +37,7 @@ public class RegistrazioneServlet extends HttpServlet {
         } while (cd.doRetrieveById(cliente.getId()) != null);
         cliente.setNome(nome);
         cliente.setCognome(cognome);
-        cliente.setPswd(pswd);
+        cliente.setPswd(Pswd);
         cliente.setEmail(email);
         cliente.setSaldo(saldo);
         cliente.setIndirizzo_Via(indirizzo_via);
