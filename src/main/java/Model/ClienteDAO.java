@@ -141,15 +141,16 @@ public class ClienteDAO {
         }
     }
 
-    public Cliente doRetrieveByEmail(String email){
+    public Cliente doRetrieveByEmailPassword(String email, String password){
 
         ResultSet resultSet;
 
         Cliente c = null;
 
         try (Connection con = ConPool.getConnection()) {
-            PreparedStatement  ps = con.prepareStatement("SELECT * FROM amongus.cliente WHERE Email=?");
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM amongus.cliente WHERE Email=? AND Pswd=SHA1(?)" );
             ps.setString(1, email);
+            ps.setString(2, password);
             resultSet = ps.executeQuery();
 
             if(resultSet.next()) {
@@ -162,7 +163,7 @@ public class ClienteDAO {
 
                 c.setCognome(resultSet.getString(3));
 
-                c.setPswd(resultSet.getString(4));
+                c.setPswd(password); //La password salvata nel db è già stata convertita in hash, qui viene fornita non "hashata"
 
                 c.setEmail(resultSet.getString(5));
 

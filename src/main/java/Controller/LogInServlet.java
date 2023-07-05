@@ -6,7 +6,6 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-
 import java.io.IOException;
 
 
@@ -23,13 +22,13 @@ public class LogInServlet extends HttpServlet {
         String pswd = request.getParameter("pswd");
 
         ClienteDAO cd = new ClienteDAO();
-        Cliente utente = cd.doRetrieveByEmail(email);
+        Cliente utente = cd.doRetrieveByEmailPassword(email, pswd);
 
         String address;
         String logInStatus;
 
 
-        if (utente != null && utente.getPswd().equals(pswd)) {
+        if (utente != null) {
             address = "index.jsp";
             sessioneAttuale.setAttribute("utente", utente);
             logInStatus = "accesso";

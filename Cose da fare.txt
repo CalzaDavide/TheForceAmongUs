@@ -6,6 +6,7 @@ Funzioni da implementare
 -Sistemare Homepage
 -Usare Ajax durante la ricerca
 -Aggiungere foto prodotti
+-Aggiungere il costo dell'ordine effetuato
 
 -Aggiustare saldo e costo durante l'ordine
 -Usare JQuery/Javascript per modificare il DOM in qualche pagina,

@@ -18,9 +18,6 @@
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" value="pacchetto"><br><br>
 
-        <label for="quantita">Quantità:</label><br>
-        <input type="number" id="quantita" name="quantita" value="12"><br><br>
-
         <label for="percentuale_sconto">Percentuale sconto:</label><br>
         <input type="number" id="percentuale_sconto" name="percentuale_sconto" value="15"><br><br>
 
