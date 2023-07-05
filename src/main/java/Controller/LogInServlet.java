@@ -13,19 +13,16 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LogInServlet extends HttpServlet {
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
-    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        ClienteDAO cd = new ClienteDAO();
         HttpSession sessioneAttuale = request.getSession();
 
         String email = request.getParameter("email");
         String pswd = request.getParameter("pswd");
+
+        ClienteDAO cd = new ClienteDAO();
         Cliente utente = cd.doRetrieveByEmail(email);
 
         String address;
@@ -45,4 +42,11 @@ public class LogInServlet extends HttpServlet {
         request.setAttribute("logInStatus", logInStatus);
         dispatcher.forward(request, response);
     }
+
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
+
 }

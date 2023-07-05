@@ -1,14 +1,17 @@
 
 
 Funzioni da implementare
--Pagina Login
--Pagina Registrazione
 -Sistemare html
--Carrello
 -Pagina amministratore
--Homepage
+-Sistemare Homepage
+-Usare Ajax durante la ricerca
+-Aggiungere foto prodotti
 
--Pagina area personale (pulsante aggiungi credito)
-    -Pagina acquista sus coins
+-Aggiustare saldo e costo durante l'ordine
+-Usare JQuery/Javascript per modificare il DOM in qualche pagina,
 
-Modificare nuova pagina di login
+
+-Validare i form con javascript sia lato client che server
+
+
+
