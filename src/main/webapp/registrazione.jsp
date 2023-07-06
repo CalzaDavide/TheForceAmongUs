@@ -25,7 +25,6 @@
 
             <button>Registrati</button>
             <p class="message">Hai già un account? <a href="accesso.jsp">Accedi</a></p>
-
         </form>
     </div>
 </div>
