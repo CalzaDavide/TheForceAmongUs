@@ -2,47 +2,33 @@
 <!DOCTYPE html>
 <html>
 <head><title>Registrazione</title>
+    <link rel="stylesheet" href="./css/RegistrazioneStyle.css">
 </head>
 <body>
 <br/>
 
+<div class="registrazione">
+    <div class="form">
+        <form action="aggiungi-cliente">
 
-<form action="aggiungi-cliente">
-    <fieldset>
-        <legend>Dati utente</legend>
 
-        <label for="email">E-mail:</label><br>
-        <input required type="email" id="email" name="email" value="Mario.Rossi@gmail.com"><br><br>
+            <input required type="email" name="email" placeholder="Email"><br><br>
+            <input required type="password" name="pswd" placeholder="Password"><br><br>
 
-        <label for="pswd">Password:</label><br>
-        <input required type="text" id="pswd" name="pswd" value="pswd"><br><br>
+            <input required type="text" name="nome" placeholder="Nome"><br><br>
+            <input required type="text" name="cognome" placeholder="Cognome"><br><br>
 
-    </fieldset>
+            <input required type="text" placeholder="Indirizzo"><br><br>
+            <input required type="number" name="numero_civico" placeholder="Numero Civico"><br><br>
+            <input required type="number" name="codice_postale" placeholder="Cap"><br><br>
 
-    <fieldset>
-        <legend>Dati Spedizione</legend>
-        <label for="nome">Nome:</label><br>
-        <input required type="text" id="nome" name="nome" value="Mario"><br><br>
 
-        <label for="cognome">Cognome:</label><br>
-        <input required type="text" id="cognome" name="cognome" value="Rossi"><br><br>
+            <button>Registrati</button>
+            <p class="message">Hai già un account? <a href="accesso.jsp">Accedi</a></p>
 
-        <label for="saldo">Saldo:</label><br>
-        <input required type="number" id="saldo" name="saldo" value="1000"><br><br>
-
-        <label for="indirizzo_via">Indirizzo:</label><br>
-        <input required type="text" id="indirizzo_via" name="indirizzo_via" value="Via Diego Armando Maradona"><br><br>
-
-        <label for="codice_postale">Codice Postale:</label><br>
-        <input required type="number" id="codice_postale" name="codice_postale" value="34123"><br><br>
-
-        <label for="numero_civico">Numero Civico:</label><br>
-        <input required type="number" id="numero_civico" name="numero_civico" value="69"><br><br>
-
-        <input type="submit" value="aggiungi cliente" >
-    </fieldset>
-</form>
-<a href="index.jsp">Home page</a>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>

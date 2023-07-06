@@ -51,7 +51,7 @@
         <form action="mostra-utenti">
             <input type=submit value="Mostra Utenti">
         </form>
-        <a href="prodotto.jsp">aggiungi prodotto</a><br>
+        <a href="WEB-INF/Amministratore/prodotto.jsp">aggiungi prodotto</a><br>
     <%}%>
 
 
