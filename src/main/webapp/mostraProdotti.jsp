@@ -22,7 +22,7 @@
 <script>
     function aggiungiCarrello(idProdotto){
         $.post("aggiungi-carrello",
-            {utente: <%=utente.getId()%>, prodotto: idProdotto},
+            {prodotto: idProdotto},
         )
     }
 </script>

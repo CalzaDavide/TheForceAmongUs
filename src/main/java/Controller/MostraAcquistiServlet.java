@@ -34,7 +34,7 @@ public class MostraAcquistiServlet extends HttpServlet {
         }
         req.setAttribute("acquisti", acquistoCoinvolgimentoLista);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("WEB-INF/mostraAcquisti.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("mostraAcquisti.jsp");
         dispatcher.forward(req, resp);
     }
 }

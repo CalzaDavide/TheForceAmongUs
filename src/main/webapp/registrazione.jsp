@@ -18,7 +18,7 @@
             <input required type="text" name="nome" placeholder="Nome"><br><br>
             <input required type="text" name="cognome" placeholder="Cognome"><br><br>
 
-            <input required type="text" placeholder="Indirizzo"><br><br>
+            <input required type="text" name="indirizzo_via" placeholder="Indirizzo"><br><br>
             <input required type="number" name="numero_civico" placeholder="Numero Civico"><br><br>
             <input required type="number" name="codice_postale" placeholder="Cap"><br><br>
 
