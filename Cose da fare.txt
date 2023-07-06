@@ -7,6 +7,7 @@ Funzioni da implementare
 -Usare Ajax durante la ricerca
 -Aggiungere foto prodotti
 -Aggiungere il costo dell'ordine effettuato
+-Aggiungere pulsanti ritorna all'homepage
 
 -Aggiustare saldo e costo durante l'ordine
 -Usare JQuery/Javascript per modificare il DOM in qualche pagina,
