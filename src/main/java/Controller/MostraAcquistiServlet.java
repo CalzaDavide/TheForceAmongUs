@@ -22,10 +22,10 @@ public class MostraAcquistiServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AcquistoDAO acquistoDAO = new AcquistoDAO();
         CoinvolgimentoDAO coinvolgimentoDAO = new CoinvolgimentoDAO();
-        int utente = ((Cliente)req.getSession().getAttribute("utente")).getId();
+        String utente = ((Cliente)req.getSession().getAttribute("utente")).getEmail();
 
         ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = new ArrayList<>();
-        ArrayList<Acquisto> acquisti = acquistoDAO.doRetriveByIdCliente(utente);
+        ArrayList<Acquisto> acquisti = acquistoDAO.doRetriveByEmailCliente(utente);
         for(Acquisto a : acquisti){
             AcquistoCoinvolgimento ac = new AcquistoCoinvolgimento();
             ac.setAcquisto(a);

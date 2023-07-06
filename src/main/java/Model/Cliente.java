@@ -4,8 +4,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 public class Cliente {
-    private static int lastID = 0;
-    private int id;
     private String nome;
     private String cognome;
     private String email;
@@ -23,14 +21,6 @@ public class Cliente {
 
 
     //------------------------------------------------Getter----------------------------------------------------------//
-    public static int generateID() {
-        lastID++;
-        return lastID;
-    }
-
-    public int getId() {
-        return id;
-    }
 
     public String getNome() {
         return nome;
@@ -74,9 +64,6 @@ public class Cliente {
 
 
     //------------------------------------------------Setter----------------------------------------------------------//
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;

@@ -4,12 +4,12 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class CarrelloDAO {
-    public void doSave(int idCliente, int idProdotto) throws RuntimeException{
+    public void doSave(String emailCliente, int idProdotto) throws RuntimeException{
         try{
             Connection con = ConPool.getConnection();
 
-            PreparedStatement ps = con.prepareStatement("SELECT ID_Prodotto, Quantita FROM oggetto_carrello WHERE ID_Cliente = ?");
-            ps.setInt(1, idCliente);
+            PreparedStatement ps = con.prepareStatement("SELECT ID_Prodotto, Quantita FROM oggetto_carrello WHERE EmailCliente = ?");
+            ps.setString(1, emailCliente);
             ResultSet rs = ps.executeQuery();
 
             int q = -1;
@@ -26,10 +26,10 @@ public class CarrelloDAO {
                 statement.setInt(1, q+1);
                 statement.setInt(2, idProdotto);
             }else {
-                statement = con.prepareStatement("INSERT INTO amongus.oggetto_carrello (quantita, ID_Cliente, ID_Prodotto) VALUES (?, ?, ?)",
+                statement = con.prepareStatement("INSERT INTO amongus.oggetto_carrello (quantita, EmailCliente, ID_Prodotto) VALUES (?, ?, ?)",
                         Statement.RETURN_GENERATED_KEYS);
                 statement.setInt(1, 1);
-                statement.setInt(2, idCliente);
+                statement.setString(2, emailCliente);
                 statement.setInt(3, idProdotto);
             }
             if (statement.executeUpdate() != 1) {
@@ -40,11 +40,11 @@ public class CarrelloDAO {
         }
     }
 
-    public ArrayList<OggettoQuantita> doRetriveByCliente(int idCliente){
+    public ArrayList<OggettoQuantita> doRetriveByCliente(String emailCliente){
         try{
             Connection con = ConPool.getConnection();
-            PreparedStatement statement= con.prepareStatement("SELECT ID_Prodotto, Quantita FROM oggetto_carrello WHERE ID_Cliente = ?");
-            statement.setInt(1, idCliente);
+            PreparedStatement statement= con.prepareStatement("SELECT ID_Prodotto, Quantita FROM oggetto_carrello WHERE EmailCliente = ?");
+            statement.setString(1, emailCliente);
 
             ResultSet rs = statement.executeQuery();
 
@@ -66,12 +66,12 @@ public class CarrelloDAO {
         }
     }
 
-    public void doDeleteByIdProdotto(int idCliente, int idProdotto) throws RuntimeException{
+    public void doDeleteByIdProdotto(String emailCliente, int idProdotto) throws RuntimeException{
         try{
             Connection con = ConPool.getConnection();
-            PreparedStatement ps = con.prepareStatement("DELETE FROM oggetto_carrello WHERE ID_Prodotto =? and ID_Cliente =?");
+            PreparedStatement ps = con.prepareStatement("DELETE FROM oggetto_carrello WHERE ID_Prodotto =? and EmailCliente =?");
             ps.setInt(1, idProdotto);
-            ps.setInt(2, idCliente);
+            ps.setString(2, emailCliente);
 
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("DELETE error.");
@@ -82,11 +82,11 @@ public class CarrelloDAO {
         }
     }
 
-    public void doDeleteByIdCliente(int idCliente){
+    public void doDeleteByIdCliente(String emailCliente){
         try{
             Connection con = ConPool.getConnection();
-            PreparedStatement ps = con.prepareStatement("DELETE FROM oggetto_carrello WHERE ID_Cliente =?");
-            ps.setInt(1, idCliente);
+            PreparedStatement ps = con.prepareStatement("DELETE FROM oggetto_carrello WHERE EmailCliente =?");
+            ps.setString(1, emailCliente);
 
             ps.executeUpdate();
 

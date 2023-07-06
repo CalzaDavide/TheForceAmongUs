@@ -29,7 +29,7 @@
 
         function rimuoviCarrello(idProdotto, quantita, costo){
             $.post("rimuovi-carrello",
-                {utente: <%=utente.getId()%>, prodotto: idProdotto},
+                {prodotto: idProdotto},
                 function(){
                     $("." + idProdotto).remove();
                     tot -= quantita*costo;
@@ -40,7 +40,6 @@
 
         function acquisto(){
             $.post("acquisto",
-                {utente: <%=utente.getId()%>},
                 function(){
                     $("ul *").remove();
                     tot = 0;

@@ -20,7 +20,7 @@ public class AcquistoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CarrelloDAO carrelloDAO = new CarrelloDAO();
-        int utente = Integer.parseInt(req.getParameter("utente"));
+        String utente = ((Cliente)req.getSession().getAttribute("utente")).getEmail();
 
         CoinvolgimentoDAO coinvolgimentoDAO = new CoinvolgimentoDAO();
         AcquistoDAO acquistoDAO = new AcquistoDAO();
@@ -35,7 +35,7 @@ public class AcquistoServlet extends HttpServlet {
             totale += oq.getQuantita() * oq.getProdotto().getCosto();
         }
         acquisto.setImporto(totale);
-        acquisto.setIdCliente(utente);
+        acquisto.setEmailCliente(utente);
         acquistoDAO.doSave(acquisto);
 
         for(OggettoQuantita oq : carrello){

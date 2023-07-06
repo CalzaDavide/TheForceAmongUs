@@ -13,19 +13,18 @@ public class ClienteDAO {
     public void doSave(Cliente cliente) {
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO amongus.cliente (account_ID, Nome, Cognome, Pswd, Email, Saldo, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+                    "INSERT INTO amongus.cliente (Nome, Cognome, Pswd, Email, Saldo, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, cliente.getId());
-            ps.setString(2, cliente.getNome());
-            ps.setString(3, cliente.getCognome());
-            ps.setString(4, cliente.getPswd());
-            ps.setString(5, cliente.getEmail());
-            ps.setDouble(6, cliente.getSaldo());
-            ps.setString(7, cliente.getIndirizzo_Via());
-            ps.setInt(8, cliente.getCodice_Postale());
-            ps.setInt(9, cliente.getN_Civico());
-            ps.setDouble(10, cliente.getTotale_Carrello());
-            ps.setBoolean(11, cliente.isAdmin());
+            ps.setString(1, cliente.getNome());
+            ps.setString(2, cliente.getCognome());
+            ps.setString(3, cliente.getPswd());
+            ps.setString(4, cliente.getEmail());
+            ps.setDouble(5, cliente.getSaldo());
+            ps.setString(6, cliente.getIndirizzo_Via());
+            ps.setInt(7, cliente.getCodice_Postale());
+            ps.setInt(8, cliente.getN_Civico());
+            ps.setDouble(9, cliente.getTotale_Carrello());
+            ps.setBoolean(10, cliente.isAdmin());
 
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
@@ -55,8 +54,6 @@ public class ClienteDAO {
             while (resultSet.next()) {
 
                 c = new Cliente();
-
-                c.setId(resultSet.getInt(1));
 
                 c.setNome(resultSet.getString(2));
 
@@ -91,7 +88,7 @@ public class ClienteDAO {
         }
     }
 
-    public Cliente doRetrieveById(int id){
+    public Cliente doRetrieveByEmail(String email){
 
         ResultSet resultSet;
 
@@ -100,14 +97,12 @@ public class ClienteDAO {
         try (Connection con = ConPool.getConnection()) {
 
             PreparedStatement  ps = con.prepareStatement("SELECT * FROM amongus.cliente WHERE account_ID = ?");
-            ps.setInt(1, id);
+            ps.setString(1, email);
             resultSet = ps.executeQuery();
 
             if(resultSet.next()) {
 
                 c = new Cliente();
-
-                c.setId(resultSet.getInt(1));
 
                 c.setNome(resultSet.getString(2));
 
@@ -156,8 +151,6 @@ public class ClienteDAO {
             if(resultSet.next()) {
 
                 c = new Cliente();
-
-                c.setId(resultSet.getInt(1));
 
                 c.setNome(resultSet.getString(2));
 

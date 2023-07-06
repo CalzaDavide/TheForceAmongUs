@@ -8,17 +8,18 @@
     <title>Home Page </title>
     <link rel="icon" type="image/x-icon" href="images/Logo.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    </style>
+
 </head>
 
 
 <body>
 <header>
+        <div id="searchbar">
         <form action="mostra-prodotti">
             <input type="submit" value="CERCA">
             <input type="text" name="ricerca">
         </form>
+        </div>
         <div id="account">
         <%
         Cliente cliente = (Cliente) session.getAttribute("utente");
@@ -32,7 +33,6 @@
                     <input type="submit" value="Log out">
                 </form>
                 <form action="mostra-carrello">
-                    <input type="hidden" name="idUtente" value=<%=cliente.getId()%>>
                     <input type="submit" value="Carrello">
                 </form>
                 <form action="mostra-acquisti">

@@ -32,9 +32,7 @@ public class RegistrazioneServlet extends HttpServlet {
         // instantiating the javabean to be given in input to doSave
         Cliente cliente = new Cliente();
         ClienteDAO cd = new ClienteDAO();
-        do {
-            cliente.setId(Cliente.generateID());
-        } while (cd.doRetrieveById(cliente.getId()) != null);
+
         cliente.setNome(nome);
         cliente.setCognome(cognome);
         cliente.setPswd(Pswd);

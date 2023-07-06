@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.CarrelloDAO;
+import Model.Cliente;
 import Model.OggettoQuantita;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -21,9 +22,9 @@ public class MostraCarrelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int id = Integer.parseInt(req.getParameter("idUtente"));
+        String email = ((Cliente)req.getSession().getAttribute("utente")).getEmail();
         CarrelloDAO carrelloDAO = new CarrelloDAO();
-        ArrayList<OggettoQuantita> carrello = carrelloDAO.doRetriveByCliente(id);
+        ArrayList<OggettoQuantita> carrello = carrelloDAO.doRetriveByCliente(email);
         req.setAttribute("carrello", carrello);
         float totale = 0;
         for(OggettoQuantita oq : carrello){

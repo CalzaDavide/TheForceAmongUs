@@ -10,7 +10,7 @@ public class Acquisto {
     int id;
     Date data;
     float importo;
-    int idCliente;
+    String emailCliente;
 
     public static int generateId(){
         lastId++;
@@ -29,8 +29,8 @@ public class Acquisto {
         return importo;
     }
 
-    public int getIdCliente() {
-        return idCliente;
+    public String getEmailCliente() {
+        return emailCliente;
     }
 
     public void setId(int id) {
@@ -41,8 +41,8 @@ public class Acquisto {
         this.data = data;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setEmailCliente(String emailCliente) {
+        this.emailCliente = emailCliente;
     }
 
     public void setImporto(float importo) {

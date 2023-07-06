@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.CarrelloDAO;
+import Model.Cliente;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,10 +19,10 @@ public class RimuoviCarrelloServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int utente = Integer.parseInt(req.getParameter("utente"));
+        String email = ((Cliente)req.getSession().getAttribute("utente")).getEmail();
         int prodotto = Integer.parseInt(req.getParameter("prodotto"));
 
         CarrelloDAO carrelloDAO = new CarrelloDAO();
-        carrelloDAO.doDeleteByIdProdotto(utente, prodotto);
+        carrelloDAO.doDeleteByIdProdotto(email, prodotto);
     }
 }
