@@ -1,28 +1,29 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
+
 <html>
 <head><title>Log-in</title>
+    <link rel="stylesheet" href="./css/AccessoStyle.css">
 </head>
+
 <body>
 
-<%  String logInStatus = (String) request.getAttribute("logInStatus");
-    if(logInStatus != null && logInStatus.equals("errato")){%>
+<div class="login">
+    <% String logInStatus = (String) request.getAttribute("logInStatus");
+        if (logInStatus != null && logInStatus.equals("errato")) {%>
     <h1>Credenziali Errate</h1><%}%>
+    <br/>
 
-<br/>
-
-<form action="login" method="post">
-
-    <label for="email">Email:</label><br>
-    <input required type="email" id="email" name="email" value="John@john.com"><br><br>
-    <label for="pswd">Password:</label><br>
-    <input required type="password" id="pswd" name="pswd" value="pswd"><br><br>
-
-    <input type="submit" value="Log in">
-</form>
-
-<a href="index.jsp">Home page</a>
+    <div class="form">
+        <form action="login" method="post">
+            <input required type="email" name="email" placeholder="Email"><br><br>
+            <input required type="password" name="pswd" placeholder="Password"><br><br>
+            <button>login</button>
+            <p class="message">Non hai un account? <a href="registrazione.jsp">Registrati</a></p>
+        </form>
+    </div>
+</div>
 
 </body>
-</html>
 
+</html>

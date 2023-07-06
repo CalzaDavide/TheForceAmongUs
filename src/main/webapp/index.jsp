@@ -2,7 +2,8 @@
 <%@ page import="com.mysql.cj.Session" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+
 <head>
     <title>Home Page </title>
     <link rel="icon" type="image/x-icon" href="images/Logo.ico">
@@ -10,6 +11,7 @@
     <style>
     </style>
 </head>
+
 
 <body>
 <header>
@@ -60,7 +62,7 @@
         <form action="mostra-utenti">
             <input type=submit value="Mostra Utenti">
         </form>
-        <a href="prodotto.jsp">aggiungi prodotto</a><br>
+        <a href="WEB-INF/Amministratore/prodotto.jsp">aggiungi prodotto</a><br>
     <%}%>
 
 
