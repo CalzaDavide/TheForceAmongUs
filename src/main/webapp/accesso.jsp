@@ -7,7 +7,17 @@
 </head>
 
 <body>
-
+<script>
+    function validate(){
+        if(/[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val()) == false)
+        {
+            alert("Email non valida!");
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
 <div class="login">
     <% String logInStatus = (String) request.getAttribute("logInStatus");
         if (logInStatus != null && logInStatus.equals("errato")) {%>
@@ -15,8 +25,8 @@
     <br/>
 
     <div class="form">
-        <form action="login" method="post">
-            <input required type="email" name="email" placeholder="Email"><br><br>
+        <form action="login" method="post" onsubmit="return validate()">
+            <input required id="email" type="email" name="email" placeholder="Email"><br><br>
             <input required type="password" name="pswd" placeholder="Password"><br><br>
             <button>login</button>
             <p class="message">Non hai un account? <a href="registrazione.jsp">Registrati</a></p>
