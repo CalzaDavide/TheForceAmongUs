@@ -1,3 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: #333;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7) 0 100%), url("/images/SH_famiglia_che_dorme.jpg");
+    background-size: cover;
+}
+
+
+
 #search, #account{
     height: 90px;
     background-color: black;
@@ -9,3 +20,4 @@ h1 {
     color: white;
     font-size: 25px;
 }
+

@@ -3,7 +3,7 @@
 
 <html>
 <head><title>Log-in</title>
-    <link rel="stylesheet" href="./css/AccessoStyle.css">
+    <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
 </head>
 
 <body>
