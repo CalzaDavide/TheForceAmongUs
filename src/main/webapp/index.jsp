@@ -7,7 +7,7 @@
 <head>
     <title>Home Page </title>
     <link rel="icon" type="image/x-icon" href="images/Logo.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
@@ -41,14 +41,28 @@
         <%}%>
         </div>
 </header>
-<aside>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.jsp">catalogo</a><br>
     <a href="index.jsp">pacchetti</a><br>
     <a href="index.jsp">box</a><br>
     <a href="index.jsp">carte</a><br>
     <a href="index.jsp">info</a><br>
     <a href="index.jsp">contatti</a>
-</aside>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.display = "block";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.display = "none";
+    }
+</script>
 <main>
     <h1 id="scrollLeft"><</h1>
     <img src="images/prova.png">
