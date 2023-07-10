@@ -24,6 +24,7 @@ public class RegistrazioneServlet extends HttpServlet {
         String cognome = request.getParameter("cognome");
         String Pswd = request.getParameter("pswd");
         String email = request.getParameter("email");
+        //System.out.println("\n\n"+email+"\n\n");
         String indirizzo_via = request.getParameter("indirizzo_via");
         String codice_postale = request.getParameter("codice_postale");
         String n_civico = request.getParameter("numero_civico");

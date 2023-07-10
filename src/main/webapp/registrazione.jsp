@@ -13,7 +13,7 @@
             || /[^a-z]+/i.test($("#fname").val())
             || /[^a-z]+/i.test($("#lname").val())
             || /[^0-9]+/.test($("#civico").val())
-            || /[^0-9/\d{5}/]+/.test($("#cap").val())
+            || /[^0-9/\d{5}]+/.test($("#cap").val())
         ){
             alert("valore non valido");
             return false;
