@@ -1,5 +1,9 @@
 package Model;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.util.Locale;
+
 public class Prodotto {
 
     private static int lastID = 0;
@@ -36,9 +40,9 @@ public class Prodotto {
     }
 
     public double getPrezzoScontato(){
-        double ps = costo - (costo*percentuale_sconto/100);
-        String format = String.format("%.2d", ps);
-        return Double.parseDouble(format);
+        Double ps = costo - (costo*percentuale_sconto/100);
+        String psFormat = String.format(Locale.US, "%.2f", ps);
+        return Double.parseDouble(psFormat);
     }
 
     public double getPercentuale_sconto() {

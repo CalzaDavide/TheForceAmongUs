@@ -32,8 +32,7 @@ public class AcquistoServlet extends HttpServlet {
         ArrayList<OggettoQuantita> carrello = carrelloDAO.doRetriveByCliente(utente);
         float totale = 0f;
         for(OggettoQuantita oq : carrello){
-            double costo = oq.getProdotto().getCosto();
-            totale += oq.getQuantita() * (costo - costo*oq.getProdotto().getPercentuale_sconto()/100);
+            totale += oq.getQuantita() * oq.getProdotto().getPrezzoScontato();
         }
         acquisto.setImporto(totale);
         acquisto.setEmailCliente(utente);

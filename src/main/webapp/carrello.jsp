@@ -1,6 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="Model.OggettoQuantita" %>
-<%@ page import="Model.Cliente" %><%--
+<%@ page import="Model.Cliente" %>
+<%@ page import="java.util.Locale" %><%--
   Created by IntelliJ IDEA.
   User: aless
   Date: 24/06/2023
@@ -20,7 +21,7 @@
 </head>
 <body>
     <%Cliente utente = (Cliente) session.getAttribute("utente");
-    float totale = (float)request.getAttribute("totale");
+    Double totale = Double.parseDouble(String.format(Locale.US, "%.2f", request.getAttribute("totale")));
     %>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -32,7 +33,8 @@
                 {prodotto: idProdotto},
                 function(){
                     $("." + idProdotto).remove();
-                    tot -= quantita*costo;
+                    tot -= (quantita*costo).toFixed(2);
+                    tot=tot.toFixed(2);
                     $("#totale").text("TOTALE: " + tot + "€");
                 }
             )
@@ -55,7 +57,7 @@
         <% for(OggettoQuantita oq : carrello){
         int id = oq.getProdotto().getId();%>
             <li class="<%=id%>"><%=oq.getProdotto().getNome()%> (<%=oq.getQuantita()%>)</li>
-            <input type="button" value="RIMUOVI" class="<%=id%>" onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getCosto()-(oq.getProdotto().getCosto()*oq.getProdotto().getPercentuale_sconto()/100)%>)"><br>
+            <input type="button" value="RIMUOVI" class="<%=id%>" onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getPrezzoScontato()%>)"><br>
         <%}%>
     </ul>
     <h1 id="totale">TOTALE: <%=totale%>€</h1>

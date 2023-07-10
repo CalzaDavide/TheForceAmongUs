@@ -44,13 +44,11 @@
         <td><%=p.getNome()%></td>
         <td><%=p.getPercentuale_sconto() + "%"%></td>
         <td>
-            <% double costo = p.getCosto();
-                double sconto = p.getPercentuale_sconto();
-                if(sconto==0){%>
-                <%=costo%>
+            <%if(p.getPercentuale_sconto()==0){%>
+                <%p.getCosto();%>
             <%}else{%>
-                <del><%=costo%></del>
-                <%=costo-(costo*sconto/100)%>
+                <del><%=p.getCosto()%></del>
+                <%=p.getPrezzoScontato()%>
             <%}%>
         </td>
         <td><%=p.getEspansione()%></td>

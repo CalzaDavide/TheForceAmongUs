@@ -29,7 +29,7 @@ public class MostraCarrelloServlet extends HttpServlet {
         float totale = 0;
         for(OggettoQuantita oq : carrello){
             double costo=oq.getProdotto().getCosto();
-            totale += (costo-costo*oq.getProdotto().getPercentuale_sconto()/100) * oq.getQuantita();
+            totale += oq.getProdotto().getPrezzoScontato() * oq.getQuantita();
         }
         req.setAttribute("totale", totale);
 
