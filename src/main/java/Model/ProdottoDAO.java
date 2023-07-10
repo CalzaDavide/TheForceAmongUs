@@ -110,6 +110,47 @@ public class ProdottoDAO {
         }
     }
 
+    public Prodotto doRetrieveByTipologia(String tipologia){
+
+        ResultSet resultSet;
+
+        Prodotto p = null;
+
+        try (Connection con = ConPool.getConnection()) {
+
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM Prodotto WHERE Tipologia = ?");
+            ps.setString(1, tipologia);
+
+            resultSet = ps.executeQuery();
+
+            if(resultSet.next()) {
+
+                p = new Prodotto();
+
+                p.setId(resultSet.getInt(1));
+
+                p.setNome(resultSet.getString(2));
+
+                p.setPercentuale_sconto(resultSet.getInt(3));
+
+                p.setCosto(resultSet.getDouble(4));
+
+                p.setEspansione(resultSet.getString(5));
+
+                p.setTipologia(resultSet.getString(6));
+            }
+
+            con.close();
+
+            return p;
+        }
+
+        catch (SQLException e) {
+
+            throw new RuntimeException(e);
+        }
+    }
+
     public ArrayList<Prodotto> doRetrieveByName(String ricerca){
 
         ResultSet resultSet;
@@ -124,7 +165,7 @@ public class ProdottoDAO {
             while(resultSet.next()) {
 
                 String nome = resultSet.getString(2);
-                if(!nome.contains(ricerca)){
+                if(!nome.toLowerCase().contains(ricerca.toLowerCase())){
                     continue;
                 }
                 Prodotto p = new Prodotto();

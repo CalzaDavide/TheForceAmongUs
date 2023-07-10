@@ -5,6 +5,7 @@
 <html>
 <head>
     <title>Mostra utenti</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
 </head>
 <style>
     table, th, td {

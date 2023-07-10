@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 
 <html>
-<head><title>Log-in</title>
+<head>
+    <title>Log-in</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
     <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
 </head>
 
