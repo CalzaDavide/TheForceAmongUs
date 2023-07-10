@@ -40,6 +40,7 @@
         }
     </script>
 
+
     <%-- Searchbar --%>
     <div style="float:left" id="searchbar">
         <form action="mostra-prodotti">
@@ -47,6 +48,7 @@
             <input type="text" name="ricerca">
         </form>
     </div>
+
 
     <%-- Nome Utente --%>
     <div style="float:left" id="account">
