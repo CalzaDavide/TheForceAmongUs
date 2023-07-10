@@ -1,7 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-<head><title>Yeees</title>
+
+<head>
+    <title>Yeees</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
 </head>
 <body>
 <table class="title">

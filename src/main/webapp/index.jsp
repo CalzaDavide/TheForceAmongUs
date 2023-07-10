@@ -22,11 +22,11 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.jsp">catalogo</a><br>
-        <a href="index.jsp">pacchetti</a><br>
-        <a href="index.jsp">box</a><br>
-        <a href="index.jsp">carte</a><br>
-        <a href="index.jsp">info</a><br>
+        <a href="index.jsp">catalogo</a>
+        <a href="index.jsp">pacchetti</a>
+        <a href="index.jsp">box</a>
+        <a href="index.jsp">carte</a>
+        <a href="index.jsp">info</a>
         <a href="index.jsp">contatti</a>
     </div>
 
@@ -34,7 +34,6 @@
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }
-
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }
@@ -75,12 +74,8 @@
 
 
 <main>
-    <h1 id="scrollLeft"><</h1>
-    <img src="images/prova.png">
-    <h1 id="scrollRight">></h1>
 </main>
 <footer>
-    <h2>scopri amogus</h2>
 </footer>
 <br>
 <% if (cliente != null && cliente.isAdmin()) {%>

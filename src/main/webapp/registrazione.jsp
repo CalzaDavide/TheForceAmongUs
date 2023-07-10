@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head><title>Registrazione</title>
+    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
     <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
 </head>
 <body>
