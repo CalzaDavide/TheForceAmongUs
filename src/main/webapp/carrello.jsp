@@ -55,7 +55,7 @@
         <% for(OggettoQuantita oq : carrello){
         int id = oq.getProdotto().getId();%>
             <li class="<%=id%>"><%=oq.getProdotto().getNome()%> (<%=oq.getQuantita()%>)</li>
-            <input type="button" value="RIMUOVI" class="<%=id%>" onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getCosto()%>)"><br>
+            <input type="button" value="RIMUOVI" class="<%=id%>" onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getCosto()-(oq.getProdotto().getCosto()*oq.getProdotto().getPercentuale_sconto()/100)%>)"><br>
         <%}%>
     </ul>
     <h1 id="totale">TOTALE: <%=totale%>€</h1>

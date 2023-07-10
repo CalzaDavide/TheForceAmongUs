@@ -35,6 +35,12 @@ public class Prodotto {
         return costo;
     }
 
+    public double getPrezzoScontato(){
+        double ps = costo - (costo*percentuale_sconto/100);
+        String format = String.format("%.2d", ps);
+        return Double.parseDouble(format);
+    }
+
     public double getPercentuale_sconto() {
         return percentuale_sconto;
     }
