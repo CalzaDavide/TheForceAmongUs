@@ -7,7 +7,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import Model.*;
 
 
@@ -24,12 +25,21 @@ public class RegistrazioneServlet extends HttpServlet {
         String Pswd = request.getParameter("pswd");
         String email = request.getParameter("email");
         String indirizzo_via = request.getParameter("indirizzo_via");
-        int codice_postale = Integer.parseInt(request.getParameter("codice_postale"));
-        int n_civico = Integer.parseInt(request.getParameter("numero_civico"));
+        String codice_postale = request.getParameter("codice_postale");
+        String n_civico = request.getParameter("numero_civico");
 
         // instantiating the javabean to be given in input to doSave
         Cliente cliente = new Cliente();
         ClienteDAO cd = new ClienteDAO();
+
+        Pattern nomePattern = Pattern.compile("[a-zA-Z\\s]+");
+        Matcher nomeMatcher = nomePattern.matcher(nome);
+        Matcher cognomeMatcher = nomePattern.matcher(cognome);
+        Pattern emailPattern = Pattern.compile("[^\\s@]+@[^\\s@]+\\.[^\\s@]+");
+        Matcher matcher = emailPattern.matcher(email);
+        Pattern numeroPattern = Pattern.compile("[0-9]+");
+        Matcher civicoMatcher = numeroPattern.matcher(n_civico);
+        Matcher capMatcher = numeroPattern.matcher(codice_postale);
 
         cliente.setNome(nome);
         cliente.setCognome(cognome);
@@ -37,8 +47,8 @@ public class RegistrazioneServlet extends HttpServlet {
         cliente.setEmail(email);
         cliente.setSaldo(0);
         cliente.setIndirizzo_Via(indirizzo_via);
-        cliente.setCodice_Postale(codice_postale);
-        cliente.setN_Civico(n_civico);
+        cliente.setCodice_Postale(Integer.parseInt(codice_postale));
+        cliente.setN_Civico(Integer.parseInt(n_civico));
         cliente.setAdminValue(false);
 
 
