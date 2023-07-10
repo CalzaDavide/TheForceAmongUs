@@ -15,11 +15,33 @@
 
 <body>
 <header>
+
+
     <%-- Sidebar --%>
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <span style="font-size:30px; cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.jsp">catalogo</a><br>
+        <a href="index.jsp">pacchetti</a><br>
+        <a href="index.jsp">box</a><br>
+        <a href="index.jsp">carte</a><br>
+        <a href="index.jsp">info</a><br>
+        <a href="index.jsp">contatti</a>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 
     <%-- Searchbar --%>
-    <div id="searchbar">
+    <div style="float:left" id="searchbar">
         <form action="mostra-prodotti">
             <input type="submit" value="CERCA">
             <input type="text" name="ricerca">
@@ -27,7 +49,7 @@
     </div>
 
     <%-- Nome Utente --%>
-    <div id="account">
+    <div style="float:left" id="account">
         <%
             Cliente cliente = (Cliente) session.getAttribute("utente");
             if (cliente == null) {
@@ -48,26 +70,7 @@
         <%}%>
     </div>
 </header>
-<%-- Sidebar --%>
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.jsp">catalogo</a><br>
-    <a href="index.jsp">pacchetti</a><br>
-    <a href="index.jsp">box</a><br>
-    <a href="index.jsp">carte</a><br>
-    <a href="index.jsp">info</a><br>
-    <a href="index.jsp">contatti</a>
-</div>
 
-<script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
 
 <main>
     <h1 id="scrollLeft"><</h1>

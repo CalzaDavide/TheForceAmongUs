@@ -6,6 +6,11 @@ body {
     background-size: cover;
 }
 
+div.inline {
+    float: left;
+}
+
+/* Barra laterale sinistra */
 
 .sidenav {
     height: 100%;
@@ -42,18 +47,23 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
-/*
-#search, #account{
+
+#searchbar, #account {
     height: 90px;
     background-color: black;
     padding-left: 50px;
     padding-top: 32px;
 }
-*/
+
 h1 {
     color: white;
     font-size: 25px;
