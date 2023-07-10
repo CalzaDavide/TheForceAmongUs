@@ -22,7 +22,8 @@
 <script>
     function aggiungiCarrello(idProdotto){
         $.post("aggiungi-carrello",
-            {prodotto: idProdotto},
+            {prodotto: idProdotto,
+            p},
         )
     }
 </script>
@@ -43,7 +44,17 @@
         <td><%=p.getId()%></td>
         <td><%=p.getNome()%></td>
         <td><%=p.getPercentuale_sconto() + "%"%></td>
-        <td><%=p.getCosto()%></td>
+        <td>
+            <% double costo = p.getCosto();
+                double sconto = p.getPercentuale_sconto();
+                if(sconto==0){%>
+                <%=costo%>
+            <%}else{
+                    double prezzoScontato = costo-(costo*sconto/100);%>
+                <del><%=costo%></del>
+                <%=prezzoScontato%>
+            <%}%>
+        </td>
         <td><%=p.getEspansione()%></td>
         <td><%=p.getTipologia() %></td>
         <%if(utente != null){%>
