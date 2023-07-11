@@ -50,11 +50,18 @@ body {
         font-size: 18px;
     }
 }
+#account {
+    padding-left: 50px;
+    color:black;
+}
 
+#searchbar{
+    padding-left: 400px;
+}
 
 #searchbar, #account {
+    float:left;
     height: 90px;
-    padding-left: 400px;
     padding-top: 12px;
 }
 

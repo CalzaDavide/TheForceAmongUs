@@ -4,7 +4,7 @@
 
 <head>
     <title>Yeees</title>
-    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
 </head>
 <body>
 <table class="title">

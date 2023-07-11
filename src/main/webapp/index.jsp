@@ -6,7 +6,7 @@
 
 <head>
     <title>Home Page </title>
-    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -82,7 +82,7 @@
 <form action="mostra-utenti">
     <input type=submit value="Mostra Utenti">
 </form>
-<a href="WEB-INF/Amministratore/prodotto.jsp">aggiungi prodotto</a><br>
+<a href="prodotto.jsp">aggiungi prodotto</a><br>
 <%}%>
 
 

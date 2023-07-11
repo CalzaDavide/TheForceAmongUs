@@ -11,7 +11,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <title>Carrello</title>
     <style>
         li{

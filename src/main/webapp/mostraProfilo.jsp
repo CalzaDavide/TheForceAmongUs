@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head><title>Home Page</title>
-    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
 </head>
 
 <body>

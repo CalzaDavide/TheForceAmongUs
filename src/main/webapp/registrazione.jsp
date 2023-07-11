@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head><title>Registrazione</title>
-    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
             || /[^a-z]+/i.test($("#fname").val())
             || /[^a-z]+/i.test($("#lname").val())
             || /[^0-9]+/.test($("#civico").val())
-            || /[^0-9/\d{5}]+/.test($("#cap").val())
+            || /[^0-9/\d{5,6}]+/.test($("#cap").val())
         ){
             alert("valore non valido");
             return false;
