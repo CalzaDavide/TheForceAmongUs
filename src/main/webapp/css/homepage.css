@@ -9,11 +9,14 @@ header{
     background-color: #f1f1f1;
     overflow: hidden;
     padding: 10px;
+    position:fixed;
 }
 
-.header .logo {
+.logo {
     float: left;
+    border-radius: 6%;
     height: 10%;
+    width: 10%;
     padding: 5px;
 }
 
@@ -71,6 +74,15 @@ header{
         font-size: 18px;
     }
 }
+
+#menu{
+    font-size:30px;
+    cursor:pointer;
+    float:left;
+    height: 10%;
+    width: 10%;
+}
+
 #account {
     padding-left: 50px;
     color:black;
