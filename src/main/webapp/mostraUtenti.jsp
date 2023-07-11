@@ -6,14 +6,8 @@
 <head>
     <title>Mostra utenti</title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/Tabelle.css"/>
 </head>
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
 
 <body>
 <%ArrayList<Cliente> clienti = (ArrayList<Cliente>) request.getAttribute("clienti");%>
@@ -23,7 +17,6 @@
         <th>E-mail</th>
         <th>Password</th>
         <th>Admin</th>
-
     </tr>
     <%for (Cliente c : clienti) {%>
     <tr>
@@ -31,10 +24,9 @@
         <td><%=c.getEmail() %></td>
         <td><%=c.getPswd() %></td>
         <%if (c.isAdmin()){%>
-            <td class="isAdmin"></td>
-        <%}%>
-        <% if (!c.isAdmin()){%>
-            <td class="isNotAdmin"></td>
+            <td id="isAdmin"></td>
+        <%}else{%>
+            <td id="isNotAdmin"></td>
         <%}%>
     </tr>
     <%}%>
