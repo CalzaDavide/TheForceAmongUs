@@ -18,18 +18,19 @@
 
 
     <%-- Sidebar --%>
-    <span style="font-size:30px; cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+    <span id="menu" onclick="openNav()">&#9776;</span>
+
         <a href="#">
             <img src="images/LogoSito.jpg" alt="Logo" class="logo">
         </a>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.jsp">catalogo</a>
-        <a href="index.jsp">pacchetti</a>
-        <a href="index.jsp">box</a>
-        <a href="index.jsp">carte</a>
-        <a href="index.jsp">info</a>
+        <a href="index.jsp">Catalogo</a>
+        <a href="index.jsp">Pacchetti</a>
+        <a href="index.jsp">Box</a>
+        <a href="index.jsp">Carte</a>
+        <a href="index.jsp">Info</a>
         <a href="index.jsp">contatti</a>
     </div>
 
@@ -47,14 +48,14 @@
     <%-- Searchbar --%>
     <div style="float:left" id="searchbar">
         <form action="mostra-prodotti">
-            <input type="submit" value="CERCA">
             <input type="text" name="ricerca">
+            <input type="submit" value="CERCA">
         </form>
     </div>
 
 
     <%-- Nome Utente --%>
-    <div style="float:left" id="account">
+    <div id="account">
         <%
             Cliente cliente = (Cliente) session.getAttribute("utente");
             if (cliente == null) {
@@ -79,6 +80,7 @@
 
 <main>
 </main>
+
 <footer>
 </footer>
 <br>
