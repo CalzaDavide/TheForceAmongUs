@@ -6,6 +6,7 @@
 <head>
     <title>Mostra utenti</title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
 </head>
 <style>
     table, th, td {
@@ -16,7 +17,7 @@
 
 <body>
 <%ArrayList<Cliente> clienti = (ArrayList<Cliente>) request.getAttribute("clienti");%>
-<table style="width:80%">
+<table>
     <tr>
         <th>Nome e Cognome</th>
         <th>E-mail</th>
@@ -30,10 +31,10 @@
         <td><%=c.getEmail() %></td>
         <td><%=c.getPswd() %></td>
         <%if (c.isAdmin()){%>
-            <td style="background-color: green"></td>
+            <td class="isAdmin"></td>
         <%}%>
         <% if (!c.isAdmin()){%>
-            <td style="background-color: red"></td>
+            <td class="isNotAdmin"></td>
         <%}%>
     </tr>
     <%}%>
