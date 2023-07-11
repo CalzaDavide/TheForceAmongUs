@@ -55,25 +55,25 @@ public class ClienteDAO {
 
                 c = new Cliente();
 
-                c.setNome(resultSet.getString(2));
+                c.setNome(resultSet.getString(1));
 
-                c.setCognome(resultSet.getString(3));
+                c.setCognome(resultSet.getString(2));
 
-                c.setPswd(resultSet.getString(4));
+                c.setPswd(resultSet.getString(3));
 
-                c.setEmail(resultSet.getString(5));
+                c.setEmail(resultSet.getString(4));
 
-                c.setSaldo(resultSet.getDouble(6));
+                c.setSaldo(resultSet.getDouble(5));
 
-                c.setIndirizzo_Via(resultSet.getString(7));
+                c.setIndirizzo_Via(resultSet.getString(6));
 
-                c.setCodice_Postale(resultSet.getInt(8));
+                c.setCodice_Postale(resultSet.getInt(7));
 
-                c.setN_Civico(resultSet.getInt(9));
+                c.setN_Civico(resultSet.getInt(8));
 
-                c.setTotale_Carrello(resultSet.getInt(10));
+                c.setTotale_Carrello(resultSet.getInt(9));
 
-                c.setAdminValue(resultSet.getBoolean(11));
+                c.setAdminValue(resultSet.getBoolean(10));
 
 
                 clienti.add(c);
@@ -104,25 +104,25 @@ public class ClienteDAO {
 
                 c = new Cliente();
 
-                c.setNome(resultSet.getString(2));
+                c.setNome(resultSet.getString(1));
 
-                c.setCognome(resultSet.getString(3));
+                c.setCognome(resultSet.getString(2));
 
-                c.setPswd(resultSet.getString(4));
+                c.setPswd(resultSet.getString(3));
 
-                c.setEmail(resultSet.getString(5));
+                c.setEmail(resultSet.getString(4));
 
-                c.setSaldo(resultSet.getDouble(6));
+                c.setSaldo(resultSet.getDouble(5));
 
-                c.setIndirizzo_Via(resultSet.getString(7));
+                c.setIndirizzo_Via(resultSet.getString(6));
 
-                c.setCodice_Postale(resultSet.getInt(8));
+                c.setCodice_Postale(resultSet.getInt(7));
 
-                c.setN_Civico(resultSet.getInt(9));
+                c.setN_Civico(resultSet.getInt(8));
 
-                c.setTotale_Carrello(resultSet.getInt(10));
+                c.setTotale_Carrello(resultSet.getInt(9));
 
-                c.setAdminValue(resultSet.getBoolean(11));
+                c.setAdminValue(resultSet.getBoolean(10));
             }
 
             con.close();

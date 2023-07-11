@@ -28,7 +28,7 @@ public class MostraUtentiServlet extends HttpServlet {
 
         ClienteDAO  cd = new ClienteDAO();
 
-        String address = "WEB-INF/mostraUtenti.jsp";
+        String address = "mostraUtenti.jsp";
 
         RequestDispatcher rd;
 

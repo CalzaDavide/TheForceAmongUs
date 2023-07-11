@@ -46,7 +46,7 @@
         <td><%=p.getPercentuale_sconto() + "%"%></td>
         <td>
             <%if(p.getPercentuale_sconto()==0){%>
-                <%p.getCosto();%>
+                <%=p.getCosto()%>
             <%}else{%>
                 <del><%=p.getCosto()%></del>
                 <%=p.getPrezzoScontato()%>

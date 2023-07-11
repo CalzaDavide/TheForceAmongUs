@@ -16,7 +16,7 @@
             || /[^0-9]+/.test($("#civico").val())
             || /[^0-9/\d{5,6}]+/.test($("#cap").val())
         ){
-            alert("valore non valido");
+            $("#errore").style.visibility="visible"
             return false;
         }else{
             return true;
@@ -27,7 +27,11 @@
 
 <div class="registrazione">
 
-
+    <% String status = (String)request.getAttribute("status");
+        if(status != null && status.equals("emailInUso")){%>
+        <h1>Email già in uso.</h1>
+    <%}%>
+    <h1 style="visibility: hidden" id="errore">Credenziali non valide.</h1>
     <div class="form">
         <a href="index.jsp">
             <img src="images/LogoSito.jpg" alt="Logo" class="logo">

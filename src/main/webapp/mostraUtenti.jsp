@@ -18,7 +18,6 @@
 <%ArrayList<Cliente> clienti = (ArrayList<Cliente>) request.getAttribute("clienti");%>
 <table style="width:80%">
     <tr>
-        <th>Id</th>
         <th>Nome e Cognome</th>
         <th>E-mail</th>
         <th>Password</th>
@@ -27,7 +26,6 @@
     </tr>
     <%for (Cliente c : clienti) {%>
     <tr>
-        <td><%=c.getId()%></td>
         <td><%= c.getNome() + " " + c.getCognome()%></td>
         <td><%=c.getEmail() %></td>
         <td><%=c.getPswd() %></td>
