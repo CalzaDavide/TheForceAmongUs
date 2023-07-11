@@ -27,6 +27,10 @@
     <br/>
 
     <div class="form">
+
+        <a href="index.jsp">
+            <img src="images/LogoSito.jpg" alt="Logo" class="logo">
+        </a>
         <form action="login" method="post" onsubmit="return validate()">
             <input required id="email" type="email" name="email" placeholder="Email"><br><br>
             <input required type="password" name="pswd" placeholder="Password"><br><br>

@@ -19,6 +19,9 @@
 
     <%-- Sidebar --%>
     <span style="font-size:30px; cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+        <a href="#">
+            <img src="images/LogoSito.jpg" alt="Logo" class="logo">
+        </a>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -34,6 +37,7 @@
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }
+
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
         }

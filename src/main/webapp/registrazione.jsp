@@ -26,7 +26,13 @@
 <br/>
 
 <div class="registrazione">
+
+
     <div class="form">
+        <a href="index.jsp">
+            <img src="images/LogoSito.jpg" alt="Logo" class="logo">
+        </a>
+
         <form action="aggiungi-cliente" onsubmit="return validate()">
 
             <input required id="email" type="email" name="email" placeholder="Email"><br><br>
