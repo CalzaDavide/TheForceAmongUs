@@ -14,7 +14,7 @@
             || /[^a-z]+/i.test($("#fname").val())
             || /[^a-z]+/i.test($("#lname").val())
             || /[^0-9]+/.test($("#civico").val())
-            || /[^0-9/\d{5,6}]+/.test($("#cap").val())
+            || /\d{5,6}]/.test($("#cap").val()) == false
         ){
             $("#errore").style.visibility="visible"
             return false;
