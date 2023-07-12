@@ -31,7 +31,7 @@
         if(status != null && status.equals("emailInUso")){%>
         <h1>Email già in uso.</h1>
     <%}%>
-    <h1 style="visibility: hidden" id="errore">Credenziali non valide.</h1>
+    <h1 id="errore">Credenziali non valide.</h1>
     <div class="form">
         <a href="index.jsp">
             <img src="images/LogoSito.jpg" alt="Logo" class="logo">

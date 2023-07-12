@@ -32,8 +32,8 @@
             <img src="images/LogoSito.jpg" alt="Logo" class="logo">
         </a>
         <form action="login" method="post" onsubmit="return validate()">
-            <input required id="email" type="email" name="email" placeholder="Email"><br><br>
-            <input required type="password" name="pswd" placeholder="Password"><br><br>
+            <input required id="email" type="email" name="email" placeholder="Email" value="John@john.com"><br><br>
+            <input required type="password" name="pswd" placeholder="Password" value="pswd"><br><br>
             <button>login</button>
             <p class="message">Non hai un account? <a href="registrazione.jsp">Registrati</a></p>
         </form>
