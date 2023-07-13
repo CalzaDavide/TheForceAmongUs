@@ -28,6 +28,7 @@
     }
 </script>
 <%}%>
+<a href="prodotto.jsp">aggiungi prodotto</a><br>
 
 <%ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");%>
 <table style="width:70%">
