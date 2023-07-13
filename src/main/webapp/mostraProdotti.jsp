@@ -32,6 +32,7 @@
 <%ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");%>
 <table style="width:70%">
     <tr>
+        <th></th>
         <th>Id</th>
         <th>Nome</th>
         <th>Percentuale sconto</th>
@@ -41,6 +42,7 @@
     </tr>
         <%for (Prodotto p : prodotti) {%>
     <tr>
+        <td><img src="<%=p.getImmagine()%>"></td>
         <td><%=p.getId()%></td>
         <td><%=p.getNome()%></td>
         <td><%=p.getPercentuale_sconto() + "%"%></td>

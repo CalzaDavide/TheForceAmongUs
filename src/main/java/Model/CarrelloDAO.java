@@ -35,6 +35,7 @@ public class CarrelloDAO {
             if (statement.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
             }
+            con.close();
         }catch (SQLException e){
             throw new RuntimeException(e);
         }
@@ -59,6 +60,8 @@ public class CarrelloDAO {
                                 rs.getInt(1)));
                 results.add(oq);
             }
+
+            con.close();
             return results;
 
         }catch(SQLException e){
@@ -76,6 +79,7 @@ public class CarrelloDAO {
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("DELETE error.");
             }
+            con.close();
 
         }catch(SQLException e){
             throw new RuntimeException(e);
@@ -89,6 +93,8 @@ public class CarrelloDAO {
             ps.setString(1, emailCliente);
 
             ps.executeUpdate();
+
+            con.close();
 
         }catch(SQLException e){
             throw new RuntimeException(e);

@@ -14,6 +14,8 @@ public class Prodotto {
     double costo;
     double percentuale_sconto;
 
+    String immagine;
+
     public static int generateID() {
         lastID++;
         return lastID;
@@ -49,6 +51,9 @@ public class Prodotto {
         return percentuale_sconto;
     }
 
+    public String getImmagine() {
+        return immagine;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -74,4 +79,7 @@ public class Prodotto {
         this.percentuale_sconto = percentuale_sconto;
     }
 
+    public void setImmagine(String immagine) {
+        this.immagine = immagine;
+    }
 }

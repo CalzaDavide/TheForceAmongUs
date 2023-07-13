@@ -7,7 +7,7 @@ public class ProdottoDAO {
     public void doSave(Prodotto prodotto) {
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO Prodotto (ID_Prodotto, Nome, percentuale_Sconto, Costo, Espansione, Tipologia) VALUES(?,?,?,?,?,?)",
+                    "INSERT INTO Prodotto (ID_Prodotto, Nome, percentuale_Sconto, Costo, Espansione, Tipologia, Immagine) VALUES(?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, prodotto.getId());
             ps.setString(2, prodotto.getNome());
@@ -15,6 +15,7 @@ public class ProdottoDAO {
             ps.setDouble(4, prodotto.getCosto());
             ps.setString(5, prodotto.getEspansione());
             ps.setString(6, prodotto.getTipologia());
+            ps.setString(7, prodotto.getImmagine());
 
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
@@ -55,6 +56,8 @@ public class ProdottoDAO {
                 p.setEspansione(resultSet.getString(5));
 
                 p.setTipologia(resultSet.getString(6));
+
+                p.setImmagine(resultSet.getString(7));
 
                 prodotti.add(p);
             }
@@ -97,6 +100,8 @@ public class ProdottoDAO {
                 p.setEspansione(resultSet.getString(5));
 
                 p.setTipologia(resultSet.getString(6));
+
+                p.setImmagine(resultSet.getString(7));
             }
 
             con.close();
@@ -110,7 +115,7 @@ public class ProdottoDAO {
         }
     }
 
-    public Prodotto doRetrieveByTipologia(String tipologia){
+    public ArrayList<Prodotto> doRetrieveByTipologia(String tipologia){
 
         ResultSet resultSet;
 
@@ -123,7 +128,9 @@ public class ProdottoDAO {
 
             resultSet = ps.executeQuery();
 
-            if(resultSet.next()) {
+            ArrayList<Prodotto> risultati = new ArrayList<>();
+
+            while(resultSet.next()) {
 
                 p = new Prodotto();
 
@@ -138,11 +145,15 @@ public class ProdottoDAO {
                 p.setEspansione(resultSet.getString(5));
 
                 p.setTipologia(resultSet.getString(6));
+
+                p.setImmagine(resultSet.getString(7));
+
+                risultati.add(p);
             }
 
             con.close();
 
-            return p;
+            return risultati;
         }
 
         catch (SQLException e) {
@@ -182,6 +193,8 @@ public class ProdottoDAO {
 
                 p.setTipologia(resultSet.getString(6));
 
+                p.setImmagine(resultSet.getString(7));
+                
                 risultati.add(p);
             }
 

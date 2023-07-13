@@ -40,6 +40,7 @@ public class CoinvolgimentoDAO {
                 coinvolgimenti.add(c);
             }
 
+            connection.close();
             return coinvolgimenti;
 
         }catch(SQLException e){
