@@ -23,7 +23,7 @@
     </form>
     <%String immagine =(String) request.getAttribute("uploaded");
     if(immagine != null){%>
-    <form action="aggiungi-prodotto" method="post" enctype="multipart/form-data">
+    <form action="aggiungi-prodotto">
 
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" value="pacchetto"><br><br>
