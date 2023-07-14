@@ -8,12 +8,6 @@
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <title>Mostra prodotti</title>
 </head>
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
 
 <body>
 <%Cliente utente = (Cliente) session.getAttribute("utente");%>

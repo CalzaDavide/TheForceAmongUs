@@ -15,8 +15,8 @@ header{
 .logo {
     float: left;
     border-radius: 6%;
-    height: 10%;
-    width: 10%;
+    height: 8%;
+    width: 8%;
     padding: 5px;
 }
 
@@ -76,20 +76,20 @@ header{
 }
 
 #menu{
-    font-size:30px;
+    font-size:60px;
     cursor:pointer;
     float:left;
-    height: 10%;
-    width: 10%;
+    height: 15%;
+    width: 15%;
 }
 
 #account {
-    padding-left: 50px;
+    padding-left: 75px;
     color:black;
 }
 
 #searchbar{
-    padding-left: 400px;
+    padding-left: 325px;
 }
 
 #searchbar, #account {
