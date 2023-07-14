@@ -17,6 +17,9 @@ public class AcquistoDAO {
             if(statement.executeUpdate() != 1){
                 throw new RuntimeException("INSERT error.");
             }
+
+            connection.close();
+
         }catch(SQLException e){
             throw new RuntimeException(e);
         }
@@ -39,6 +42,7 @@ public class AcquistoDAO {
                 acquisti.add(a);
             }
 
+            connection.close();
             return acquisti;
 
         }catch(SQLException e){

@@ -30,11 +30,10 @@ public class AggiungiProdottoServlet extends HttpServlet {
         prodotto.setCosto(Double.parseDouble(request.getParameter("costo")));
         prodotto.setEspansione(request.getParameter("espansione"));
         prodotto.setTipologia(request.getParameter("tipologia"));
+        prodotto.setImmagine(request.getParameter("immagine"));
 
         ProdottoDAO prodottoDAO = new ProdottoDAO();
         prodottoDAO.doSave(prodotto);
-
-        request.setAttribute("prodotto", prodottoDAO);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request, response);
