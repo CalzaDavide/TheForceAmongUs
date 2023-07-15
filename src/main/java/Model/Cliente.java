@@ -9,6 +9,10 @@ public class Cliente {
     private String email;
     private String pswd;
     private double saldo;
+
+    private String regione;
+
+    private String provincia;
     private String indirizzo_via;
     private int codice_Postale;
     private int n_Civico;
@@ -36,6 +40,14 @@ public class Cliente {
 
     public String getPswd() {
         return pswd;
+    }
+
+    public String getRegione() {
+        return regione;
+    }
+
+    public String getProvincia() {
+        return provincia;
     }
 
     public String getIndirizzo_Via() {
@@ -88,6 +100,13 @@ public class Cliente {
         }
     }
 
+    public void setRegione(String regione) {
+        this.regione = regione;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }
 
     public void setIndirizzo_Via(String indirizzo_via) {
         this.indirizzo_via = indirizzo_via;

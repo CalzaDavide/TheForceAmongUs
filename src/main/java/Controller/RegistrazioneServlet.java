@@ -33,6 +33,8 @@ public class RegistrazioneServlet extends HttpServlet {
             dispatcher.forward(request, response);
         }
 
+        String regione = request.getParameter("regione");
+        String provincia = request.getParameter("provincia");
         String indirizzo_via = request.getParameter("indirizzo_via");
         String codice_postale = request.getParameter("codice_postale");
         String n_civico = request.getParameter("numero_civico");
@@ -55,6 +57,8 @@ public class RegistrazioneServlet extends HttpServlet {
         cliente.setPswd(Pswd);
         cliente.setEmail(email);
         cliente.setSaldo(0);
+        cliente.setRegione(regione);
+        cliente.setProvincia(provincia);
         cliente.setIndirizzo_Via(indirizzo_via);
         cliente.setCodice_Postale(Integer.parseInt(codice_postale));
         cliente.setN_Civico(Integer.parseInt(n_civico));

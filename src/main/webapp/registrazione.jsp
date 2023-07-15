@@ -15,6 +15,9 @@
             || /[^a-z]+/i.test($("#lname").val())
             || /[^0-9]+/.test($("#civico").val())
             || /\d{5,6}]/.test($("#cap").val()) == false
+            || $("#regione").val()==""
+            || $("#provincia").val()==null
+            || $("#provincia").val()==""
         ){
             $("#errore").style.visibility="visible"
             return false;
@@ -24,25 +27,18 @@
     }
 
     function trovaProvince(){
-        var regione = document.getElementById("regione").value;
-        var xhr = new XMLHttpRequest();
-        xhr.open("post", "data\\regioni.json", true);
-        xhr.onreadystatechange = function (){
-            if(this.readyState == 4 && this.status == 200){
-                var risultato =JSON.parse(this.responseText);
-                var selettoreProvincia = document.getElementById("provincia");
-                for(var i = 0; i < 20; i++){
-                    if(risultato.regioni[i].nome == regione){
-                        selettoreProvincia.removeAttribute("disabled");
-                        var province = risultato.regioni[i].province;
-                        for(var j = 0; j < province.lenght; j++)
-                            selettoreProvincia.appendChild("<option value=+ province[j] +>" + province[j] + "</option>");
-                        break;
-                    }
+        $("#selezione").remove();
+        $.getJSON("data\\regioni.json", function(result){
+            result.regioni.forEach(function(item, index){
+                if(item.nome==$("#regione").val()){
+                    $("#provincia").removeAttr("disabled");
+                    $("#provincia").append('<option value="" selected>Seleziona una provincia</option>');
+                    item.province.forEach(function(item, index){
+                        $("#provincia").append('<option value="'+item+'">' + item + '</option>');
+                    });
                 }
-            }
-        }
-        xhr.send("regione="+regione);
+            });
+        });
     }
 </script>
 <br/>
@@ -67,8 +63,8 @@
             <input required id="fname" type="text" name="nome" placeholder="Nome"><br><br>
             <input required id="lname" type="text" name="cognome" placeholder="Cognome"><br><br>
 
-            <select id="regione" onchange="trovaProvince()" form="clienteForm">
-                <option value="" selected>Seleziona una regione</option>
+            <select id="regione" onchange="trovaProvince()" form="clienteForm" name="regione">
+                <option value="" id="selezione" selected>Seleziona una regione</option>
                 <option value="Abruzzo">Abruzzo</option>
                 <option value="Basilicata">Basilicata</option>
                 <option value="Calabria">Calabria</option>
@@ -89,6 +85,9 @@
                 <option value="Umbria">Umbria</option>
                 <option value="Valle d'Aosta">Valle d'Aosta</option>
                 <option value="Veneto">Veneto</option>
+            </select>
+
+            <select id="provincia" form="clienteForm" name="provincia" disabled>
             </select>
 
             <input required id= type="text" name="indirizzo_via" placeholder="Indirizzo"><br><br>

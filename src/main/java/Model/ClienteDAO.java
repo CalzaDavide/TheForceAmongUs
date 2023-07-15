@@ -13,18 +13,20 @@ public class ClienteDAO {
     public void doSave(Cliente cliente) {
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO amongus.cliente (Nome, Cognome, Pswd, Email, Saldo, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?)",
+                    "INSERT INTO amongus.cliente (Nome, Cognome, Pswd, Email, Saldo, Regione, Provincia, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, cliente.getNome());
             ps.setString(2, cliente.getCognome());
             ps.setString(3, cliente.getPswd());
             ps.setString(4, cliente.getEmail());
             ps.setDouble(5, cliente.getSaldo());
-            ps.setString(6, cliente.getIndirizzo_Via());
-            ps.setInt(7, cliente.getCodice_Postale());
-            ps.setInt(8, cliente.getN_Civico());
-            ps.setDouble(9, cliente.getTotale_Carrello());
-            ps.setBoolean(10, cliente.isAdmin());
+            ps.setString(6, cliente.getRegione());
+            ps.setString(7, cliente.getProvincia());
+            ps.setString(8, cliente.getIndirizzo_Via());
+            ps.setInt(9, cliente.getCodice_Postale());
+            ps.setInt(10, cliente.getN_Civico());
+            ps.setDouble(11, cliente.getTotale_Carrello());
+            ps.setBoolean(12, cliente.isAdmin());
 
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
@@ -65,15 +67,19 @@ public class ClienteDAO {
 
                 c.setSaldo(resultSet.getDouble(5));
 
-                c.setIndirizzo_Via(resultSet.getString(6));
+                c.setRegione(resultSet.getString(6));
 
-                c.setCodice_Postale(resultSet.getInt(7));
+                c.setProvincia(resultSet.getString(7));
 
-                c.setN_Civico(resultSet.getInt(8));
+                c.setIndirizzo_Via(resultSet.getString(8));
 
-                c.setTotale_Carrello(resultSet.getInt(9));
+                c.setCodice_Postale(resultSet.getInt(9));
 
-                c.setAdminValue(resultSet.getBoolean(10));
+                c.setN_Civico(resultSet.getInt(10));
+
+                c.setTotale_Carrello(resultSet.getInt(11));
+
+                c.setAdminValue(resultSet.getBoolean(12));
 
 
                 clienti.add(c);
@@ -114,15 +120,19 @@ public class ClienteDAO {
 
                 c.setSaldo(resultSet.getDouble(5));
 
-                c.setIndirizzo_Via(resultSet.getString(6));
+                c.setRegione(resultSet.getString(6));
 
-                c.setCodice_Postale(resultSet.getInt(7));
+                c.setProvincia(resultSet.getString(7));
 
-                c.setN_Civico(resultSet.getInt(8));
+                c.setIndirizzo_Via(resultSet.getString(8));
 
-                c.setTotale_Carrello(resultSet.getInt(9));
+                c.setCodice_Postale(resultSet.getInt(9));
 
-                c.setAdminValue(resultSet.getBoolean(10));
+                c.setN_Civico(resultSet.getInt(10));
+
+                c.setTotale_Carrello(resultSet.getInt(11));
+
+                c.setAdminValue(resultSet.getBoolean(12));
             }
 
             con.close();
@@ -162,15 +172,19 @@ public class ClienteDAO {
 
                 c.setSaldo(resultSet.getDouble(5));
 
-                c.setIndirizzo_Via(resultSet.getString(6));
+                c.setRegione(resultSet.getString(6));
 
-                c.setCodice_Postale(resultSet.getInt(7));
+                c.setProvincia(resultSet.getString(7));
 
-                c.setN_Civico(resultSet.getInt(8));
+                c.setIndirizzo_Via(resultSet.getString(8));
 
-                c.setTotale_Carrello(resultSet.getInt(9));
+                c.setCodice_Postale(resultSet.getInt(9));
 
-                c.setAdminValue(resultSet.getBoolean(10));
+                c.setN_Civico(resultSet.getInt(10));
+
+                c.setTotale_Carrello(resultSet.getInt(11));
+
+                c.setAdminValue(resultSet.getBoolean(12));
             }
 
             con.close();
