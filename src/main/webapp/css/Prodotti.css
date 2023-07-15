@@ -19,6 +19,7 @@
 .prodotti {
     display: flex;
     flex-wrap: wrap;
+
 }
 .prodottoSingolo  {
     padding: 2%;
@@ -27,9 +28,8 @@
     background-color: lightblue;
     border-collapse: collapse;
     border-color: black;
-    border-width: 3px;
+    border-width: 2px;
     border-style: solid;
-
 }
 
 .fotoProdotto img {

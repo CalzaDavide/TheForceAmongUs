@@ -91,10 +91,6 @@
                 <option value="Veneto">Veneto</option>
             </select>
 
-            <select id="provincia" disabled>
-            </select>
-
-
             <input required id= type="text" name="indirizzo_via" placeholder="Indirizzo"><br><br>
             <input required id="civico" type="number" name="numero_civico" placeholder="Numero Civico"><br><br>
             <input required id="cap" type="number" name="codice_postale" placeholder="Cap"><br><br>
