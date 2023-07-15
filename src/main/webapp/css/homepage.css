@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'impostographregular';
+    src: url('/Fonts/impostograph-regular-webfont.woff2') format('woff2'),
+    url('/Fonts/impostograph-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Impostograph, Helvetica, sans-serif;
     font-size: 100%;
     color: #333;
     background-size: cover;

@@ -96,7 +96,7 @@
             <input required id="cap" type="number" name="codice_postale" placeholder="Cap"><br><br>
 
             <button>Registrati</button>
-            <p class="message">Hai già un account? <a href="accesso.jsp">Accedi</a></p>
+            <p class="message">Hai gia' un account? <a href="accesso.jsp">Accedi</a></p>
         </form>
     </div>
 </div>

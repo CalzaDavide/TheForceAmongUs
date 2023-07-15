@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'impostographregular';
+    src: url('/Fonts/impostograph-regular-webfont.woff2') format('woff2'),
+    url('/Fonts/impostograph-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 table, th, td {
     padding-right: 10px;
     border: 1px solid black;
