@@ -19,17 +19,14 @@ h1 {
     flex-grow: 1;
 }
 
-.sort {
-    display: flex;
-}
 
 .prodotti {
-    display: flex;
+    display: inline-block;
     flex-wrap: wrap;
 }
 
 .prodotti-card {
-    padding: 2%;
+    padding: 1%;
     flex-grow: 1;
     flex-basis: 16%;
     background-color: lightblue;

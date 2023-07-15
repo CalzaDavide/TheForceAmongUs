@@ -6,6 +6,7 @@
 <html>
 <head>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" type="text/css" href="./css/Prodotti.css"/>
     <title>Mostra prodotti</title>
 </head>
 <style>
@@ -30,36 +31,31 @@
 <%}%>
 
 <%ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");%>
-<table style="width:70%">
-    <tr>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Percentuale sconto</th>
-        <th>Costo</th>
-        <th>Espansione</th>
-        <th>Tipologia</th>
-    </tr>
-        <%for (Prodotto p : prodotti) {%>
-    <tr>
-        <td><%=p.getId()%></td>
-        <td><%=p.getNome()%></td>
-        <td><%=p.getPercentuale_sconto() + "%"%></td>
-        <td>
-            <%if(p.getPercentuale_sconto()==0){%>
+
+<div class="prodotti">
+    <%for (Prodotto p : prodotti) {%>
+    <div class="prodottoSingolo">
+        <div class="fotoProdotto">
+            <img src="<%=p.getImmagine()%>" alt="foto del prodotto <%=p.getNome()%>">
+        </div>
+        <div class="infoProdotto">
+            <p><%=p.getNome()%></p>
+            <p><%if(p.getPercentuale_sconto()==0){%>
                 <%=p.getCosto()%>
-            <%}else{%>
-                <del><%=p.getCosto()%></del>
+                <%}else{%>
+                <del><%=p.getCosto()%>€</del>
                 <%=p.getPrezzoScontato()%>
+                <%}%>€</p>
+            <%if(utente != null){%>
+            <div class="carrello">
+                <input onclick="aggiungiCarrello(<%=p.getId()%>)" type="button" value = "Aggiungi al carrello">
+            </div>
             <%}%>
-        </td>
-        <td><%=p.getEspansione()%></td>
-        <td><%=p.getTipologia() %></td>
-        <%if(utente != null){%>
-        <td onclick="aggiungiCarrello(<%=p.getId()%>)"><input type="button" value = "Aggiungi al carrello"></td>
-        <%}%>
-    </tr>
+        </div>
+    </div>
+
     <%}%>
-</table>
+</div>
 
 </body>
 </html>
