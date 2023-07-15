@@ -2,22 +2,29 @@
     font-family: 'impostographregular';
     src: url('/Fonts/impostograph-regular-webfont.woff2') format('woff2'),
     url('/Fonts/impostograph-regular-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 
 body {
-    font-family: Impostograph, Helvetica, sans-serif;
-    font-size: 100%;
+    font-family:'Impostograph', monospace;
     color: #333;
     background-size: cover;
 }
 
 header{
-    background-color: #f1f1f1;
+    background-color: #18f1f1;
     overflow: hidden;
     padding: 10px;
     position:fixed;
+    font-size: 35px;
+}
+
+header a:visited, a:link, a:active{
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+
 }
 
 .logo {
@@ -35,7 +42,6 @@ header{
     padding: 5px;
     width: 200px;
 }
-
 
 /* Barra laterale sinistra */
 
@@ -55,21 +61,21 @@ header{
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 40px;
     color: #818181;
     display: block;
     transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #ff3838;
 }
 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 40px;
     margin-left: 50px;
 }
 

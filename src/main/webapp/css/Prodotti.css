@@ -23,7 +23,9 @@
     }
 }
 
-
+body{
+    font-family:'Impostograph', monospace;
+}
 .prodotti {
     display: flex;
     flex-wrap: wrap;
@@ -47,4 +49,9 @@
 
 .infoProdotto {
     margin-top: auto;
+}
+
+#nome{
+    font-size: 30px;
+    font-weight: bold;
 }

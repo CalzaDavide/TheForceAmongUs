@@ -35,7 +35,7 @@
             <input required id="email" type="email" name="email" placeholder="Email" value="John@john.com"><br><br>
             <input required type="password" name="pswd" placeholder="Password" value="pswd"><br><br>
             <button>login</button>
-            <p class="message">Non hai un account? <a href="registrazione.jsp">Registrati</a></p>
+            <p class="message">NON HAI UN ACCOUNT? <a href="registrazione.jsp">REGISTRATI</a></p>
         </form>
     </div>
 </div>

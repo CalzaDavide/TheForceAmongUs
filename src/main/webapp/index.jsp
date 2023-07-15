@@ -26,12 +26,12 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.jsp">Catalogo</a>
-        <a href="index.jsp">Pacchetti</a>
-        <a href="index.jsp">Box</a>
-        <a href="index.jsp">Carte</a>
-        <a href="index.jsp">Info</a>
-        <a href="index.jsp">contatti</a>
+        <a href="index.jsp">CATALOGO</a>
+        <a href="index.jsp">PACCHETTI</a>
+        <a href="index.jsp">BOX</a>
+        <a href="index.jsp">CARTE</a>
+        <a href="index.jsp">INFO</a>
+        <a href="index.jsp">CONTATTI</a>
     </div>
 
     <script>
@@ -60,26 +60,26 @@
             Cliente cliente = (Cliente) session.getAttribute("utente");
             if (cliente == null) {
         %>
-        <a href="accesso.jsp">Accedi</a>
-        <a href="registrazione.jsp">Registrati</a>
+        <a href="accesso.jsp">ACCEDI</a>
+        <a href="registrazione.jsp">REGISTRATI</a>
         <%} else {%>
-        <h1>Benvenuto, <%= cliente.getNome()%>!</h1>
+        <h1>Benvenuto, <%= cliente.getNome().toUpperCase()%>!</h1>
         <form action="logout">
-            <input type="submit" value="Log out">
+            <input type="submit" value="LOG OUT">
         </form>
         <form action="mostra-carrello">
-            <input type="submit" value="Carrello">
+            <input type="submit" value="CARRELLO">
         </form>
         <form action="mostra-acquisti">
-            <input type="submit" value="Visualizza acquisti">
+            <input type="submit" value="VISUALIZZA ACQUISTI">
         </form>
         <%}%>
     </div>
         <% if (cliente != null && cliente.isAdmin()) {%>
         <form action="mostra-utenti">
-            <input type=submit value="Mostra Utenti">
+            <input type=submit value="MOSTRA UTENTI">
         </form>
-        <a href="prodotto.jsp">aggiungi prodotto</a><br>
+        <a href="prodotto.jsp">AGGIUNGI PRODOTTO</a><br>
         <%}%>
 </header>
 
