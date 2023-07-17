@@ -26,10 +26,10 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.jsp">CATALOGO</a>
-        <a href="index.jsp">PACCHETTI</a>
-        <a href="index.jsp">BOX</a>
-        <a href="index.jsp">CARTE</a>
+        <form action="mostra-prodotti"><input type="hidden" name="ricerca" value=""><input type="submit" value="CATALOGO"></form>
+        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Pacchetto"><input type="submit" value="PACCHETTI"></form>
+        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Box"><input type="submit" value="BOX"></form>
+        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Carta"><input type="submit" value="CARTE"></form>
         <a href="index.jsp">INFO</a>
         <a href="index.jsp">CONTATTI</a>
     </div>
@@ -83,9 +83,13 @@
         <%}%>
 </header>
 
-
 <main>
-
+    <h1>ULTIMA ESPANSIONE:</h1>
+    <img src="images/ultimaEspansione">
+    <form action="mostraProdotti.jsp">
+        <input type="hidden" name="espansione" value="Rise of the Impostor">
+        <input type="submit" value="SCOPRI ORA">
+    </form>
 </main>
 
 <footer>

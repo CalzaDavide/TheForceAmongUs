@@ -162,7 +162,54 @@ public class ProdottoDAO {
         }
     }
 
-    public ArrayList<Prodotto> doRetrieveByName(String ricerca){
+    public ArrayList<Prodotto> doRetrieveByEspansione(String espansione){
+
+        ResultSet resultSet;
+
+        Prodotto p = null;
+
+        try (Connection con = ConPool.getConnection()) {
+
+            PreparedStatement  ps = con.prepareStatement("SELECT * FROM Prodotto WHERE Espansione = ?");
+            ps.setString(1, espansione);
+
+            resultSet = ps.executeQuery();
+
+            ArrayList<Prodotto> risultati = new ArrayList<>();
+
+            while(resultSet.next()) {
+
+                p = new Prodotto();
+
+                p.setId(resultSet.getInt(1));
+
+                p.setNome(resultSet.getString(2));
+
+                p.setPercentuale_sconto(resultSet.getInt(3));
+
+                p.setCosto(resultSet.getDouble(4));
+
+                p.setEspansione(resultSet.getString(5));
+
+                p.setTipologia(resultSet.getString(6));
+
+                p.setImmagine(resultSet.getString(7));
+
+                risultati.add(p);
+            }
+
+            con.close();
+
+            return risultati;
+        }
+
+        catch (SQLException e) {
+
+            throw new RuntimeException(e);
+        }
+    }
+
+    public ArrayList<Prodotto> doRetrieveByNome(String ricerca){
 
         ResultSet resultSet;
 

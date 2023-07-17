@@ -28,13 +28,20 @@ public class MostraProdottiServlet extends HttpServlet {
 
         String address = "mostraProdotti.jsp";
 
-        RequestDispatcher rd;
+        String espansione = request.getParameter("espansione");
+        String tipologia = request.getParameter("tipologia");
 
-        ArrayList<Prodotto> prodotti = pd.doRetrieveByName(request.getParameter("ricerca"));
+        ArrayList<Prodotto> prodotti;
 
+        if(espansione!= null)
+            prodotti = pd.doRetrieveByEspansione(espansione);
+        else if (tipologia!= null)
+            prodotti = pd.doRetrieveByTipologia(tipologia);
+        else
+            prodotti = pd.doRetrieveByNome(request.getParameter("ricerca"));
         request.setAttribute("prodotti", prodotti);
 
-        rd = request.getRequestDispatcher(address);
+        RequestDispatcher rd = request.getRequestDispatcher(address);
 
         rd.forward(request, response);
     }
