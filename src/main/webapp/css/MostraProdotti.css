@@ -25,7 +25,7 @@
 }
 
 body{
-    font-family:'Impostograph', monospace;
+    font-family:'impostographregular', monospace;
 }
 h1 {
     flex-grow: 1;

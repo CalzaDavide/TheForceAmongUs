@@ -1,31 +1,17 @@
 @font-face {
     font-family: 'impostographregular';
-    src: url('/Fonts/impostograph-regular-webfont.woff2') format('woff2'),
-    url('/Fonts/impostograph-regular-webfont.woff') format('woff');
+    src: url('Fonts/impostograph-regular-webfont.woff2') format('woff2'),
+    url('Fonts/impostograph-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-@media (max-width: 920px) {
-    .prodottoSingolo {
-        flex: 1 21%;
-    }
-}
 
-.prodotto .prodottoSingolo:first-child,
-.prodotto .prodottoSingolo:nth-child(2) {
-    flex: 2 46%;
-}
-
-@media (max-width: 600px) {
-    .prodottoSingolo {
-        flex: 1 46%;
-    }
-}
 
 body{
-    font-family:'Impostograph', monospace;
+    font-family: impostographregular, sans-serif;
 }
+
 .prodotti {
     display: flex;
     flex-wrap: wrap;
