@@ -13,13 +13,24 @@
             || /[^a-z]+/i.test($("#fname").val())
             || /[^a-z]+/i.test($("#lname").val())
             || /[^0-9]+/.test($("#civico").val())
-            || !(/\d{5,6}]/.test($("#cap").val()))
+            || !(/^\d{5,6}$/.test($("#cap").val()))
             || $("#regione").val()===""
             || $("#provincia").val()===null
             || $("#provincia").val()==="")
         {
-            $("#errore").style.visibility="visible";
+            alert("email: " + !(/^[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val())));
+            alert("nome: " + /[^a-z]+/i.test($("#fname").val()));
+            alert("cognome: " + /[^a-z]+/i.test($("#lname").val()));
+            alert("civico: " + /[^0-9]+/.test($("#civico").val()));
+            alert("cap: " + !(/^\d{5,6}$/.test($("#cap").val())));
+            alert("regione empty: " + $("#regione").val()==="");
+            alert("provincia null: " + $("#provincia").val()==null);
+            alert("provincia empty: " + $("#provincia").val()==="");
+            $("#errore").css("visibility","visible");
             return false;
+        }
+        else{
+            return true;
         }
     }
 
@@ -29,6 +40,7 @@
             result.regioni.forEach(function(item, index){
                 if(item.nome===$("#regione").val()){
                     $("#provincia").removeAttr("disabled");
+                    $("#provincia").html("");
                     $("#provincia").append('<option value="" selected>Seleziona una provincia</option>');
                     item.province.forEach(function(item, index){
                         $("#provincia").append('<option value="'+item+'">' + item + '</option>');
