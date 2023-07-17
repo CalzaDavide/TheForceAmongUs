@@ -9,20 +9,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
     function validate(){
-        if(
-            /^[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val()) == false
+        if(!(/^[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val()))
             || /[^a-z]+/i.test($("#fname").val())
             || /[^a-z]+/i.test($("#lname").val())
             || /[^0-9]+/.test($("#civico").val())
-            || /\d{5,6}]/.test($("#cap").val()) == false
-            || $("#regione").val()==""
-            || $("#provincia").val()==null
-            || $("#provincia").val()==""
-        ){
-            $("#errore").style.visibility="visible"
+            || !(/\d{5,6}]/.test($("#cap").val()))
+            || $("#regione").val()===""
+            || $("#provincia").val()===null
+            || $("#provincia").val()==="")
+        {
+            $("#errore").style.visibility="visible";
             return false;
-        }else{
-            return true;
         }
     }
 
@@ -30,7 +27,7 @@
         $("#selezione").remove();
         $.getJSON("data\\regioni.json", function(result){
             result.regioni.forEach(function(item, index){
-                if(item.nome==$("#regione").val()){
+                if(item.nome===$("#regione").val()){
                     $("#provincia").removeAttr("disabled");
                     $("#provincia").append('<option value="" selected>Seleziona una provincia</option>');
                     item.province.forEach(function(item, index){
@@ -94,7 +91,7 @@
             <input required id="civico" type="number" name="numero_civico" placeholder="Numero Civico"><br><br>
             <input required id="cap" type="number" name="codice_postale" placeholder="Cap"><br><br>
 
-            <button>Registrati</button>
+            <button type="submit">Registrati</button>
             <p class="message">Hai gia' un account? <a href="accesso.jsp">Accedi</a></p>
         </form>
     </div>
