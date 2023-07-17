@@ -8,6 +8,17 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
+    $(document).ready(function(){
+        <% String status = (String)request.getAttribute("status");
+        if(status != null){
+            if(status.equals("errore")){%>
+                $("#errore").html("Valore non valido.");
+            <%}else if(status.equals("emailInUso")){%>
+                $("#errore").html("Email in uso.");
+            <%}
+        }%>
+    })
+
     function validate(){
         if(!(/^[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val()))
             || /[^a-z]+/i.test($("#fname").val())
@@ -26,7 +37,7 @@
             alert("regione empty: " + $("#regione").val()==="");
             alert("provincia null: " + $("#provincia").val()==null);
             alert("provincia empty: " + $("#provincia").val()==="");
-            $("#errore").css("visibility","visible");
+            $("#errore").html("Valore non valido");
             return false;
         }
         else{
@@ -51,13 +62,9 @@
     }
 </script>
 <br/>
+<h1 id="errore"></h1>
 
 <div class="registrazione">
-
-    <% String status = (String)request.getAttribute("status");
-        if(status != null && status.equals("emailInUso")){%>
-        <h1>Email già in uso.</h1>
-    <%}%>
 
     <div class="form">
         <a href="index.jsp">

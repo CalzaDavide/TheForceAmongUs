@@ -47,10 +47,26 @@ public class RegistrazioneServlet extends HttpServlet {
         Matcher nomeMatcher = nomePattern.matcher(nome);
         Matcher cognomeMatcher = nomePattern.matcher(cognome);
         Pattern emailPattern = Pattern.compile("[^\\s@]+@[^\\s@]+\\.[^\\s@]+");
-        Matcher matcher = emailPattern.matcher(email);
-        Pattern numeroPattern = Pattern.compile("[0-9]+");
-        Matcher civicoMatcher = numeroPattern.matcher(n_civico);
-        Matcher capMatcher = numeroPattern.matcher(codice_postale);
+        Matcher emailMatcher = emailPattern.matcher(email);
+        Pattern civicoPattern = Pattern.compile("^[0-9]+$");
+        Matcher civicoMatcher = civicoPattern.matcher(n_civico);
+        Pattern capPattern = Pattern.compile("^[0-9]{5,6}$");
+        Matcher capMatcher = capPattern.matcher(codice_postale);
+
+        if(!nomeMatcher.find()
+            || !cognomeMatcher.find()
+            || !emailMatcher.find()
+            || !civicoMatcher.find()
+            || !capMatcher.find()
+            || regione.equals("")
+            || provincia.equals("")
+            || provincia == null)
+        {
+            request.setAttribute("status", "errore");
+            RequestDispatcher dispatcher =
+                    request.getRequestDispatcher("registrazione.jsp");
+            dispatcher.forward(request, response);
+        }
 
         cliente.setNome(nome);
         cliente.setCognome(cognome);
