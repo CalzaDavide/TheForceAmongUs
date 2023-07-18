@@ -13,6 +13,10 @@
 
 body {
     font-family: impostographregular, sans-serif;
+    background-image: url('/images/sfondo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #nome{
@@ -37,7 +41,7 @@ body {
 }
 
 .prodottoSingolo {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(89, 124, 255, 0.2);
     width: 20%;
     margin: auto;
     text-align: center;
