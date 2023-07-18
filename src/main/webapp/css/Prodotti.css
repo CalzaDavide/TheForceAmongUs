@@ -15,27 +15,16 @@ body {
     font-family: impostographregular, sans-serif;
 }
 
-.prodottoSingolo {
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 15%;
-    margin: auto;
-    text-align: center;
-    font-family: impostographregular, sans-serif;
-    display: inline-block;
-}
-
 #nome{
     font-size: 50px;
     font-weight: bold;
 }
 
 #espansione{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
-    padding: 5px;
+    padding: 5px 5px 15px;
 }
-
 
 .fotoProdotto img {
     width: 80%;
@@ -47,12 +36,31 @@ body {
     margin-top: auto;
 }
 
-/*
-.prodotti {
-    display: flex;
-    flex-wrap: wrap;
+.prodottoSingolo {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    font-family: impostographregular, sans-serif;
+    display: inline-block;
 
+    background-color: lightblue;
+    border-collapse: collapse;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
 }
+
+
+/*
+.prodotti{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .prodottoSingolo  {
     padding: 2%;
     flex-grow: 1;
@@ -63,8 +71,5 @@ body {
     border-width: 2px;
     border-style: solid;
 }
-
-
-
 
 */
