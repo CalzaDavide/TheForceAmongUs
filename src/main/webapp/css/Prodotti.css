@@ -5,18 +5,20 @@
     font-weight: normal;
     font-style: normal;
 }
+
+body {
+    background-image: url("/images/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: impostographregular, sans-serif;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: impostographregular, sans-serif;
-    background-image: url('/images/sfondo.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 #nome{
