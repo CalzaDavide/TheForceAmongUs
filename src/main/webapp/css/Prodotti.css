@@ -5,15 +5,20 @@
     font-weight: normal;
     font-style: normal;
 }
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: impostographregular, sans-serif;
 }
 
 .prodottoSingolo {
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
+    width: 15%;
     margin: auto;
     text-align: center;
     font-family: impostographregular, sans-serif;
@@ -21,16 +26,26 @@ body {
 }
 
 #nome{
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
 }
 
+#espansione{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+
 .fotoProdotto img {
-    width: 100%;
-    padding: 2%;
+    width: 80%;
+    padding: 2% 5% 10% 5%;
     text-align: center;
 }
 
+.infoProdotto {
+    margin-top: auto;
+}
 
 /*
 .prodotti {
@@ -49,13 +64,7 @@ body {
     border-style: solid;
 }
 
-.fotoProdotto img {
-    max-width: 100%;
-}
 
-.infoProdotto {
-    margin-top: auto;
-}
 
 
 */

@@ -40,6 +40,7 @@
         </div>
         <div class="infoProdotto">
             <p id="nome"><%=p.getNome().toUpperCase()%></p>
+            <p id="espansione"><%=p.getEspansione().toUpperCase()%></p>
             <p><%if(p.getPercentuale_sconto()==0){%>
                 <%=p.getCosto()%>
                 <%}else{%>
