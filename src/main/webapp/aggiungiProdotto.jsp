@@ -26,13 +26,13 @@
     <form action="aggiungi-prodotto">
 
         <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" placeholder="Marco"><br><br>
+        <input required type="text" id="nome" name="nome" placeholder="Marco"><br><br>
 
         <label for="percentuale_sconto">Percentuale sconto:</label><br>
-        <input type="number" id="percentuale_sconto" name="percentuale_sconto" placeholder="5"><br><br>
+        <input required type="number" id="percentuale_sconto" name="percentuale_sconto" placeholder="5"><br><br>
 
         <label for="costo">Costo:</label><br>
-        <input type="number" id="costo" name="costo" placeholder="10"><br><br>
+        <input required type="number" id="costo" name="costo" placeholder="10"><br><br>
 
 
         <select id="espansione" name="espansione">
