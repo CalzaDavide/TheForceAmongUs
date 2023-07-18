@@ -30,8 +30,8 @@
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Pacchetto"><input type="submit" value="PACCHETTI"></form>
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Box"><input type="submit" value="BOX"></form>
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Carta"><input type="submit" value="CARTE"></form>
-        <a href="WEB-INF/info.html">INFO</a>
-        <a href="WEB-INF/contatti.html">CONTATTI</a>
+        <a href="info.html">INFO</a>
+        <a href="contatti.html">CONTATTI</a>
     </div>
 
     <script>
