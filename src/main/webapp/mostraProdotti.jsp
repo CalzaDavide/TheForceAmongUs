@@ -39,7 +39,7 @@
             <img src="<%=p.getImmagine()%>" alt="foto del prodotto <%=p.getNome()%>">
         </div>
         <div class="infoProdotto">
-            <h1><%=p.getNome().toUpperCase()%></h1>
+            <p id="nome"><%=p.getNome().toUpperCase()%></p>
             <p><%if(p.getPercentuale_sconto()==0){%>
                 <%=p.getCosto()%>
                 <%}else{%>
