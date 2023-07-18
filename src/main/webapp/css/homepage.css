@@ -7,10 +7,13 @@
 }
 
 body {
+    background-image: url("../images/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 
     font-family:impostographregular, sans-serif;
     color: #333;
-    background-size: cover;
 }
 
 header{

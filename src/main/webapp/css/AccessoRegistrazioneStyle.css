@@ -8,7 +8,11 @@
 
 body{
     background-color: #003C82;
-    font-family: 'impostographregular';
+    background-image: url("../images/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'impostographregular', serif;
 }
 
 .login, .registrazione {

@@ -10,7 +10,7 @@
 <body>
 <table class="title">
     <tr>
-        <th>Yeees</th>
+        <th>Aggiungi Prodotto</th>
     </tr>
 </table>
 <br/>
@@ -26,19 +26,26 @@
     <form action="aggiungi-prodotto">
 
         <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" value="pacchetto"><br><br>
+        <input type="text" id="nome" name="nome" placeholder="Marco"><br><br>
 
         <label for="percentuale_sconto">Percentuale sconto:</label><br>
-        <input type="number" id="percentuale_sconto" name="percentuale_sconto" value="15"><br><br>
+        <input type="number" id="percentuale_sconto" name="percentuale_sconto" placeholder="5"><br><br>
 
         <label for="costo">Costo:</label><br>
-        <input type="number" id="costo" name="costo" value="10"><br><br>
+        <input type="number" id="costo" name="costo" placeholder="10"><br><br>
 
-        <label for="espansione">Espansione:</label><br>
-        <input type="text" id="espansione" name="espansione"><br><br>
 
-        <label for="tipologia">Tipologia:</label><br>
-        <input type="text" id="tipologia" name="tipologia"><br><br>
+        <select id="espansione" name="espansione">
+            <option value="Set Base">SET BASE</option>
+            <option value="The rise of the impostor">THE RISE OF THE IMPOSTOR</option>
+        </select><br><br>
+
+
+        <select id="tipologia" name="tipologia">
+            <option value="Carta">CARTA</option>
+            <option value="Pacchetto">PACCHETTO</option>
+            <option value="Box">BOX</option>
+        </select><br><br>
 
         <input type="hidden" name="immagine" value="<%=immagine%>">
 

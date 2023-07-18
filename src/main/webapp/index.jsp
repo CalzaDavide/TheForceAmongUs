@@ -79,7 +79,7 @@
         <form action="mostra-utenti">
             <input type=submit value="MOSTRA UTENTI">
         </form>
-        <a href="prodotto.jsp">AGGIUNGI PRODOTTO</a><br>
+        <a href="aggiungiProdotto.jsp">AGGIUNGI PRODOTTO</a><br>
         <%}%>
 </header>
 

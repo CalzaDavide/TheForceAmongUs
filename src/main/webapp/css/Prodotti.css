@@ -22,7 +22,7 @@ body {
 }
 
 #nome{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -39,16 +39,15 @@ body {
 }
 
 .infoProdotto {
-    margin-top: auto;
-    background-color: rgba(173, 216, 230, 0.5);
+    background-color: rgba(0, 189, 255, 0.8);
     border-radius: 5%;
     width: 70%;
-    text-align: center;
+    margin:auto;
 }
 
 .prodottoSingolo {
 
-    width: 17%;
+    width: 22%;
     margin: auto;
     text-align: center;
     font-family: impostographregular, sans-serif;
@@ -59,7 +58,8 @@ body {
     padding-top: 2%;
 }
 
-/*
+
+
 .prodotti{
     position: absolute;
     top: 50%;
@@ -67,7 +67,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-
+/*
 .prodottoSingolo  {
     padding: 2%;
     flex-grow: 1;

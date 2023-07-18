@@ -79,7 +79,7 @@ public class UploadServlet extends HttpServlet {
 
         request.setAttribute("uploaded", destinazione);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("prodotto.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("aggiungiProdotto.jsp");
         requestDispatcher.forward(request, response);
     }
 }
