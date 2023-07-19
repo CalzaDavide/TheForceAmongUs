@@ -6,6 +6,7 @@
 <head>
     <title>Yeees</title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" href="css/CssComune.css">
 </head>
 <body>
 <table class="title">

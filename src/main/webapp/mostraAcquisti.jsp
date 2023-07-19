@@ -12,6 +12,7 @@
 <html>
 <head>
     <title>Mostra Acquisti</title>
+    <link rel="stylesheet" href="css/CssComune.css">
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
 </head>
 <body>

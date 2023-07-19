@@ -7,6 +7,7 @@
 <head>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <link rel="stylesheet" type="text/css" href="./css/Prodotti.css"/>
+    <link rel="stylesheet" href="css/CssComune.css">
     <title>Mostra prodotti</title>
 </head>
 <style>

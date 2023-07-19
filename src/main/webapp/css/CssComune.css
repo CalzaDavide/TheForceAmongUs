@@ -1,0 +1,33 @@
+/*    CSS Comune    */
+
+@font-face {
+    font-family: 'impostographregular';
+    src: url('Fonts/impostograph-regular-webfont.woff2') format('woff2'),
+    url('Fonts/impostograph-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: url('../images/cursore.png'), auto;
+    font-family: 'Impostograph', monospace;
+}
+
+body{
+    background-color: #003C82;
+    background-image: url("../images/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'impostographregular', serif;
+}
+
+a{
+    text-decoration: none;
+    color: #ff3838;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/

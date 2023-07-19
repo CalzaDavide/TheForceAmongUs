@@ -12,6 +12,7 @@
 <html>
 <head>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" href="css/CssComune.css">
     <title>Carrello</title>
     <style>
         li{

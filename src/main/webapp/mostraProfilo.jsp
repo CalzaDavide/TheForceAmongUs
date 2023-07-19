@@ -5,6 +5,7 @@
 <html>
 <head><title>Home Page</title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" href="css/CssComune.css">
 </head>
 
 <body>

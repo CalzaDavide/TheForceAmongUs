@@ -1,10 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
-<head><title>Registrazione</title>
-    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
-</head>
+    <head><title>Registrazione</title>
+        <link rel="icon" type="image/x-icon" href="images/Icona.ico">
+        <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
+        <link rel="stylesheet" href="css/CssComune.css">
+    </head>
+
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>

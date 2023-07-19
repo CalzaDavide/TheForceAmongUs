@@ -1,20 +1,3 @@
-@font-face {
-    font-family: 'impostographregular';
-    src: url('Fonts/impostograph-regular-webfont.woff2') format('woff2'),
-    url('Fonts/impostograph-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body{
-    background-color: #003C82;
-    background-image: url("../images/sfondo.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'impostographregular', serif;
-}
-
 .login, .registrazione {
     width: 35%;
     height: 70%;
@@ -57,11 +40,9 @@ body{
 
 }
 
-select{
-    margin-bottom: 20px;
-}
 
-.form button {
+
+button {
     font-family: 'Impostograph', monospace;
     font-weight: bold;
     text-transform: uppercase;
@@ -74,6 +55,9 @@ select{
     font-size: 24px;
 }
 
+select{
+    margin-bottom: 20px;
+}
 
 .form .message {
     margin: 15px 0 0;
