@@ -3,8 +3,8 @@
 <html>
     <head><title>Registrazione</title>
         <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-        <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
         <link rel="stylesheet" href="css/CssComune.css">
+        <link rel="stylesheet" href="css/AccessoRegistrazioneStyle.css">
     </head>
 
 <body>
