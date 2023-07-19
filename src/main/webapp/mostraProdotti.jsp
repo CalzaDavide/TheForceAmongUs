@@ -10,12 +10,6 @@
     <link rel="stylesheet" type="text/css" href="./css/Prodotti.css"/>
     <title>Mostra prodotti</title>
 </head>
-<style>
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-</style>
 
 <body>
 <%Cliente utente = (Cliente) session.getAttribute("utente");%>
@@ -35,26 +29,36 @@
 
 <div class="prodotti">
     <%for (Prodotto p : prodotti) {%>
+
+
     <div class="prodottoSingolo">
-        <div class="fotoProdotto">
             <img src="<%=p.getImmagine()%>" alt="foto del prodotto <%=p.getNome()%>">
-        </div>
+
         <div class="infoProdotto">
-            <p id="nome"><%=p.getNome().toUpperCase()%></p>
-            <p id="espansione"><%=p.getEspansione().toUpperCase()%></p>
-            <p><%if(p.getPercentuale_sconto()==0){%>
-                <%=p.getCosto()%>
-                <%}else{%>
-                <del><%=p.getCosto()%>€</del>
-                <%=p.getPrezzoScontato()%>
-                <%}%>€</p>
-            <%if(utente != null){%>
-            <div class="carrello">
-                <input onclick="aggiungiCarrello(<%=p.getId()%>)" type="button" value = "Aggiungi al carrello">
+            <div class="prodottoHeader">
+                <h2 id="nome"><%=p.getNome().toUpperCase()%></h2>
+                <p id="espansione"><%=p.getEspansione().toUpperCase()%></p>
             </div>
-            <%}%>
+
+            <div class="prodottoFooter">
+                <p id="prezzo"><%if(p.getPercentuale_sconto()==0){%>
+                    <%=p.getCosto()%>
+                    <%}else{%>
+                    <del><%=p.getCosto()%>€</del>
+                    <%=p.getPrezzoScontato()%>
+                    <%}%>€</p>
+                <%if(utente != null){%>
+                <div id="carrello">
+
+                    <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/cart.png" alt="carrello">
+
+                    <%--<input onclick="aggiungiCarrello(<%=p.getId()%>)" type="button" value = "Aggiungi al carrello">--%>
+                </div>
+                <%}%>
+            </div>
         </div>
     </div>
+
 
     <%}%>
 </div>

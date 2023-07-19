@@ -1,50 +1,62 @@
-#nome{
-    font-size: 40px;
-    font-weight: bold;
-}
 
-#espansione{
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px 5px 15px;
-}
 
-.fotoProdotto img {
-    width: 95%;
-    padding-bottom: 2%;
-    text-align: center;
-}
+/* ======================== */
 
-.infoProdotto {
-    background-color: rgba(0, 189, 255, 0.8);
-    border-radius: 5%;
-    width: 70%;
-    margin:auto;
+.prodotti{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 2%;
+
+
 }
 
 .prodottoSingolo {
 
-    width: 22%;
+    row-gap: 16px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 10px;
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+img {
+    display: block;
+    max-width: 90%;
     margin: auto;
-    text-align: center;
-    font-family: impostographregular, sans-serif;
-    display: inline-block;
 }
-
-.carrello{
-    padding-top: 2%;
+.infoProdotto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #2b2b2d;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: inherit;
 }
-
-/*
-.prodottoSingolo  {
-    padding: 2%;
-    flex-grow: 1;
-    flex-basis: 16%;
-    background-color: lightblue;
-    border-collapse: collapse;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
+.nome {
+    font-size: 30px;
+    text-transform: uppercase;
 }
-
-*/
+.espansione {
+    font-size: 20px;
+    color: #d8d7e3;
+}
+.prodottoFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.prezzo {
+    font-size: 21px;
+    font-weight: bold;
+}
+#carrello {
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
