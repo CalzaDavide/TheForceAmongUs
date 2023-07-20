@@ -88,14 +88,12 @@ public class RegistrazioneServlet extends HttpServlet {
         // invocating the Model clienteDAO to store the "customer" in the db
         clienteDAO.doSave(cliente);
 
-        //storing the javabean in the "request" object
-        request.setAttribute("cliente", cliente);
-        request.getSession().setAttribute("email", email);
         ArrayList<OggettoQuantita> carrelloProvvisorio =(ArrayList<OggettoQuantita>) request.getSession().getAttribute("carrelloProvvisorio");
         if(carrelloProvvisorio != null)
         {
             CarrelloDAO carrelloDAO = new CarrelloDAO();
             carrelloDAO.doSave(email, carrelloProvvisorio);
+            request.getSession().removeAttribute("carrelloProvvisorio");
         }
 
         RequestDispatcher dispatcher =
