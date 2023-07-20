@@ -22,9 +22,17 @@ public class MostraCarrelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String email = ((Cliente)req.getSession().getAttribute("utente")).getEmail();
-        CarrelloDAO carrelloDAO = new CarrelloDAO();
-        ArrayList<OggettoQuantita> carrello = carrelloDAO.doRetriveByCliente(email);
+        Cliente utente =(Cliente)req.getSession().getAttribute("utente");
+        ArrayList<OggettoQuantita> carrello;
+        if(utente != null) {
+            String email = utente.getEmail();
+            CarrelloDAO carrelloDAO = new CarrelloDAO();
+            carrello = carrelloDAO.doRetriveByCliente(email);
+        }else{
+            carrello=(ArrayList<OggettoQuantita>)req.getSession().getAttribute("carrelloProvvisorio");
+            if(carrello==null)
+                carrello= new ArrayList<>();
+        }
         req.setAttribute("carrello", carrello);
         float totale = 0;
         for(OggettoQuantita oq : carrello){

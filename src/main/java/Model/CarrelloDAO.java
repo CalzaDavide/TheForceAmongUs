@@ -41,6 +41,26 @@ public class CarrelloDAO {
         }
     }
 
+    public void doSave(String emailCliente, ArrayList<OggettoQuantita> carrello) throws RuntimeException {
+        try {
+            Connection con = ConPool.getConnection();
+
+            PreparedStatement statement = con.prepareStatement("INSERT INTO amongus.oggetto_carrello (quantita, EmailCliente, ID_Prodotto) VALUES (?, ?, ?)",
+                    Statement.RETURN_GENERATED_KEYS);
+            statement.setString(2, emailCliente);
+            for (OggettoQuantita oq : carrello) {
+                statement.setInt(1, oq.getQuantita());
+                statement.setInt(3, oq.getProdotto().getId());
+                if (statement.executeUpdate() != 1) {
+                    throw new RuntimeException("INSERT error.");
+                }
+            }
+            con.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public ArrayList<OggettoQuantita> doRetriveByCliente(String emailCliente){
         try{
             Connection con = ConPool.getConnection();

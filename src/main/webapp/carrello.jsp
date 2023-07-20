@@ -22,9 +22,7 @@
     </style>
 </head>
 <body>
-    <%Cliente utente = (Cliente) session.getAttribute("utente");
-    Double totale = Double.parseDouble(String.format(Locale.US, "%.2f", request.getAttribute("totale")));
-    %>
+    <%Double totale = Double.parseDouble(String.format(Locale.US, "%.2f", request.getAttribute("totale")));%>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
@@ -63,6 +61,8 @@
         <%}%>
     </ul>
     <h1 id="totale">TOTALE: <%=totale%>€</h1>
-    <input type = "button" value="PROCEDI ALL'ACQUISTO" onclick="acquisto()">
+    <%if(session.getAttribute("utente") != null){%>
+        <input type = "button" value="PROCEDI ALL'ACQUISTO" onclick="acquisto()">
+    <%}%>
 </body>
 </html>

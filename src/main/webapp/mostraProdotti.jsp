@@ -15,7 +15,6 @@
 <%Cliente utente = (Cliente) session.getAttribute("utente");%>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<%if(utente != null){%>
 <script>
     function aggiungiCarrello(idProdotto){
         $.post("aggiungi-carrello",
@@ -23,7 +22,6 @@
         )
     }
 </script>
-<%}%>
 
 <%ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");%>
 
@@ -47,14 +45,10 @@
                     <del><%=p.getCosto()%>€</del>
                     <%=p.getPrezzoScontato()%>
                     <%}%>€</p>
-                <%if(utente != null){%>
                 <div id="carrello">
-
-                    <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/iconaCarrello.png" alt="carrello">
-
+                        <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/iconaCarrello.png" alt="carrello">
                     <%--<input onclick="aggiungiCarrello(<%=p.getId()%>)" type="button" value = "Aggiungi al carrello">--%>
                 </div>
-                <%}%>
             </div>
         </div>
     </div>

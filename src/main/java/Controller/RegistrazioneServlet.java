@@ -7,6 +7,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import Model.*;
@@ -82,15 +84,19 @@ public class RegistrazioneServlet extends HttpServlet {
 
 
         // instantiating a Model class to interact with the db
-        ClienteDAO service = new ClienteDAO();
-
-        // invocating the Model service to store the "customer" in the db
-        service.doSave(cliente);
+        ClienteDAO clienteDAO = new ClienteDAO();
+        // invocating the Model clienteDAO to store the "customer" in the db
+        clienteDAO.doSave(cliente);
 
         //storing the javabean in the "request" object
         request.setAttribute("cliente", cliente);
         request.getSession().setAttribute("email", email);
-
+        ArrayList<OggettoQuantita> carrelloProvvisorio =(ArrayList<OggettoQuantita>) request.getSession().getAttribute("carrelloProvvisorio");
+        if(carrelloProvvisorio != null)
+        {
+            CarrelloDAO carrelloDAO = new CarrelloDAO();
+            carrelloDAO.doSave(email, carrelloProvvisorio);
+        }
 
         RequestDispatcher dispatcher =
                 request.getRequestDispatcher("index.jsp");
