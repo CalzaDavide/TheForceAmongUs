@@ -63,13 +63,13 @@
         %>
         <a href="accesso.jsp">ACCEDI</a>
         <a href="registrazione.jsp">REGISTRATI</a>
+        <form action="mostra-carrello">
+            <input type="submit" value="CARRELLO">
+        </form>
         <%} else {%>
         <h1>Benvenuto, <%= cliente.getNome().toUpperCase()%>!</h1>
         <form action="logout">
             <input type="submit" value="LOG OUT">
-        </form>
-        <form action="mostra-carrello">
-            <input type="submit" value="CARRELLO">
         </form>
         <form action="mostra-acquisti">
             <input type="submit" value="VISUALIZZA ACQUISTI">
