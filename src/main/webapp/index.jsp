@@ -57,6 +57,9 @@
 
     <%-- Nome Utente --%>
     <div id="account">
+        <form action="mostra-carrello">
+            <input type="submit" value="CARRELLO">
+        </form>
         <%
             Cliente cliente = (Cliente) session.getAttribute("utente");
             if (cliente == null) {
@@ -72,9 +75,6 @@
             <input type="submit" value="VISUALIZZA ACQUISTI">
         </form>
         <%}%>
-        <form action="mostra-carrello">
-            <input type="submit" value="CARRELLO">
-        </form>
     </div>
         <% if (cliente != null && cliente.isAdmin()) {%>
         <form action="mostra-utenti">
