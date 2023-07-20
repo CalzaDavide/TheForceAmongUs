@@ -50,7 +50,7 @@
                 <%if(utente != null){%>
                 <div id="carrello">
 
-                    <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/cart.png" alt="carrello">
+                    <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/iconaCarrello.png" alt="carrello">
 
                     <%--<input onclick="aggiungiCarrello(<%=p.getId()%>)" type="button" value = "Aggiungi al carrello">--%>
                 </div>

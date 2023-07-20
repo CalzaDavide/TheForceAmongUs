@@ -11,8 +11,6 @@
     <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 </head>
 
 
@@ -24,15 +22,15 @@
     <span id="menu" onclick="openNav()">&#9776;</span>
 
         <a href="#">
-            <img src="images/LogoSito.jpg" alt="Logo" class="logo">
+            <img src="images/LogoSito.jpg" alt="Logo" id="logo">
         </a>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <form action="mostra-prodotti"><input type="hidden" name="ricerca" value=""><input type="submit" value="CATALOGO"></form>
-        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Pacchetto"><input type="submit" value="PACCHETTI"></form>
-        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Box"><input type="submit" value="BOX"></form>
-        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Carta"><input type="submit" value="CARTE"></form>
+        <form action="mostra-prodotti"><input type="hidden" name="ricerca" value="">            <input class="submit" type="submit" value="CATALOGO"></form>
+        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Pacchetto"> <input class="submit" type="submit" value="PACCHETTI"></form>
+        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Box">       <input class="submit" type="submit" value="BOX"></form>
+        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Carta">     <input class="submit" type="submit" value="CARTE"></form>
         <a href="info.html">INFO</a>
         <a href="contatti.html">CONTATTI</a>
     </div>
@@ -93,75 +91,42 @@
         <input type="hidden" name="espansione" value="Rise of the Impostor">
         <input type="submit" value="SCOPRI ORA">
     </form>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+    <p style="font-size: 50px">Prova</p>
+
+
+
 </main>
 
 
 
-<footer class="footer">
-    <div class="contenitoreFooter">
-        <div class="footerTop">
-            <div>
-
-            </div>
-            <div>
-                <h6 class="footerTitolo">Prodotti</h6>
-                <ul class="footer__list">
-                    <li class="oggettoLista">
-                        <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="ricerca" value=""><input type="submit" value="CATALOGO"></form>
-                    </li>
-                    <li class="oggettoLista">
-                        <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="tipologia" value="Pacchetto"><input type="submit" value="PACCHETTI"></form>
-                    </li>
-                    <li class="oggettoLista">
-                        <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="tipologia" value="Box"><input type="submit" value="BOX"></form>
-                    </li>
-                    <li class="oggettoLista">
-                        <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="tipologia" value="Carta"><input type="submit" value="CARTE"></form>                    </li>
-                </ul>
-            </div>
-            <div>
-                <h6 class="footer__title">Altro</h6>
-                <ul class="footer__list">
-                    <li class="oggettoLista">
-                        <a href="" class="footer__list-link">About</a>
-                    </li>
-                    <li class="oggettoLista">
-                        <a href="" class="footer__list-link">Careers</a>
-                    </li>
-                    <li class="oggettoLista">
-                        <a href="" class="footer__list-link">Affiliates</a>
-                    </li>
-                    <li class="oggettoLista">
-                        <a href="" class="footer__list-link">Sitemap</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <hr class="footerLinea" />
-
-        <div class="footerBottom">
-					<span class="copyright"
-                    >&copy; 2023 Company. All rights reserved.</span
-                    >
-            <ul class="footer__list footer__list--bottom">
-                <li class="oggettoLista">
-                    <a href="#" class="footer__list-link">
-                        <i class="ri-facebook-circle-line"></i>
-                    </a>
-                </li>
-                <li class="oggettoLista">
-                    <a href="#" class="footer__list-link">
-                        <i class="ri-instagram-line"></i>
-                    </a>
-                </li>
-                <li class="oggettoLista">
-                    <a href="#" class="footer__list-link">
-                        <i class="ri-twitter-line"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<footer >
+    <jsp:include page="footer.jsp" />
 </footer>
 
 

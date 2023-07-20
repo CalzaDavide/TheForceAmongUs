@@ -26,7 +26,6 @@
 }
 
 .form input, select {
-    font-family: 'Impostograph', monospace;
     font-weight: bold;
     outline: 0;
     background: #add8e6;
@@ -43,7 +42,6 @@
 
 
 button {
-    font-family: 'Impostograph', monospace;
     font-weight: bold;
     text-transform: uppercase;
     outline: 0;

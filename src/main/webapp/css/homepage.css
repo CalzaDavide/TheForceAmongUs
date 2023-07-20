@@ -1,24 +1,24 @@
 header{
-    background-color: #18f1f1;
+    background-color: #151515;
     overflow: hidden;
-    padding: 10px;
+    padding: 5px;
     position:fixed;
     font-size: 35px;
 }
 
-header a:visited, a:link, a:active{
-    text-decoration: none;
-    font-weight: bold;
-    color:black;
 
+
+
+header a:hover {
+    color: white;
 }
 
-.logo {
+#logo {
     float: left;
-    border-radius: 6%;
-    height: 8%;
-    width: 8%;
-    padding: 5px;
+    border-radius: 10%;
+    height: 7%;
+    width: 7%;
+    padding: 2px;
 }
 
 .header input[type="text"] {
@@ -29,51 +29,7 @@ header a:visited, a:link, a:active{
     width: 200px;
 }
 
-/* Barra laterale sinistra */
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 40px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #ff3838;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 40px;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
-}
 
 #menu{
     font-size:60px;
