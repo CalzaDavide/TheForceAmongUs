@@ -21,7 +21,7 @@ header a:visited, a:link, a:active{
     padding: 5px;
 }
 
-.header input[type=text] {
+.header input[type="text"] {
     float: left;
     margin-top: 5px;
     margin-left: 10px;
