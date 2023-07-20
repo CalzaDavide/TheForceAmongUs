@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: david
-  Date: 20/07/2023
-  Time: 12:19
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,6 +10,32 @@
 </head>
 <body>
 <main>
+    <div class="contatti">
+        <div class="form">
+
+            <a href="index.jsp">
+                <img src="images/LogoSito.jpg" alt="Logo" class="logo">
+            </a>
+            <form action="login" method="post" onsubmit="return validate()">
+                <input required id="email" type="email" name="email" placeholder="Email" value="John@john.com"><br><br>
+                <input required type="password" name="pswd" placeholder="Password" value="pswd"><br><br>
+                <button>login</button>
+                <p class="message">NON HAI UN ACCOUNT? <a href="registrazione.jsp">REGISTRATI</a></p>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
     Per qualsiasi problema o dubbio, potete contattare gli admin tramite le seguenti email:<br>
     Davide.calza.2002@gmail.com<br>
     Alele.caturano.2002@gmail.com
