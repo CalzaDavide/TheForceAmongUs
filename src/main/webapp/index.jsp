@@ -31,8 +31,8 @@
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Pacchetto"> <input class="submit" type="submit" value="PACCHETTI"></form>
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Box">       <input class="submit" type="submit" value="BOX"></form>
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Carta">     <input class="submit" type="submit" value="CARTE"></form>
-        <a href="info.html">INFO</a>
-        <a href="contatti.html">CONTATTI</a>
+        <a href="info.jsp">INFO</a>
+        <a href="contatti.jsp">CONTATTI</a>
     </div>
 
     <script>
@@ -86,7 +86,7 @@
 
 <main>
     <h1>ULTIMA ESPANSIONE:</h1>
-    <img src="images/ultimaEspansione">
+    <img src="images/ultimaEspansione.jpg" alt="Ultima Espansione">
     <form action="mostraProdotti.jsp">
         <input type="hidden" name="espansione" value="Rise of the Impostor">
         <input type="submit" value="SCOPRI ORA">
