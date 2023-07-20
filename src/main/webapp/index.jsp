@@ -31,8 +31,8 @@
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Pacchetto"> <input class="submit" type="submit" value="PACCHETTI"></form>
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Box">       <input class="submit" type="submit" value="BOX"></form>
         <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Carta">     <input class="submit" type="submit" value="CARTE"></form>
-        <a href="info.html">INFO</a>
-        <a href="contatti.html">CONTATTI</a>
+        <a href="info.jsp">INFO</a>
+        <a href="contatti.jsp">CONTATTI</a>
     </div>
 
     <script>
@@ -63,13 +63,13 @@
         %>
         <a href="accesso.jsp">ACCEDI</a>
         <a href="registrazione.jsp">REGISTRATI</a>
+        <form action="mostra-carrello">
+            <input type="submit" value="CARRELLO">
+        </form>
         <%} else {%>
         <h1>Benvenuto, <%= cliente.getNome().toUpperCase()%>!</h1>
         <form action="logout">
             <input type="submit" value="LOG OUT">
-        </form>
-        <form action="mostra-carrello">
-            <input type="submit" value="CARRELLO">
         </form>
         <form action="mostra-acquisti">
             <input type="submit" value="VISUALIZZA ACQUISTI">
