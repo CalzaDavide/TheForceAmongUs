@@ -86,7 +86,7 @@
 
 <main>
     <h1>ULTIMA ESPANSIONE:</h1>
-    <img src="images/ultimaEspansione">
+    <img src="images/ultimaEspansione.jpg" alt="Ultima Espansione">
     <form action="mostraProdotti.jsp">
         <input type="hidden" name="espansione" value="Rise of the Impostor">
         <input type="submit" value="SCOPRI ORA">

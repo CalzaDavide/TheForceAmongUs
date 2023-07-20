@@ -26,17 +26,17 @@ body {
     margin-bottom: 20px;
 }
 
-.footer__list {
+.listaFooter {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.footer__list-link {
+.linkListaFooter {
     transition: color 0.25s;
 }
 
-.footer__list-link:hover {
+.linkListaFooter:hover {
     color: #fff;
 }
 

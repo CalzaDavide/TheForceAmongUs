@@ -24,38 +24,39 @@
       </div>
       <div>
         <h6 class="footerTitolo">Prodotti</h6>
-        <ul class="footer__list">
-          <li class="oggettoLista">
-            <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="ricerca" value=""><input class="submitFooter" type="submit" value="CATALOGO"></form>
+        <ul class="listaFooter">
+          <li class="oggettoListaFooter">
+            <form action="mostra-prodotti" class="linkListaFooter"><input type="hidden" name="ricerca" value=""><input class="submitFooter" type="submit" value="CATALOGO"></form>
           </li>
-          <li class="oggettoLista">
-            <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="tipologia" value="Pacchetto"><input class="submitFooter" type="submit" value="PACCHETTI"></form>
+          <li class="oggettoListaFooter">
+            <form action="mostra-prodotti" class="linkListaFooter"><input type="hidden" name="tipologia" value="Pacchetto"><input class="submitFooter" type="submit" value="PACCHETTI"></form>
           </li>
-          <li class="oggettoLista">
-            <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="tipologia" value="Box"><input class="submitFooter" type="submit" value="BOX"></form>
+          <li class="oggettoListaFooter">
+            <form action="mostra-prodotti" class="linkListaFooter"><input type="hidden" name="tipologia" value="Box"><input class="submitFooter" type="submit" value="BOX"></form>
           </li>
-          <li class="oggettoLista">
-            <form action="mostra-prodotti" class="footer__list-link"><input type="hidden" name="tipologia" value="Carta"><input class="submitFooter" type="submit" value="CARTE"></form>                    </li>
+          <li class="oggettoListaFooter">
+            <form action="mostra-prodotti" class="linkListaFooter"><input type="hidden" name="tipologia" value="Carta"><input class="submitFooter" type="submit" value="CARTE"></form>                    </li>
         </ul>
       </div>
       <div>
-        <h6 class="footer__title">Altro</h6>
-        <ul class="footer__list">
-          <li class="oggettoLista">
-            <a href="" class="footer__list-link">About</a>
+        <h6 class="footerTitolo">Altro</h6>
+        <ul class="listaFooter">
+          <li class="oggettoListaFooter">
+            <a href="" class="linkListaFooter">About</a>
           </li>
-          <li class="oggettoLista">
-            <a href="" class="footer__list-link">Careers</a>
+          <li class="oggettoListaFooter">
+            <a href="" class="linkListaFooter">Careers</a>
           </li>
-          <li class="oggettoLista">
-            <a href="" class="footer__list-link">Affiliates</a>
+          <li class="oggettoListaFooter">
+            <a href="" class="linkListaFooter">Affiliates</a>
           </li>
-          <li class="oggettoLista">
-            <a href="" class="footer__list-link">Sitemap</a>
+          <li class="oggettoListaFooter">
+            <a href="" class="linkListaFooter">Sitemap</a>
           </li>
         </ul>
       </div>
     </div>
+
     <hr class="footerLinea" />
 
     <div class="footerBottom">
