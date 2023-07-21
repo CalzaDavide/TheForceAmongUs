@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="css/CssComune.css">
     <link rel="stylesheet" href="css/carrello.css">
     <title>Carrello</title>
-    <style>
-        li {
-            float: left;
-            padding-right: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -64,7 +58,7 @@
             <span id="p">
                 <% for (OggettoQuantita oq : carrello) {
                     int id = oq.getProdotto().getId();%>
-                <p class="<%=id%>">x<%=oq.getQuantita()%> &emsp; <%=oq.getProdotto().getNome().toUpperCase()%></p> <p style="font-size: 15px">&emsp; (<%=oq.getQuantita()* oq.getProdotto().getCosto()%>€) </p>  <%--  &emsp; è uno spazio di 4 caratteri  --%>
+                <p class="<%=id%>">x<%=oq.getQuantita()%> &emsp; <%=oq.getProdotto().getNome().toUpperCase()%></p> <p class="<%=id%>" style="font-size: 15px">&emsp; (<%=oq.getQuantita()* oq.getProdotto().getCosto()%>€) </p>  <%--  &emsp; è uno spazio di 4 caratteri  --%>
                 <input id="rimuovi"  value="RIMUOVI" class="<%=id%>"
                        onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getPrezzoScontato()%>)"><br>
                 <%}%>
