@@ -1,13 +1,10 @@
 header{
-    background-color: #151515;
+
     overflow: hidden;
     padding: 5px;
     position:fixed;
     font-size: 35px;
 }
-
-
-
 
 header a:hover {
     color: white;

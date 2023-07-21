@@ -16,7 +16,7 @@ import Model.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "AggiungiClienteServlet", value = "/aggiungi-cliente")
+@WebServlet(name = "RegistrazioneServlet", value = "/registrazione")
 public class RegistrazioneServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,6 +24,7 @@ public class RegistrazioneServlet extends HttpServlet {
         // reading parameters from the request
         String nome = request.getParameter("nome");
         String cognome = request.getParameter("cognome");
+
         String Pswd = request.getParameter("pswd");
         String email = request.getParameter("email");
 
@@ -56,13 +57,13 @@ public class RegistrazioneServlet extends HttpServlet {
         Matcher capMatcher = capPattern.matcher(codice_postale);
 
         if(!nomeMatcher.find()
-            || !cognomeMatcher.find()
-            || !emailMatcher.find()
-            || !civicoMatcher.find()
-            || !capMatcher.find()
-            || regione.equals("")
-            || provincia.equals("")
-            || provincia == null)
+                || !cognomeMatcher.find()
+                || !emailMatcher.find()
+                || !civicoMatcher.find()
+                || !capMatcher.find()
+                || regione.equals("")
+                || provincia.equals("")
+                || provincia == null)
         {
             request.setAttribute("status", "errore");
             RequestDispatcher dispatcher =
