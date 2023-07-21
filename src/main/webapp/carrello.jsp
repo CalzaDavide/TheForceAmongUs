@@ -54,7 +54,8 @@
         function carrelloVuoto(){
             $("#acquista").remove();
             $("#totale").remove();
-            $("#listaProdotti").append("<h1>Il tuo carrello e' vuoto!</h1>");
+            $("#listaProdotti").append("<h1 style='margin: auto;'> Il tuo carrello e' vuoto !</h1>");
+
         }
     </script>
 
