@@ -55,20 +55,23 @@
                 <img style="margin: 2% 20% 10% 20%" src="images/LogoSito.jpg" alt="Logo" class="logo">
             </a>
             <br>
-            <span id="p">
-                <% for (OggettoQuantita oq : carrello) {
-                    int id = oq.getProdotto().getId();%>
-                <p class="<%=id%>">x<%=oq.getQuantita()%> &emsp; <%=oq.getProdotto().getNome().toUpperCase()%></p> <p class="<%=id%>" style="font-size: 15px">&emsp; (<%=oq.getQuantita()* oq.getProdotto().getCosto()%>€) </p>  <%--  &emsp; è uno spazio di 4 caratteri  --%>
-                <input id="rimuovi"  value="RIMUOVI" class="<%=id%>"
-                       onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getPrezzoScontato()%>)"><br>
+            <%if(carrello.isEmpty()){%>
+            <h1>Il tuo carrello e' vuoto!</h1>
+            <%}else{%>
+                <span id="p">
+                    <% for (OggettoQuantita oq : carrello) {
+                        int id = oq.getProdotto().getId();%>
+                    <p class="<%=id%>">x<%=oq.getQuantita()%> &emsp; <%=oq.getProdotto().getNome().toUpperCase()%></p> <p class="<%=id%>" style="font-size: 15px">&emsp; (<%=oq.getQuantita()* oq.getProdotto().getCosto()%>€) </p>  <%--  &emsp; è uno spazio di 4 caratteri  --%>
+                    <input id="rimuovi"  value="RIMUOVI" class="<%=id%>"
+                           onclick="rimuoviCarrello(<%=id%>, <%=oq.getQuantita()%>, <%=oq.getProdotto().getPrezzoScontato()%>)"><br>
+                    <%}%>
+                </span>
+
+                <h1 id="totale">TOTALE: <%=totale%>€</h1>
+                <%if (session.getAttribute("utente") != null) {%>
+                <input id="acquista" type="button" value="PROCEDI ALL'ACQUISTO" onclick="acquisto()">
                 <%}%>
-            </span>
-
-            <h1 id="totale">TOTALE: <%=totale%>€</h1>
-            <%if (session.getAttribute("utente") != null) {%>
-            <input id="acquista" type="button" value="PROCEDI ALL'ACQUISTO" onclick="acquisto()">
             <%}%>
-
         </div>
     </div>
 
