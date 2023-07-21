@@ -17,12 +17,14 @@
 <header></header>
 
 <main>
-    <%Double totale = Double.parseDouble(String.format(Locale.US, "%.2f", request.getAttribute("totale")));%>
+    <%Double totale = Double.parseDouble(String.format(Locale.US, "%.2f", request.getAttribute("totale")));
+    ArrayList<OggettoQuantita> carrello = (ArrayList<OggettoQuantita>) request.getAttribute("carrello");%>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
         var tot = <%=totale%>;
-
+        var n = <%=carrello.size()%>
         function rimuoviCarrello(idProdotto, quantita, costo) {
             $.post("rimuovi-carrello",
                 {prodotto: idProdotto},
@@ -31,6 +33,10 @@
                     tot -= (quantita * costo).toFixed(2);
                     tot = tot.toFixed(2);
                     $("#totale").text("TOTALE: " + tot + "€");
+                    n--;
+                    if(n<=0){
+                        carrelloVuoto();
+                    }
                 }
             )
         }
@@ -40,17 +46,20 @@
                 function () {
                     $("#p *").remove();
                     tot = 0;
-                    $("#totale").text("TOTALE: 0€");
+                    carrelloVuoto();
                 }
             )
         }
+
+        function carrelloVuoto(){
+            $("#acquista").remove();
+            $("#totale").remove();
+            $("#listaProdotti").append("<h1>Il tuo carrello e' vuoto!</h1>");
+        }
     </script>
 
-    <% ArrayList<OggettoQuantita> carrello = (ArrayList<OggettoQuantita>) request.getAttribute("carrello");%>
-
-
     <div class="carrello">
-        <div class="listaProdotti">
+        <div class="listaProdotti" id="listaProdotti">
             <a href="index.jsp">
                 <img style="margin: 2% 20% 10% 20%" src="images/LogoSito.jpg" alt="Logo" class="logo">
             </a>
