@@ -1,0 +1,71 @@
+*{font-weight: bold}
+
+.carrello {
+    width: 35%;
+    height: 70%;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.logo {
+
+    max-width: 55%;
+    border-radius: 6%;
+    margin-bottom: 10%;
+    margin-top: 15px;
+}
+
+
+.listaProdotti {
+
+    position: relative;
+    z-index: 1;
+    background: #06051F;
+    margin: 0 auto 100px;
+    padding: 10px 45px 45px 45px;
+    font-size: 30px;
+    float: left;
+    border-radius: 10%;
+}
+
+p {
+    display: inline-block;
+    color: #ff3838;
+}
+
+#totale {
+    font-size: 45px;
+    margin: 7% auto auto auto;
+    color: #ff3838;
+}
+
+#rimuovi {
+
+    background: #00295b;
+    color: #ff3838;
+    font-size: 16px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 1%;
+    float: right;
+}
+
+#rimuovi:hover{
+    color: white;
+}
+
+#acquista {
+    text-transform: uppercase;
+    background: #00295b;
+    width: 100%;
+    padding: 15px;
+    color: #ff3838;
+    font-size: 24px;
+    border-radius: 15px;
+}
+
+#acquista:hover {
+    color: white;
+}
+
+

@@ -3,16 +3,16 @@
     height: 70%;
     padding: 8% 0 0;
     margin: auto;
+
 }
 
-.logo{
+.logo {
     position: relative;
     max-width: 55%;
     border-radius: 6%;
     margin-bottom: 15px;
     margin-top: 15px;
 }
-
 
 
 .form {
@@ -22,7 +22,7 @@
     margin: 0 auto 100px;
     padding: 10px 45px 45px 45px;
     text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10%;
 }
 
 .form input, select {
@@ -40,20 +40,22 @@
 }
 
 
-
 button {
     font-weight: bold;
     text-transform: uppercase;
-    outline: 0;
-    background: #003C82;
+    background: #00295b;
     width: 100%;
-    border: 0;
     padding: 15px;
-    color: #FFFFFF;
+    color: #ff3838;
     font-size: 24px;
+    border-radius: 15px;
 }
 
-select{
+button:hover{
+    color: white;
+}
+
+select {
     margin-bottom: 20px;
 }
 
@@ -63,7 +65,7 @@ select{
     font-size: 25px;
 }
 
-a{
+a {
     text-decoration: none;
     color: #ff3838;
 }

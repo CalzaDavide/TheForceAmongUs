@@ -15,6 +15,7 @@
 </head>
 <body>
 <main>
+  
     <ol>
         <%
             ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = (ArrayList<AcquistoCoinvolgimento>) request.getAttribute("acquisti");
@@ -22,8 +23,7 @@
         %>
         <li>
             <div>
-                <h1><%=ac.getAcquisto().getData() + " " + ac.getAcquisto().getImporto()%>
-                </h1>
+                <h1><%=ac.getAcquisto().getData() + " " + ac.getAcquisto().getImporto()%>€</h1>
                 <ul>
                     <%for (Coinvolgimento c : ac.getProdottiCoinvolti()) {%>
                     <li>
