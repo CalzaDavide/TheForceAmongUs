@@ -27,10 +27,8 @@
 
 .form input, select {
     font-weight: bold;
-    outline: 0;
     background: #add8e6;
     width: 85%;
-    border: 0;
     margin: 0 0 8px;
     padding: 20px;
     box-sizing: border-box;

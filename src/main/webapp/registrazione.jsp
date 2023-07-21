@@ -73,7 +73,7 @@
             <img src="images/LogoSito.jpg" alt="Logo" class="logo">
         </a>
 
-        <form action="aggiungi-cliente" onsubmit="return validate()" id="clienteForm">
+        <form action="registrazione" method="get" onsubmit="return validate()" id="clienteForm">
 
             <input required id="email" type="email" name="email" placeholder="Email"><br><br>
             <input required type="password" name="pswd" placeholder="Password"><br><br>

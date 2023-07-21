@@ -1,4 +1,6 @@
-*{font-weight: bold}
+* {
+    font-weight: bold;
+}
 
 .carrello {
     width: 35%;
@@ -50,7 +52,7 @@ p {
     float: right;
 }
 
-#rimuovi:hover{
+#rimuovi:hover {
     color: white;
 }
 
