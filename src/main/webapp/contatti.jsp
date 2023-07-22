@@ -7,22 +7,44 @@
     <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        // Ottieni riferenza al form dal DOM
+        const emailForm = document.getElementById('emailForm');
+
+        // Aggiungi un gestore di eventi al form
+        emailForm.addEventListener('submit', (event) => {
+            // Ottieni il contenuto della textarea
+            const messageContent = encodeURIComponent(document.getElementById('message').value);
+
+            // Aggiorna l'azione del form con il testo del messaggio
+            emailForm.action = "mailto:david67calza@gmail.com?body=${messageContent}";
+        });
+    </script>
 </head>
 <body>
 <main>
     <div class="contatti">
-        <div class="form">
+        <a href="index.jsp">
+            <img src="images/LogoSito.jpg" alt="Logo" class="logo">
+        </a>
 
-            <a href="index.jsp">
-                <img src="images/LogoSito.jpg" alt="Logo" class="logo">
-            </a>
-            <form action="login" method="post" onsubmit="return validate()">
-                <input required id="email" type="email" name="email" placeholder="Email" value="John@john.com"><br><br>
-                <input required type="password" name="pswd" placeholder="Password" value="pswd"><br><br>
-                <button>login</button>
-                <p class="message">NON HAI UN ACCOUNT? <a href="registrazione.jsp">REGISTRATI</a></p>
+
+
+            <h2>Descrivi il problema</h2>
+            <form id="emailForm" action="mailto:david67calza@gmail.com" method="post" enctype="text/plain">
+                <textarea name="message" id="message"></textarea>
+                <button type="submit">Invia email</button>
             </form>
-        </div>
+
+
+
+
+
+        Per qualsiasi problema o dubbio, potete contattare i creatori del sito tramite le seguenti email:<br>
+        Davide.calza.2002@gmail.com<br>
+        Alele.caturano.2002@gmail.com
+
     </div>
 
 
