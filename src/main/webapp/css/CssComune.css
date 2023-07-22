@@ -60,8 +60,14 @@ a{
 
 #menu{
     font-size:60px;
-    cursor:pointer;
     float:left;
+    height: 15%;
+    width: 15%;
+}
+
+#menuDestra{
+    font-size:60px;
+    float:right;
     height: 15%;
     width: 15%;
 }
