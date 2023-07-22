@@ -12,11 +12,75 @@ body{
     background-color: #151515;
 }
 
+/*    Header Sidenav    */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #151515;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
 #menu{
+    font-size:60px;
     float:left;
     color: white;
     width: auto;
 }
+
+#menuDestra{
+    font-size:60px;
+    float:right;
+    height: 15%;
+    width: 15%;
+}
+
+.sidenav a  {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #ff3838;
+    display: block;
+    font-weight: bold;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+
+.sidenav input  {
+    padding: 8px 8px 8px 32px;
+    border: none;
+    background: none;
+    font-size: 40px;
+    color: #ff3838;
+    display: block;
+    font-weight: bold;
+}
+
+.submit:hover {
+    color: white;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 50px;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+/*    Logo    */
 
 #logo {
     float: left;
@@ -25,6 +89,11 @@ body{
     padding: 2%;
     margin: auto;
 }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+/*    Search bar    */
 
 #searchbar{
     margin: 25px auto 10px 40%;
@@ -52,6 +121,11 @@ body{
     border: none;
     background-color: rgba(255, 255, 255, 0);
 }
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
+/*    Search bar    */
 
 #nomeUtente, #accediRegistrati{
     margin: 17% 20% 13% auto;
