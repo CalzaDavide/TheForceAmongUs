@@ -4,6 +4,7 @@
     <title>Contatti</title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <link rel="stylesheet" href="css/CssComune.css">
+    <link rel="stylesheet" href="css/infoContatti.css">
     <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,43 +25,20 @@
 </head>
 <body>
 <main>
-    <div class="contatti">
-        <a href="index.jsp">
-            <img src="images/LogoSito.jpg" alt="Logo" class="logo">
-        </a>
 
-
-
-            <h2>Descrivi il problema</h2>
+    <div class="contenitoreInfoContatti">
+        <div class="contatti">
+            <a href="index.jsp">
+                <img src="images/LogoSito.jpg" alt="Logo" class="logo">
+            </a>
+            <h1>Descrivi il problema</h1>
             <form id="emailForm" action="mailto:david67calza@gmail.com" method="post" enctype="text/plain">
-                <textarea name="message" id="message"></textarea>
+                <textarea name="message" id="message" rows="10" cols="60"></textarea>
                 <button type="submit">Invia email</button>
             </form>
-
-
-
-
-
-        Per qualsiasi problema o dubbio, potete contattare i creatori del sito tramite le seguenti email:<br>
-        Davide.calza.2002@gmail.com<br>
-        Alele.caturano.2002@gmail.com
-
+        </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-    Per qualsiasi problema o dubbio, potete contattare gli admin tramite le seguenti email:<br>
-    Davide.calza.2002@gmail.com<br>
-    Alele.caturano.2002@gmail.com
 </main>
 
 <footer>

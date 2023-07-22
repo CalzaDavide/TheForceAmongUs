@@ -68,4 +68,7 @@ a {
     color: #ff3838;
 }
 
+a:hover {
+    color: white;
+}
 

@@ -1,4 +1,4 @@
-.contatti, .info {
+.contenitoreInfoContatti {
     width: 35%;
     height: 70%;
     padding: 8% 0 0;
@@ -14,13 +14,7 @@
     margin-top: 15px;
 }
 
-
-
-
-
-
-
-.form {
+.info, .contatti {
     position: relative;
     z-index: 1;
     background: #06051F;
@@ -30,18 +24,27 @@
     border-radius: 10%;
 }
 
-.form input, select {
-    font-weight: bold;
-    background: #add8e6;
-    width: 85%;
-    margin: 0 0 8px;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 25px;
-    border-radius: 30px;
+.info h1, .contatti h1{
+    color: #ff3838;
+    margin: 8% auto 4% auto;
+    font-size: 45px;
+}
+
+.info p{
+    color: white;
+    font-size: 27px;
+    letter-spacing: 2px;
+    line-height: 140%;
 
 }
 
+textarea{
+    background-color: lightblue;
+    margin: auto auto 5% auto;
+    padding: 5%;
+    font-size: 35px;
+    border-radius: 12px;
+}
 
 button {
     font-weight: bold;
@@ -57,9 +60,6 @@ button {
 button:hover{
     color: white;
 }
-
-
-
 
 a {
     text-decoration: none;

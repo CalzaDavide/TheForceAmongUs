@@ -22,6 +22,7 @@
     }
 </script>
 
+<main>
 <div class="login">
     <% String logInStatus = (String) request.getAttribute("logInStatus");
         if (logInStatus != null && logInStatus.equals("errato")) {%>
@@ -41,7 +42,7 @@
         </form>
     </div>
 </div>
-
+</main>
 
 </body>
 </html>
