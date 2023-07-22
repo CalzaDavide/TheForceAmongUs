@@ -1,0 +1,70 @@
+body{
+    overflow: hidden;
+    padding: 5px;
+    position:fixed;
+    font-size: 35px;
+}
+
+
+.barra{
+    display: grid;
+    grid-template-columns: 8% 8% 8% auto auto auto auto auto;  /* Menù laterale / Logo / Barra di ricerca / Benvenuto / Accedi / Registrati / Carrello / Visualizza acquisti passati  */
+    grid-template-rows: auto;
+}
+
+
+#menu{
+    float:left;
+    color: white;
+    width: auto;
+}
+
+
+#logo {
+    float: left;
+    border-radius: 10%;
+    width: 100%;
+    padding: 2px;
+}
+
+#searchbar{
+    margin: 10px 0 10px 300px;
+    float: left;
+    width: 300px;
+    height: 50px;
+    background-color: lightblue;
+    border-radius: 25px;
+}
+
+#searchbar input[type="text"] {
+    margin: 12px 2px 8px 10px;
+    font-size: 35px;
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0);
+    letter-spacing: 1.5px;
+}
+
+#searchbar #cerca{
+    float: right;
+    margin: 7px 3px 3px 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+
+#account {
+    padding-left: 75px;
+    color:black;
+}
+
+
+
+#account {
+    float:left;
+    height: 90px;
+    padding-top: 12px;
+}

@@ -105,11 +105,16 @@ a{
 
 /*    Footer    */
 
-.submitFooter{
+.testoFooter{
     border: none;
     background: none;
-    font-size: 30px;
+    padding: 2px;
+    font-size: 20px;
     color: #ff3838;
     display: block;
     font-weight: bold;
 }
+.testoFooter:hover{
+    color: white;
+}
+

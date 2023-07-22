@@ -15,76 +15,11 @@
 
 
 <body>
-<header>
+<footer >
+    <jsp:include page="header.jsp" />
+</footer>
 
-
-    <%-- Sidebar --%>
-    <span id="menu" onclick="openNav()">&#9776;</span>
-
-        <a href="#">
-            <img src="images/LogoSito.jpg" alt="Logo" id="logo">
-        </a>
-
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <form action="mostra-prodotti"><input type="hidden" name="ricerca" value="">            <input class="submit" type="submit" value="CATALOGO"></form>
-        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Pacchetto"> <input class="submit" type="submit" value="PACCHETTI"></form>
-        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Box">       <input class="submit" type="submit" value="BOX"></form>
-        <form action="mostra-prodotti"><input type="hidden" name="tipologia" value="Carta">     <input class="submit" type="submit" value="CARTE"></form>
-        <a href="info.jsp">INFO</a>
-        <a href="contatti.jsp">CONTATTI</a>
-    </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-
-
-    <%-- Searchbar --%>
-    <div style="float:left" id="searchbar">
-        <form action="mostra-prodotti">
-            <input type="text" name="ricerca">
-            <input type="submit" value="CERCA">
-        </form>
-    </div>
-
-
-    <%-- Nome Utente --%>
-    <div id="account">
-        <form action="mostra-carrello">
-            <input type="submit" value="CARRELLO">
-        </form>
-        <%
-            Cliente cliente = (Cliente) session.getAttribute("utente");
-            if (cliente == null) {
-        %>
-        <a href="accesso.jsp">ACCEDI</a>
-        <a href="registrazione.jsp">REGISTRATI</a>
-        <%} else {%>
-        <h1>Benvenuto, <%= cliente.getNome().toUpperCase()%>!</h1>
-        <form action="mostra-acquisti">
-            <input type="submit" value="VISUALIZZA ACQUISTI">
-        </form>
-        <form action="logout">
-            <input type="submit" value="LOG OUT">
-        </form>
-
-        <%}%>
-    </div>
-        <% if (cliente != null && cliente.isAdmin()) {%>
-        <form action="mostra-utenti">
-            <input type=submit value="MOSTRA UTENTI">
-        </form>
-        <a href="aggiungiProdotto.jsp">AGGIUNGI PRODOTTO</a><br>
-        <%}%>
-</header>
-
+<%--%>
 <main>
     <h1>ULTIMA ESPANSIONE:</h1>
     <img src="images/ultimaEspansione.jpg" alt="Ultima Espansione">
@@ -92,6 +27,7 @@
         <input type="hidden" name="espansione" value="The rise of the impostor">
         <input type="submit" value="SCOPRI ORA">
     </form>
+    <%--%>
     <p style="font-size: 50px">Prova</p>
     <p style="font-size: 50px">Prova</p>
     <p style="font-size: 50px">Prova</p>
