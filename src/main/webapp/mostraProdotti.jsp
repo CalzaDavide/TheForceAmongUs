@@ -25,6 +25,57 @@
 
 <%ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");%>
 
+<main>
+
+
+
+    <div class="prodotti">
+
+        <div class="displayProdotti">
+
+            <%for (Prodotto p : prodotti) {%>
+            <div class="prodottoSingolo">
+
+                <div id="immagine">
+                    <img src="<%=p.getImmagine()%>" alt="foto del prodotto <%=p.getNome()%>">
+                </div>
+
+                <div class="infoProdotto">
+                    <div class="prodottoHeader">
+                        <h2 id="nome"><%=p.getNome().toUpperCase()%></h2>
+                        <p id="espansione"><%=p.getEspansione().toUpperCase()%></p>
+                    </div>
+
+                    <div class="prodottoFooter">
+                        <p id="prezzo"><%if(p.getPercentuale_sconto()==0){%>
+                            <%=p.getCosto()%>
+                            <%}else{%>
+                            <del><%=p.getCosto()%>€</del>
+                            <%=p.getPrezzoScontato()%>
+                            <%}%>€</p>
+                        <div id="carrello">
+                            <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/iconaCarrello.png" alt="carrello">
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+            </div>
+            <hr class="footerLinea" />
+            <%}%>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+
+
+
+<%--%>
 <div class="prodotti">
     <%for (Prodotto p : prodotti) {%>
 
@@ -47,7 +98,6 @@
                     <%}%>€</p>
                 <div id="carrello">
                         <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/iconaCarrello.png" alt="carrello">
-                    <%--<input onclick="aggiungiCarrello(<%=p.getId()%>)" type="button" value = "Aggiungi al carrello">--%>
                 </div>
             </div>
         </div>
@@ -56,6 +106,8 @@
 
     <%}%>
 </div>
+<%--%>
+
 
 <footer >
     <jsp:include page="footer.jsp" />
