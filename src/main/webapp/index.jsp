@@ -14,9 +14,10 @@
 
 
 <body>
-<footer >
+
+<header >
     <jsp:include page="header.jsp" />
-</footer>
+</header>
 
 <%--%>
 <main>

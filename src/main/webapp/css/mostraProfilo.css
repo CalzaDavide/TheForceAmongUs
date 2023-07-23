@@ -1,0 +1,45 @@
+main{
+    width: 40%;
+    height: 90%;
+    margin: 5% auto 5% auto;
+
+}
+
+
+#mostraProfilo {
+    position: relative;
+    z-index: 1;
+    background: #06051F;
+    margin: 0 auto 100px;
+    padding: 10px 45px 45px 45px;
+    text-align: center;
+    border-radius: 10%;
+}
+
+#benvenuto{
+    margin: 2% auto 2% auto;
+    padding: 2px
+}
+
+#benvenuto h1{
+    padding: 2px;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 7%;
+}
+
+#informazioniPersonali h2, #datiSpedizione h2{
+   color: #ff3838;
+    font-size: 35px;
+    margin: 1% auto 0 1%;
+}
+
+#informazioniPersonali p, #datiSpedizione p{
+    color: white;
+    font-size: 25px;
+    padding: 0 0 0 5px;
+    margin: 2% auto 2% 1%;
+}
+
+
+

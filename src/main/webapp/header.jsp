@@ -139,7 +139,10 @@
         <%Cliente cliente = (Cliente) session.getAttribute("utente");%>
         <%  if (!(cliente == null)) {%>
 
-    <h1 id="nomeUtente">Benvenuto, <%= cliente.getNome().toUpperCase()%>!</h1>
+    <div class="nomeUtenteAccediRegistrati">
+        <h1 id="nomeUtente">Benvenuto, <%= cliente.getNome().toUpperCase()%>!</h1>
+    </div>
+
 
     <div id="accountHeader">
         <div id="mostraProfiloHeader">
@@ -174,9 +177,8 @@
     </div>
 
         <%} else {%>
-    <div id="accediRegistrati">
+    <div id="nomeUtenteAccediRegistrati">
         <a href="accesso.jsp">ACCEDI &nbsp;</a>
-
         <a href="registrazione.jsp">REGISTRATI</a>
     </div>
         <%}%>

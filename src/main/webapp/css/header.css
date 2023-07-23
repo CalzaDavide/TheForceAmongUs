@@ -92,11 +92,10 @@ body{
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-
 /*    Search bar    */
 
 #searchbar{
-    margin: 25px auto 10px 40%;
+    margin: 25px auto 10px auto;
     float: left;
     width: 350px;
     height: 50px;
@@ -127,14 +126,18 @@ body{
 
 /*    Search bar    */
 
-#nomeUtente, #accediRegistrati{
-    margin: 17% 20% 13% auto;
-    float: right;
-    color: #ff3838;
-    font-size: 30px;
+.nomeUtenteAccediRegistrati{
+    margin: 17% auto 13% auto;
 }
 
-#accediRegistrati a:hover {
+#nomeUtente, #nomeUtenteAccediRegistrati a{
+    color: #ff3838;
+    font-size: 30px;
+    margin: auto;
+}
+
+
+#nomeUtenteAccediRegistrati a:hover {
     color: white;
 }
 
