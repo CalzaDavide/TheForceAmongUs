@@ -7,7 +7,7 @@ body{
 
 .barra{
     display: grid;
-    grid-template-columns: 8% 10% 33% 14% 25% 10%;  /* Menù laterale / Logo / Barra di ricerca / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
+    grid-template-columns: 8% 10% 33% 0 14% 25% 10%;  /* Menù laterale / Logo / Barra di ricerca / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
     grid-template-rows: auto;
     background-color: #151515;
 }
@@ -32,13 +32,6 @@ body{
     float:left;
     color: white;
     width: auto;
-}
-
-#menuDestra{
-    font-size:60px;
-    float:right;
-    height: 15%;
-    width: 15%;
 }
 
 .sidenav a  {
@@ -115,12 +108,23 @@ body{
 }
 
 #searchbar #cerca{
-    float: right;
+    float:right;
     margin: 7px 3px 3px 5px;
     border: none;
     background-color: rgba(255, 255, 255, 0);
 }
 
+#searchbar{
+    width: 400px;
+}
+
+#cercaForm{
+    display: flex;
+}
+
+#cercaInput{
+    flex:1;
+}
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -166,7 +170,17 @@ body{
     margin:auto;
 }
 
+@media screen and (max-width: 1200px){
+    .barra{
+        grid-template-columns: 15% 20% 65%;  /* Menù laterale / Logo / Barra di ricerca / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
+        grid-template-rows: auto auto;
+    }
+}
 
-
+@media screen and (max-width: 600px){
+    #searchbar{
+        width: 250px;
+    }
+}
 
 

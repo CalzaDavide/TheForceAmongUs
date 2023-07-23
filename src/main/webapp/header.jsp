@@ -127,14 +127,16 @@
 
     <%-- Searchbar --%>
     <div id="searchbar">
-        <form action="mostra-prodotti">
-            <input type="text" name="ricerca">
+        <form action="mostra-prodotti" id="cercaForm">
             <button id="cerca">
                 <img style="transform: scaleX(-1);" src="images/iconaCerca.png" alt="Cerca">
             </button>
+            <input type="text" name="ricerca" id="cercaInput">
+
         </form>
     </div>
 
+    <div></div>
 
         <%Cliente cliente = (Cliente) session.getAttribute("utente");%>
         <%  if (!(cliente == null)) {%>
