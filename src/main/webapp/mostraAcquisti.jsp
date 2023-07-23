@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <link rel="stylesheet" href="css/CssComune.css">
     <link rel="stylesheet" type="text/css" href="./css/mostraAcquisti.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -24,7 +23,7 @@
                 <img style="margin: 2% 20% 10% 20%" src="images/LogoSito.jpg" alt="Logo" class="logo">
             </a>
             <br>
-            <hr class="linea" />
+            <hr class="linea">
             <%
                 ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = (ArrayList<AcquistoCoinvolgimento>) request.getAttribute("acquisti");
                 for (AcquistoCoinvolgimento ac : acquistoCoinvolgimentoLista) {
@@ -38,7 +37,7 @@
                      <p id="oggettoListaAcquisto">- <%=c.getProdotto().getNome() + " " + c.getQuantita() + " (" + c.getProdotto().getPrezzoScontato()*c.getQuantita() + "€)"%></p>
                     <%}%>
             </div>
-            <hr class="footerLinea" />
+            <hr class="linea">
             <br>
             <%}%>
         </div>

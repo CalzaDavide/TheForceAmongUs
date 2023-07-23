@@ -1,10 +1,5 @@
-* {
-    font-weight: bold;
-}
-
-
 .prodotti {
-    width: 35%;
+    width: 45%;
     height: 70%;
     padding: 8% 0 0;
     margin: auto;
@@ -14,9 +9,8 @@
 .displayProdotti {
     z-index: 1;
     background: #06051F;
-    margin: 0 auto 100px;
+    margin: 0 auto 100px auto;
     padding: 20px 55px;
-    float: left;
     border-radius: 15px;
 }
 
@@ -102,7 +96,21 @@
 
 
 #carrello img:hover {
-
     background-color: rgba(255, 0, 0, 0.44);
     border-radius: 3px;
+}
+
+.displayProdotti #nessunRisultato, .displayProdotti #ricerca{
+    display: inline-block;
+    font-size: 40px;
+}
+
+#nessunRisultato {
+    margin: 2% auto 3% auto;
+    color: white;
+
+}
+#ricerca{
+    color: #ff3838;
+    margin: auto;
 }
