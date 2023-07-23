@@ -20,14 +20,11 @@
     <% Cliente cliente = (Cliente) session.getAttribute("utente"); %>
 
     <div id="mostraProfilo">
-
-
         <div id="benvenuto">
             <h1>Benvenuto, <%= cliente.getNome()%> !</h1>
         </div>
 
         <div id="informazioniPersonali">
-
             <h2>EMAIL : </h2>
             <p><%= cliente.getEmail()%></p>
             <br>
@@ -37,15 +34,12 @@
         </div>
 
         <div id="datiSpedizione">
-
             <h2>NOME E COGNOME : </h2>
             <p><%= cliente.getNome().toUpperCase()%> &nbsp; <%= cliente.getCognome().toUpperCase()%></p>
             <br>
             <h2>INDIRIZZO : </h2>
             <p><%= cliente.getIndirizzo_Via().toUpperCase()%> , <%= cliente.getN_Civico()%> , <%=cliente.getCodice_Postale()%> , ITALIA</p>
             <br>
-
-
         </div>
     </div>
 
