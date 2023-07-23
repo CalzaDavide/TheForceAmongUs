@@ -5,8 +5,6 @@
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <link rel="stylesheet" href="css/CssComune.css">
     <link rel="stylesheet" href="css/infoContatti.css">
-    <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -14,17 +12,13 @@
 <main>
 
     <div class="contenitoreInfoContatti">
-        <div class="info">
-            <a href="index.jsp">
-                <img src="images/LogoSito.jpg" alt="Logo" class="logo">
-            </a>
 
-            <h1>Scopri THE FORCE AMONG US!</h1>
+            <h2>SCOPRI THE FORCE AMONG US!</h2>
 
             <p>IL GIOCO DI CARTE STRATEGICO DOVE IL TUO OBBIETTIVO e' SABOTARE
                 LA NAVE DELL' AVVERSARIO PRIMA CHE LUI FACCIA LO STESSO!</p>
 
-            <h1>REGOLE</h1>
+            <h2>REGOLE</h2>
             <br>
 
             <p>DURANTE IL PROPRIO TURNO UN GIOCATORE PUO' SCHIERARE UNA CARTA SULLA SUA NAVE.
@@ -36,8 +30,6 @@
             </p>
 
         </div>
-
-    </div>
 </main>
 
 <footer>

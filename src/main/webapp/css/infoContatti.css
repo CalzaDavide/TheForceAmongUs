@@ -1,11 +1,11 @@
 main {
-    width: 35%;
+    width: 45%;
     height: 70%;
     padding: 8% 0 0;
     margin: 50px auto;
 }
 
-#info {
+.contenitoreInfoContatti {
     position: relative;
     z-index: 1;
     background: #06051F;
@@ -17,15 +17,21 @@ main {
 }
 
 h1, h2{
-    color: white;
-    padding: 15px 5%;
+    padding: 15px 0;
     margin: auto;
 }
 
 h1{
     font-size: 64px;
+    color: white;
 }
 h2{
-    font-size: 32px;
+    font-size: 35px;
+    color: #ff3838;
+}
+
+p{
+    color: white;
+    font-size: 20px ;
 }
 

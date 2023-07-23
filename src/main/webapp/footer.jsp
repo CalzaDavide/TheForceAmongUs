@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="Model.Cliente" %>
 <html>
 <head>
     <title>footer</title>
@@ -13,7 +14,18 @@
     <div class="contenitoreFooter">
         <div class="footerTop">
             <div>
-
+                <%Cliente cliente = (Cliente) session.getAttribute("utente");%>
+                <%if (cliente != null && cliente.isAdmin()) {%>
+                <h6 class="footerTitolo">FUNZIONI ADMIN</h6>
+                <ul class="listaFooter">
+                    <li>
+                        <a class="testoFooter" href="mostraUtenti.jsp">MOSTRA UTENTI</a>
+                    </li>
+                    <li>
+                        <a class="testoFooter" href="aggiungiProdotto.jsp">AGGIUNGI PRODOTTO</a>
+                    </li>
+                </ul>
+                <%}%>
             </div>
             <div>
                 <h6 class="footerTitolo">PRODOTTI</h6>
@@ -44,10 +56,10 @@
                 <h6 class="footerTitolo">ALTRO</h6>
                 <ul class="listaFooter">
                     <li class="oggettoListaFooter">
-                        <a href="info.jsp" class="testoFooter">INFO</a>
+                        <a class="testoFooter" href="info.jsp">INFO</a>
                     </li>
                     <li class="oggettoListaFooter">
-                        <a href="contatti.jsp" class="testoFooter">CONTATTI</a>
+                        <a class="testoFooter" href="contatti.jsp">CONTATTI</a>
                     </li>
                 </ul>
             </div>
