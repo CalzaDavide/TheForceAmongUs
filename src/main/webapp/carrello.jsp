@@ -41,16 +41,6 @@
             )
         }
 
-        function acquisto() {
-            $.post("acquisto",
-                function () {
-                    $("#p *").remove();
-                    tot = 0;
-                    carrelloVuoto();
-                }
-            )
-        }
-
         function carrelloVuoto(){
             $("#acquista").remove();
             $("#totale").remove();
@@ -79,7 +69,7 @@
 
                 <h1 id="totale">TOTALE: <%=totale%>€</h1>
                 <%if (session.getAttribute("utente") != null) {%>
-                <input id="acquista" type="button" value="PROCEDI ALL'ACQUISTO" onclick="acquisto()">
+                <form action="acquisto"><input id="acquista" type="submit" value="PROCEDI ALL'ACQUISTO"></form>
                 <%}%>
             <%}%>
         </div>

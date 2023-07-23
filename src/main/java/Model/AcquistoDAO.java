@@ -50,4 +50,29 @@ public class AcquistoDAO {
         }
 
     }
+
+    public Acquisto doRetriveById(int id) throws RuntimeException{
+        try{
+            Connection connection = ConPool.getConnection();
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM ordine WHERE ID_ordine = ?");
+            statement.setInt(1, id);
+
+            ResultSet rs = statement.executeQuery();
+            Acquisto a = null;
+            if(rs.next()){
+                a = new Acquisto();
+                a.setId(rs.getInt(1));
+                a.setData(rs.getDate(2));
+                a.setImporto(rs.getFloat(3));
+                a.setEmailCliente(rs.getString(4));
+            }
+
+            connection.close();
+            return a;
+
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }
+
+    }
 }

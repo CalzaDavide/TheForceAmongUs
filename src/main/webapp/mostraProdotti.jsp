@@ -32,9 +32,9 @@
     <div class="prodotti">
 
         <div class="displayProdotti">
-
-            <%for (Prodotto p : prodotti) {%>
-            <div class="prodottoSingolo">
+            <%if(!prodotti.isEmpty()){
+                for (Prodotto p : prodotti) {%>
+                <div class="prodottoSingolo">
 
                 <div id="immagine">
                     <img src="<%=p.getImmagine()%>" alt="foto del prodotto <%=p.getNome()%>">
@@ -60,10 +60,12 @@
 
                 </div>
                 <br>
-            </div>
-            <hr class="footerLinea" />
+                </div>
+                <hr class="footerLinea" />
+                <%}
+            }else{%>
+                <h1>Nessun risultato relativo alla ricerca "<%=request.getAttribute("ricerca")%>"</h1>
             <%}%>
-
         </div>
 
     </div>

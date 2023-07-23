@@ -30,6 +30,7 @@ public class MostraProdottiServlet extends HttpServlet {
 
         String espansione = request.getParameter("espansione");
         String tipologia = request.getParameter("tipologia");
+        String ricerca = request.getParameter("ricerca");
 
         ArrayList<Prodotto> prodotti;
 
@@ -38,8 +39,9 @@ public class MostraProdottiServlet extends HttpServlet {
         else if (tipologia!= null)
             prodotti = pd.doRetrieveByTipologia(tipologia);
         else
-            prodotti = pd.doRetrieveByNome(request.getParameter("ricerca"));
+            prodotti = pd.doRetrieveByNome(ricerca);
         request.setAttribute("prodotti", prodotti);
+        request.setAttribute("ricerca", ricerca);
 
         RequestDispatcher rd = request.getRequestDispatcher(address);
 

@@ -5,38 +5,18 @@
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
     <link rel="stylesheet" href="css/CssComune.css">
     <link rel="stylesheet" href="css/infoContatti.css">
-    <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
-    <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-        // Ottieni riferenza al form dal DOM
-        const emailForm = document.getElementById('emailForm');
-
-        // Aggiungi un gestore di eventi al form
-        emailForm.addEventListener('submit', (event) => {
-            // Ottieni il contenuto della textarea
-            const messageContent = encodeURIComponent(document.getElementById('message').value);
-
-            // Aggiorna l'azione del form con il testo del messaggio
-            emailForm.action = "mailto:david67calza@gmail.com?body=${messageContent}";
-        });
-    </script>
 </head>
 <body>
 <main>
 
-    <div class="contenitoreInfoContatti">
-        <div class="contatti">
-            <a href="index.jsp">
-                <img src="images/LogoSito.jpg" alt="Logo" class="logo">
-            </a>
-            <h1>Descrivi il problema</h1>
-            <form id="emailForm" action="mailto:david67calza@gmail.com" method="post" enctype="text/plain">
-                <textarea name="message" id="message" rows="10" cols="60"></textarea>
-                <button type="submit">Invia email</button>
-            </form>
-        </div>
+    <div id="info">
+        <h1>PER INFORMAZIONI AGGIUNTIVE O PER SEGNALARCI UN PROBLEMA POTETE CONTATTARCI A UNO DEI SEGUENTI INDIRIZZI EMAIL:</h1>
+        <h2>ALELE.CATURANO.2002@GMAIL.COM</h2>
+        <h2>DAVIDONE.CALZA.2002@GMAIL.COM</h2>
+        <h1>OPPURE CHIAMARE IL NUMERO DI ASSISTENZA 8869420104, OPERATIVO DAL LUNEDÌ AL VENERDÌ DALLE 9:00 ALLE 13:00</h1>
+
     </div>
 
 </main>

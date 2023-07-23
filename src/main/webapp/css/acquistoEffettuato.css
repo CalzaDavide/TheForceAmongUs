@@ -2,11 +2,11 @@ main {
     width: 35%;
     height: 70%;
     padding: 8% 0 0;
-    margin: 50px auto;
+    margin: auto;
 
 }
 
-#info {
+#grazie {
     position: relative;
     z-index: 1;
     background: #06051F;
@@ -16,10 +16,24 @@ main {
     border-radius: 10%;
 }
 
+
+a {
+    text-decoration: none;
+    color: #ff3838;
+}
+
+a:hover {
+    color: white;
+}
+
 h1, h2{
     color: white;
-    padding: 15px 5%;
+    padding: 15px 20%;
     margin: auto;
+}
+img {
+    margin: 10px auto;
+    border-radius: 12px;
 }
 
 h1{

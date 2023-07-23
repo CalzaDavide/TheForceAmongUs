@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.*;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -27,7 +28,11 @@ public class AcquistoServlet extends HttpServlet {
         AcquistoDAO acquistoDAO = new AcquistoDAO();
 
         Acquisto acquisto = new Acquisto();
-        acquisto.setId(Acquisto.generateId());
+
+        do {
+            acquisto.setId(Acquisto.generateId());
+        }while(acquistoDAO.doRetriveById(acquisto.getId()) != null);
+
         java.util.Date utilDate = new java.util.Date();
         acquisto.setData(new java.sql.Date(utilDate.getTime()));
         ArrayList<OggettoQuantita> carrello = carrelloDAO.doRetriveByCliente(utente);
@@ -48,5 +53,8 @@ public class AcquistoServlet extends HttpServlet {
         }
 
         carrelloDAO.doDeleteByIdCliente(utente);
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("acquistoEffettuato.jsp");
+        dispatcher.forward(req, resp);
     }
 }
