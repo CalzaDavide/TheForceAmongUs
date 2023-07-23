@@ -39,10 +39,10 @@
         <div id="datiSpedizione">
 
             <h2>NOME E COGNOME : </h2>
-            <p><%= cliente.getNome().toUpperCase()%><%= cliente.getCognome().toUpperCase()%></p>
+            <p><%= cliente.getNome().toUpperCase()%> &nbsp; <%= cliente.getCognome().toUpperCase()%></p>
             <br>
             <h2>INDIRIZZO : </h2>
-            <p><%= cliente.getIndirizzo_Via().toUpperCase()%> , <%= cliente.getN_Civico()%> , cliente.getCodice_Postale() , ITALIA</p>
+            <p><%= cliente.getIndirizzo_Via().toUpperCase()%> , <%= cliente.getN_Civico()%> , <%=cliente.getCodice_Postale()%> , ITALIA</p>
             <br>
 
 
