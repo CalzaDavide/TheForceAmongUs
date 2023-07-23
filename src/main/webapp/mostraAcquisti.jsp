@@ -35,7 +35,7 @@
                 <p id="data">Effettuato in data <%=ac.getAcquisto().getData()%></p>
 
                     <%for (Coinvolgimento c : ac.getProdottiCoinvolti()) {%>
-                     <p id="oggettoListaAcquisto">- <%=c.getProdotto().getNome() + " " + c.getQuantita() + " (" + c.getProdotto().getCosto()*c.getQuantita() + "€)"%></p>
+                     <p id="oggettoListaAcquisto">- <%=c.getProdotto().getNome() + " " + c.getQuantita() + " (" + c.getProdotto().getPrezzoScontato()*c.getQuantita() + "€)"%></p>
                     <%}%>
             </div>
             <hr class="footerLinea" />
