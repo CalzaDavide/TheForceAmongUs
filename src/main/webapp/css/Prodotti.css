@@ -32,13 +32,13 @@
 
 
 #immagine img {
-    max-width: 95%;
+    width: 90%;
     margin: auto;
 }
 
 
 .infoProdotto {
-    max-width: 100%;
+    width: 100%;
     float: right;
     background-color: rgba(255, 255, 255, 0.67);
     color: #fff;
@@ -113,4 +113,20 @@
 #ricerca{
     color: #ff3838;
     margin: auto;
+}
+
+@media screen and (max-width: 1200px){
+    .prodotti{
+        width: 60%;
+    }
+    #immagine img {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .prodotti{
+        width: 90%;
+    }
 }

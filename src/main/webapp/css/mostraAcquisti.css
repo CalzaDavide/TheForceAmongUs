@@ -48,6 +48,17 @@
     font-size: 25px;
     color: white;
 }
+@media screen and (max-width: 1200px){
+    .contenitoreOrdini{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contenitoreOrdini{
+        width: 90%;
+    }
+}
 
 
 

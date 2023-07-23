@@ -69,3 +69,14 @@ a:hover {
     color: white;
 }
 
+@media screen and (max-width: 1200px){
+    .login, .registrazione{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .login, .registrazione{
+        width: 90%;
+    }
+}

@@ -80,6 +80,17 @@ h1{
     color:white;
 }
 
+@media screen and (max-width: 1200px){
+    .carrello{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .carrello{
+        width: 90%;
+    }
+}
 
 
 
