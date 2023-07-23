@@ -19,16 +19,17 @@ main {
     padding: 10px;
     font-size: 20px;
     border-radius: 15px;
-    margin: 5% auto 5% auto;
+    margin: 0 auto 5% auto;
 }
 
  button{
     background: #00295b;
-    width: 100%;
+    width: 70%;
     padding: 15px;
     color: #ff3838;
     font-size: 24px;
     border-radius: 15px;
+    margin: 0 auto 2% auto;
 }
 
 button:hover{
@@ -42,5 +43,12 @@ a {
 
 a:hover {
     color: #ff3838;
+}
+
+label{
+    color: white;
+    font-size: 25px;
+    margin: 2% auto 4px auto;
+    padding-left: 2%;
 }
 

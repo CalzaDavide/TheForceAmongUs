@@ -1,5 +1,4 @@
-<%@ page import="java.io.File" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -25,27 +24,27 @@
             if(immagine != null){%>
         <form action="aggiungi-prodotto">
 
-            <label for="nome">Nome:</label><br>
+            <label for="nome">NOME:</label><br>
             <input required type="text" id="nome" name="nome" placeholder="Marco"><br><br>
 
-            <label for="percentuale_sconto">Percentuale sconto:</label><br>
+            <label for="percentuale_sconto">PERCENTUALE SCONTO:</label><br>
             <input required type="number" id="percentuale_sconto" name="percentuale_sconto" placeholder="5"><br><br>
 
-            <label for="costo">Costo:</label><br>
+            <label for="costo">COSTO:</label><br>
             <input required type="number" id="costo" name="costo" placeholder="10"><br><br>
 
-
+            <label for="espansione">ESPANSIONE:</label><br>
             <select id="espansione" name="espansione">
                 <option value="Set Base">SET BASE</option>
                 <option value="The rise of the impostor">THE RISE OF THE IMPOSTOR</option>
             </select><br><br>
 
-
+            <label for="tipologia">TIPOLOGIA:</label><br>
             <select id="tipologia" name="tipologia">
                 <option value="Carta">CARTA</option>
                 <option value="Pacchetto">PACCHETTO</option>
                 <option value="Box">BOX</option>
-            </select><br><br>
+            </select>
 
             <input type="hidden" name="immagine" value="<%=immagine%>">
 
