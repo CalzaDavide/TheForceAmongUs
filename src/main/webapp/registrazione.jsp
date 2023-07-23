@@ -63,7 +63,7 @@
         });
     }
 </script>
-<br/>
+<br>
 <h1 id="errore"></h1>
 
 <div class="registrazione">
@@ -108,12 +108,12 @@
             <select id="provincia" form="clienteForm" name="provincia" disabled>
             </select>
 
-            <input required id= type="text" name="indirizzo_via" placeholder="Indirizzo"><br><br>
-            <input required id="civico" type="number" name="numero_civico" placeholder="Numero Civico"><br><br>
-            <input required id="cap" type="number" name="codice_postale" placeholder="Cap"><br><br>
+            <input required id= type="text" name="indirizzo_via" placeholder="INDIRIZZO"><br><br>
+            <input required id="civico" type="number" name="numero_civico" placeholder="NUMERO CIVICO"><br><br>
+            <input required id="cap" type="number" name="codice_postale" placeholder="CAP"><br><br>
 
-            <button type="submit">Registrati</button>
-            <p class="message">Hai gia' un account? <a href="accesso.jsp">Accedi</a></p>
+            <button type="submit">REGISTRATI</button>
+            <p class="message">HAI GIA' UN ACCOUNT? <a href="accesso.jsp">Accedi</a></p>
         </form>
     </div>
 </div>

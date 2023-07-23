@@ -1,0 +1,46 @@
+main {
+    width: 35%;
+    height: 70%;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+
+#aggiungiProdotto {
+    background: #06051F;
+    margin: auto;
+    padding: 10px 45px 45px 45px;
+    border-radius: 15px;
+}
+
+#aggiungiProdotto input, select {
+    background: #add8e6;
+    width: 85%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 5% auto 5% auto;
+}
+
+ button{
+    background: #00295b;
+    width: 100%;
+    padding: 15px;
+    color: #ff3838;
+    font-size: 24px;
+    border-radius: 15px;
+}
+
+button:hover{
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #ff3838;
+}
+

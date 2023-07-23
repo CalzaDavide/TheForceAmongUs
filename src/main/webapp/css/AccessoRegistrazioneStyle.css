@@ -26,21 +26,18 @@
 }
 
 .form input, select {
-    font-weight: bold;
+    text-transform: uppercase;
     background: #add8e6;
     width: 85%;
     margin: 0 0 8px;
-    padding: 20px;
+    padding: 25px;
     box-sizing: border-box;
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 30px;
-
 }
 
 
 button {
-    font-weight: bold;
-    text-transform: uppercase;
     background: #00295b;
     width: 100%;
     padding: 15px;
