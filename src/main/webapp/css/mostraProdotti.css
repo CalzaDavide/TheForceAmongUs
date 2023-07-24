@@ -53,7 +53,9 @@ main{
 
 
 .prodottoFooter {
-    position: relative;
+    position: relative;     /* Viene utilizzata per posizionare un elemento in base alla sua posizione originale all'interno del flusso del documento. Quando si applica
+                              position: relative; a un elemento, è possibile spostarlo rispetto alla sua posizione normale utilizzando le proprietà top, right, bottom e left
+                            */
     width: 100%;
     margin-top: 30%;
 }
