@@ -22,7 +22,6 @@
 .listaProdotti {
     position: relative;  /* è utile per spostare un elemento all'interno del suo contenitore senza influenzare il layout degli altri elementi. top, right, bottom e left*/
     float: left;
-    z-index: 1;          /* Layer pagina web */
     background: #06051F;
     margin: 0 auto 100px;
     padding: 10px 45px 45px 45px;

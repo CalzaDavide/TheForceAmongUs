@@ -1,7 +1,6 @@
 main{
     width: 80%;
     height: 95%;
-
     margin:auto;
 
 }
@@ -14,7 +13,6 @@ main{
 
 
 .displayProdotti {
-    z-index: 1;
     background: #06051F;
     margin: 0 auto 100px auto;
     padding: 20px 55px;

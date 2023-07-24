@@ -9,7 +9,6 @@ main {
     position: relative;     /* Viene utilizzata per posizionare un elemento in base alla sua posizione originale all'interno del flusso del documento. Quando si applica
                               position: relative; a un elemento, è possibile spostarlo rispetto alla sua posizione normale utilizzando le proprietà top, right, bottom e left
                             */
-    z-index: 1;
     background: #06051F;
     margin: 0 auto 100px;
     padding: 10px 70px 45px 70px;

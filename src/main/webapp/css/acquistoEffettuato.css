@@ -8,7 +8,6 @@ main {
 
 #grazie {
     position: relative;
-    z-index: 1;
     background: #06051F;
     margin: 0 auto 100px;
     padding: 10px 70px 45px 70px;
