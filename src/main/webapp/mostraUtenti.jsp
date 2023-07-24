@@ -11,32 +11,40 @@
 </head>
 
 <body>
-<% Cliente utente = (Cliente)session.getAttribute("utente");
-    if(utente==null || !utente.isAdmin()){%>
-<jsp:forward page="index.jsp"></jsp:forward>
-<%}%>
+<% Cliente utente = (Cliente) session.getAttribute("utente");
+    if (utente == null || !utente.isAdmin()) {%>
+        <jsp:forward page="index.jsp"/>
+    <%}
+%>
 
-<%ArrayList<Cliente> clienti = (ArrayList<Cliente>) request.getAttribute("clienti");%>
-<table>
-    <tr>
-        <th>Nome e Cognome</th>
-        <th>E-mail</th>
-        <th>Password</th>
-        <th>Admin</th>
-    </tr>
-    <%for (Cliente c : clienti) {%>
-    <tr>
-        <td><%= c.getNome() + " " + c.getCognome()%></td>
-        <td><%=c.getEmail() %></td>
-        <td><%=c.getPswd() %></td>
-        <%if (c.isAdmin()){%>
-            <td id="isAdmin"></td>
-        <%}else{%>
-            <td id="isNotAdmin"></td>
-        <%}%>
-    </tr>
-    <%}%>
-</table>
+
+<main>
+
+    <%ArrayList<Cliente> clienti = (ArrayList<Cliente>) request.getAttribute("clienti");%>
+    <div id="contenitoreListaUtenti">
+        <table>
+            <tr>
+                <th>NOME E COGNOME</th>
+                <th>E-MAIL</th>
+                <th>PASSWORD</th>
+                <th>ADMIN</th>
+            </tr>
+            <%for (Cliente c : clienti) {%>
+            <tr>
+                <td><%= c.getNome() + " " + c.getCognome()%></td>
+                <td><%=c.getEmail() %></td>
+                <td><%=c.getPswd() %></td>
+                <%if (c.isAdmin()) {%>
+                <td id="isAdmin"></td>
+                <%} else {%>
+                <td id="isNotAdmin"></td>
+                <%}%>
+            </tr>
+            <%}%>
+        </table>
+    </div>
+
+</main>
 
 </body>
 </html>
