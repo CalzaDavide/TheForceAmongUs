@@ -36,18 +36,6 @@
         });
 
 
-        <%-- Mostra Profilo Icona --%>
-        // Ottieni il riferimento al form e al pulsante personalizzato
-        const mostraProfiloHeader = document.getElementById('mostraProfiloHeader');
-        const customMostraProfiloButton = document.getElementById('mostraAcquistiForm');
-
-        // Aggiungi un gestore di eventi al clic sul pulsante personalizzato
-        customMostraProfiloButton.addEventListener('click', function () {
-            // Invia il modulo quando il pulsante personalizzato viene cliccato
-            mostraProfiloHeader.submit();
-        });
-
-
         <%-- Acquisti Passati Icona --%>
         // Ottieni il riferimento al form e al pulsante personalizzato
         const mostraAcquistiHeader = document.getElementById('mostraAcquistiHeader');
@@ -74,7 +62,7 @@
 
         <%-- LogOut Icona --%>
         // Ottieni il riferimento al form e al pulsante personalizzato
-        const logoutHeader = document.getElementById('carrelloHeader');
+        const logoutHeader = document.getElementById('logoutHeader');
         const customLogOutButton = document.getElementById('logOutForm');
 
         // Aggiungi un gestore di eventi al clic sul pulsante personalizzato
@@ -146,6 +134,7 @@
 
 
     <div id="accountHeader">
+
         <div id="mostraProfiloHeader">
             <a href="mostraProfilo.jsp">
                 <img src="images/profiloIcona.png" alt="PROFILO">

@@ -1,7 +1,11 @@
+main{
+    width: 100%;
+    margin:auto;
+}
+
 .prodotti {
-    width: 45%;
+    width: 35%;
     height: 70%;
-    padding: 8% 0 0;
     margin: auto;
 }
 
@@ -55,13 +59,23 @@
 }
 
 
-.prodottoFooter, .prodottoFooter #prezzo, .prodottoFooter #carrello {
+.prodottoFooter, .prodottoFooter #prezzo, .prodottoFooter{
     display: inline-block;
+}
+
+.prodottoFooter img{
+    float: right;
+}
+
+.prodottoFooter img:hover {
+    border-radius: 50%;
+    background: rgba(255, 56, 56, 0.62);
 }
 
 
 #nome, #espansione, #prezzo {
     color: #ff3838;
+    margin-bottom: 3px;
 }
 
 
@@ -74,7 +88,6 @@
     font-size: 30px;
 }
 
-
 #espansione {
     font-size: 17px;
 }
@@ -82,22 +95,6 @@
 
 #prezzo {
     font-size: 22px;
-}
-
-
-#carrello {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    padding: 10% 15% 0 30%;
-    bottom: 0;
-    right: 0;
-}
-
-
-#carrello img:hover {
-    background-color: rgba(255, 0, 0, 0.44);
-    border-radius: 3px;
 }
 
 .displayProdotti #nessunRisultato, .displayProdotti #ricerca{

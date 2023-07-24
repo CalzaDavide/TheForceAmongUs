@@ -27,20 +27,20 @@
             <tr>
                 <th>NOME E COGNOME</th>
                 <th>E-MAIL</th>
-                <th>PASSWORD</th>
+                <th>INDIRIZZO</th>
                 <th>ADMIN</th>
-                <th></th>
+                <th>ELIMINA</th>
             </tr>
             <%for (Cliente c : clienti) {%>
             <tr>
                 <td><%= c.getNome() + " " + c.getCognome()%></td>
                 <td><%=c.getEmail() %></td>
-                <td><%=c.getPswd() %></td>
+                <td><%=c.getIndirizzo_Via()%> <%=c.getN_Civico()%> , <%=c.getCodice_Postale()%> , ITALIA</td>
                 <%if (c.isAdmin()) {%>
                 <td id="isAdmin"></td>
                 <%} else {%>
                 <td id="isNotAdmin"></td>
-                <td><form action="elimina-cliente">
+                <td id="elimina"><form action="elimina-cliente">
                     <input type="hidden" name="cliente" value="<%=c.getEmail()%>">
                     <input type="submit" value="elimina">
                 </form></td>
