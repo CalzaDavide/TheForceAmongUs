@@ -25,10 +25,9 @@ public class EliminaClienteServlet extends HttpServlet {
         String emailCliente = req.getParameter("cliente");
         ClienteDAO clienteDAO = new ClienteDAO();
         AcquistoDAO acquistoDAO = new AcquistoDAO();
-        CoinvolgimentoDAO coinvolgimentoDAO = new CoinvolgimentoDAO();
 
-        clienteDAO.doDeleteByEmail(emailCliente);
-        acquistoDAO.doDeleteByEmail(emailCliente);
+        if(clienteDAO.doDeleteByEmail(emailCliente))
+            acquistoDAO.doDeleteByEmail(emailCliente);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("mostraUtenti.jsp");
         dispatcher.forward(req, resp);

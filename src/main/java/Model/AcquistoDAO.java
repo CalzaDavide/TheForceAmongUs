@@ -89,9 +89,7 @@ public class AcquistoDAO {
             PreparedStatement ps = con.prepareStatement("DELETE FROM ordine WHERE EmailCliente =?");
             ps.setString(1, emailCliente);
 
-            if (ps.executeUpdate() < 1) {
-                throw new RuntimeException("DELETE error.");
-            }
+            ps.executeUpdate();
             con.close();
 
         }catch(SQLException e){
