@@ -1,11 +1,37 @@
 main{
+    width: 90%;
     margin: 4% auto 10% auto;
-
 }
 
+#ultimaEspansione{
+    width: 65%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.41);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: auto;
+    border-radius: 12px;
+}
 h1 {
-    color: white;
+    color: #ff3838;
     font-size: 50px;
-    margin:auto;
+    margin: auto;
 }
 
+#mostraProdottiForm{
+    margin: 2% auto 3% auto;
+    border: none;
+    background: none;
+}
+
+#mostraProdottiForm button{
+    border: none;
+    background: none;
+}
+
+#mostraProdottiForm img{
+    width: 90%;
+    border-radius: 12px;
+}
