@@ -75,4 +75,27 @@ public class AcquistoDAO {
         }
 
     }
+
+    public void doDeleteByEmail(String emailCliente) throws RuntimeException{
+        try{
+            Connection con = ConPool.getConnection();
+            CoinvolgimentoDAO coinvolgimentoDAO = new CoinvolgimentoDAO();
+
+            ArrayList<Acquisto> acquisti = doRetriveByEmailCliente(emailCliente);
+            for(Acquisto a : acquisti){
+                coinvolgimentoDAO.doDeleteByAcquisto(a.getId());
+            }
+
+            PreparedStatement ps = con.prepareStatement("DELETE FROM ordine WHERE EmailCliente =?");
+            ps.setString(1, emailCliente);
+
+            if (ps.executeUpdate() < 1) {
+                throw new RuntimeException("DELETE error.");
+            }
+            con.close();
+
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
 }

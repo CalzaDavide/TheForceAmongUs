@@ -8,10 +8,7 @@ public class Cliente {
     private String cognome;
     private String email;
     private String pswd;
-    private double saldo;
-
     private String regione;
-
     private String provincia;
     private String indirizzo_via;
     private int codice_Postale;
@@ -52,10 +49,6 @@ public class Cliente {
 
     public String getIndirizzo_Via() {
         return indirizzo_via;
-    }
-
-    public double getSaldo() {
-        return saldo;
     }
 
     public int getCodice_Postale() {
@@ -110,10 +103,6 @@ public class Cliente {
 
     public void setIndirizzo_Via(String indirizzo_via) {
         this.indirizzo_via = indirizzo_via;
-    }
-
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
     }
 
     public void setCodice_Postale(int codice_Postale) {

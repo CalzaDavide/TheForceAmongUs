@@ -75,7 +75,6 @@ public class RegistrazioneServlet extends HttpServlet {
         cliente.setCognome(cognome);
         cliente.setPswd(Pswd);
         cliente.setEmail(email);
-        cliente.setSaldo(0);
         cliente.setRegione(regione);
         cliente.setProvincia(provincia);
         cliente.setIndirizzo_Via(indirizzo_via);

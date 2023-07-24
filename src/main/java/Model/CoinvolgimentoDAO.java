@@ -46,6 +46,21 @@ public class CoinvolgimentoDAO {
         }catch(SQLException e){
             throw new RuntimeException(e);
         }
+    }
 
+    public void doDeleteByAcquisto(int acquisto) throws RuntimeException{
+        try{
+            Connection con = ConPool.getConnection();
+            PreparedStatement ps = con.prepareStatement("DELETE FROM coinvolgimento WHERE Ordine =?");
+            ps.setInt(1, acquisto);
+
+            if (ps.executeUpdate() < 1) {
+                throw new RuntimeException("DELETE error.");
+            }
+            con.close();
+
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }
     }
 }

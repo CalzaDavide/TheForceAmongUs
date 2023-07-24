@@ -1,5 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="Model.Cliente" %>
+<%@ page import="Model.ClienteDAO" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -20,7 +21,7 @@
 
 <main>
 
-    <%ArrayList<Cliente> clienti = (ArrayList<Cliente>) request.getAttribute("clienti");%>
+    <%ArrayList<Cliente> clienti = (new ClienteDAO()).doRetrieveAll();%>
     <div id="contenitoreListaUtenti">
         <table>
             <tr>
@@ -28,6 +29,7 @@
                 <th>E-MAIL</th>
                 <th>PASSWORD</th>
                 <th>ADMIN</th>
+                <th></th>
             </tr>
             <%for (Cliente c : clienti) {%>
             <tr>
@@ -38,6 +40,10 @@
                 <td id="isAdmin"></td>
                 <%} else {%>
                 <td id="isNotAdmin"></td>
+                <td><form action="elimina-cliente">
+                    <input type="hidden" name="cliente" value="<%=c.getEmail()%>">
+                    <input type="submit" value="elimina">
+                </form></td>
                 <%}%>
             </tr>
             <%}%>

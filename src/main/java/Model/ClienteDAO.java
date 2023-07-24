@@ -13,20 +13,19 @@ public class ClienteDAO {
     public void doSave(Cliente cliente) {
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO amongus.cliente (Nome, Cognome, Pswd, Email, Saldo, Regione, Provincia, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",
+                    "INSERT INTO amongus.cliente (Nome, Cognome, Pswd, Email, Regione, Provincia, Indirizzo_via, Codice_Postale, N_civico, Totale_carrello, AdminValue) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, cliente.getNome());
             ps.setString(2, cliente.getCognome());
             ps.setString(3, cliente.getPswd());
             ps.setString(4, cliente.getEmail());
-            ps.setDouble(5, cliente.getSaldo());
-            ps.setString(6, cliente.getRegione());
-            ps.setString(7, cliente.getProvincia());
-            ps.setString(8, cliente.getIndirizzo_Via());
-            ps.setInt(9, cliente.getCodice_Postale());
-            ps.setInt(10, cliente.getN_Civico());
-            ps.setDouble(11, cliente.getTotale_Carrello());
-            ps.setBoolean(12, cliente.isAdmin());
+            ps.setString(5, cliente.getRegione());
+            ps.setString(6, cliente.getProvincia());
+            ps.setString(7, cliente.getIndirizzo_Via());
+            ps.setInt(8, cliente.getCodice_Postale());
+            ps.setInt(9, cliente.getN_Civico());
+            ps.setDouble(10, cliente.getTotale_Carrello());
+            ps.setBoolean(11, cliente.isAdmin());
 
             if (ps.executeUpdate() != 1) {
                 throw new RuntimeException("INSERT error.");
@@ -65,22 +64,19 @@ public class ClienteDAO {
 
                 c.setEmail(resultSet.getString(4));
 
-                c.setSaldo(resultSet.getDouble(5));
+                c.setRegione(resultSet.getString(5));
 
-                c.setRegione(resultSet.getString(6));
+                c.setProvincia(resultSet.getString(6));
 
-                c.setProvincia(resultSet.getString(7));
+                c.setIndirizzo_Via(resultSet.getString(7));
 
-                c.setIndirizzo_Via(resultSet.getString(8));
+                c.setCodice_Postale(resultSet.getInt(8));
 
-                c.setCodice_Postale(resultSet.getInt(9));
+                c.setN_Civico(resultSet.getInt(9));
 
-                c.setN_Civico(resultSet.getInt(10));
+                c.setTotale_Carrello(resultSet.getInt(10));
 
-                c.setTotale_Carrello(resultSet.getInt(11));
-
-                c.setAdminValue(resultSet.getBoolean(12));
-
+                c.setAdminValue(resultSet.getBoolean(11));
 
                 clienti.add(c);
             }
@@ -118,21 +114,19 @@ public class ClienteDAO {
 
                 c.setEmail(resultSet.getString(4));
 
-                c.setSaldo(resultSet.getDouble(5));
+                c.setRegione(resultSet.getString(7));
 
-                c.setRegione(resultSet.getString(6));
+                c.setProvincia(resultSet.getString(8));
 
-                c.setProvincia(resultSet.getString(7));
+                c.setIndirizzo_Via(resultSet.getString(9));
 
-                c.setIndirizzo_Via(resultSet.getString(8));
+                c.setCodice_Postale(resultSet.getInt(10));
 
-                c.setCodice_Postale(resultSet.getInt(9));
+                c.setN_Civico(resultSet.getInt(11));
 
-                c.setN_Civico(resultSet.getInt(10));
+                c.setTotale_Carrello(resultSet.getInt(12));
 
-                c.setTotale_Carrello(resultSet.getInt(11));
-
-                c.setAdminValue(resultSet.getBoolean(12));
+                c.setAdminValue(resultSet.getBoolean(13));
             }
 
             con.close();
@@ -170,21 +164,19 @@ public class ClienteDAO {
 
                 c.setEmail(resultSet.getString(4));
 
-                c.setSaldo(resultSet.getDouble(5));
+                c.setRegione(resultSet.getString(5));
 
-                c.setRegione(resultSet.getString(6));
+                c.setProvincia(resultSet.getString(6));
 
-                c.setProvincia(resultSet.getString(7));
+                c.setIndirizzo_Via(resultSet.getString(7));
 
-                c.setIndirizzo_Via(resultSet.getString(8));
+                c.setCodice_Postale(resultSet.getInt(8));
 
-                c.setCodice_Postale(resultSet.getInt(9));
+                c.setN_Civico(resultSet.getInt(9));
 
-                c.setN_Civico(resultSet.getInt(10));
+                c.setTotale_Carrello(resultSet.getInt(10));
 
-                c.setTotale_Carrello(resultSet.getInt(11));
-
-                c.setAdminValue(resultSet.getBoolean(12));
+                c.setAdminValue(resultSet.getBoolean(11));
             }
 
             con.close();
@@ -198,4 +190,19 @@ public class ClienteDAO {
         }
     }
 
+    public void doDeleteByEmail(String emailCliente) throws RuntimeException{
+        try{
+            Connection con = ConPool.getConnection();
+            PreparedStatement ps = con.prepareStatement("DELETE FROM cliente WHERE Email =?");
+            ps.setString(1, emailCliente);
+
+            if (ps.executeUpdate() != 1) {
+                throw new RuntimeException("DELETE error.");
+            }
+            con.close();
+
+        }catch(SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
 }
