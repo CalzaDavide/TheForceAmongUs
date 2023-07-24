@@ -12,6 +12,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
+        //chiama una servlet per aggiungere il prodotto al carrello senza ricaricare
+        //la pagina
         function aggiungiCarrello(idProdotto){
             $.post("aggiungi-carrello",
                 {prodotto: idProdotto},
@@ -32,6 +34,7 @@
 
     <div class="prodotti">
         <div class="displayProdotti">
+            <!--Per ogni prodotto, mostra le relative informazioni-->
             <%if(!prodotti.isEmpty()){
                 for (Prodotto p : prodotti) {%>
                 <div class="prodottoSingolo">

@@ -27,9 +27,11 @@
     <script>
         var tot = <%=totale%>;
         var n = <%=carrello.size()%>
-        function rimuoviCarrello(idProdotto, quantita, costo) {
-            $.post("rimuovi-carrello",
-                {prodotto: idProdotto},
+            //Per non ricaricare la pagina ogni volta che si rimuove un prodotto dal carrello,
+            //utilizziamo ajax
+            function rimuoviCarrello(idProdotto, quantita, costo) {
+            $.post("rimuovi-carrello", //servlet da chiamare
+                {prodotto: idProdotto}, //parametri nel body della richiesta
                 function () {
                     $("." + idProdotto).remove();
                     tot -= (quantita * costo).toFixed(2);
@@ -39,10 +41,11 @@
                     if(n<=0){
                         carrelloVuoto();
                     }
-                }
+                } //funzione di callback: aggiorna la pagina modificando il dom
             )
         }
-
+        //se il carrello è vuoto, il tasto per l'acquisto e il totale non vengono visualizzati;
+        //appare invece il messaggio "Il tuo carrello è vuoto!"
         function carrelloVuoto(){
             $("#acquista").remove();
             $("#totale").remove();
@@ -61,6 +64,8 @@
             <h1>Il tuo carrello e' vuoto!</h1>
             <%}else{%>
                 <span id="p">
+                    <!-- Per ogni oggetto nel carrello sono visualizzate le informazioni.
+                     Ogni oggetto ha il proprio id_Prodotto come classe, per potervi accedere facilmente-->
                     <% for (OggettoQuantita oq : carrello) {
                         int id = oq.getProdotto().getId();%>
                     <p class="<%=id%>">x<%=oq.getQuantita()%> &emsp; <%=oq.getProdotto().getNome().toUpperCase()%></p> <p class="<%=id%>" style="font-size: 15px">&emsp; (<%=oq.getQuantita()* oq.getProdotto().getCosto()%>€) </p>  <%--  &emsp; è uno spazio di 4 caratteri  --%>

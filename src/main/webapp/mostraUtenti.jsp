@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<!--Se si accede a questa pagina senza permessi da admin, si è reindirizzati alla homepage-->
 <% Cliente utente = (Cliente) session.getAttribute("utente");
     if (utente == null || !utente.isAdmin()) {%>
         <jsp:forward page="index.jsp"/>
@@ -33,6 +34,7 @@
                 <th>ADMIN</th>
                 <th>ELIMINA</th>
             </tr>
+            <!--Mostra le informazioni per ogni cliente-->
             <%for (Cliente c : clienti) {%>
             <tr>
                 <td><%= c.getNome() + " " + c.getCognome()%></td>

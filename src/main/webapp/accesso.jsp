@@ -13,6 +13,7 @@
 
 <body>
 <script>
+    //Valkida il form controllando se l'email è corretta
     function validate(){
         if(/[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val()) == false)
         {
@@ -26,6 +27,7 @@
 <main>
 
 <div class="login">
+    <!-- Controlla c'è stato un tentativo di accesso errato, visualizza un messaggio di errore -->
     <% String logInStatus = (String) request.getAttribute("logInStatus");
         if (logInStatus != null && logInStatus.equals("errato")) {%>
     <h1>Credenziali Errate</h1><%}%>

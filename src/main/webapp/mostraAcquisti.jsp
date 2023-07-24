@@ -23,8 +23,8 @@
     <div class="contenitoreOrdini">
         <div class="ordini">
 
-            <%
-                ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = (ArrayList<AcquistoCoinvolgimento>) request.getAttribute("acquisti");
+            <!--Per ogni acquisto mostra le relative informazioni e i prodotti coinvolti con le quantità-->
+            <%ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = (ArrayList<AcquistoCoinvolgimento>) request.getAttribute("acquisti");
                 for (AcquistoCoinvolgimento ac : acquistoCoinvolgimentoLista) {
             %>
             <div id="ordineSingolo">

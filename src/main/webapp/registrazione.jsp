@@ -12,6 +12,8 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
+    //quando la pagina è pronta, controlla che non sia avvenito un tentativo errato di registrazione.
+    //se è avvenuto, visualizza il relativo messaggio di errore
     $(document).ready(function(){
         <% String status = (String)request.getAttribute("status");
         if(status != null){
@@ -23,6 +25,8 @@
         }%>
     })
 
+    //controlla che i campi del form siano correttamente riempiti, visualizzando un
+    //messaggio di errore in caso contrario
     function validate(){
         if(!(/^[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val()))
             || /[^a-z]+/i.test($("#fname").val())
@@ -33,14 +37,6 @@
             || $("#provincia").val()===null
             || $("#provincia").val()==="")
         {
-            alert("email: " + !(/^[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val())));
-            alert("nome: " + /[^a-z]+/i.test($("#fname").val()));
-            alert("cognome: " + /[^a-z]+/i.test($("#lname").val()));
-            alert("civico: " + /[^0-9]+/.test($("#civico").val()));
-            alert("cap: " + !(/^\d{5,6}$/.test($("#cap").val())));
-            alert("regione empty: " + $("#regione").val()==="");
-            alert("provincia null: " + $("#provincia").val()==null);
-            alert("provincia empty: " + $("#provincia").val()==="");
             $("#errore").html("Valore non valido");
             return false;
         }
