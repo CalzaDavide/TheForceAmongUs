@@ -1,12 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
     <title>Contatti</title>
-    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" href="css/cssComune.css">
-    <link rel="stylesheet" href="css/infoContatti.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"       type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" type="text/css"     href="css/cssComune.css">
+    <link rel="stylesheet" type="text/css"     href="css/infoContatti.css"/>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>

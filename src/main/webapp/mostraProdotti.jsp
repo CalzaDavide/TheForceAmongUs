@@ -1,14 +1,13 @@
 <%@ page import="Model.Prodotto" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="Model.Cliente" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Mostra prodotti</title>
-    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" href="css/cssComune.css">
-    <link rel="stylesheet" type="text/css" href="css/mostraProdotti.css"/>
+    <link rel="icon"       type="image/x-icon"   href="images/Icona.ico">
+    <link rel="stylesheet" type="text/css"       href="css/cssComune.css">
+    <link rel="stylesheet" type="text/css"       href="css/mostraProdotti.css"/>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -22,8 +21,6 @@
 </head>
 
 <body>
-<%Cliente utente = (Cliente) session.getAttribute("utente");%>
-
 
 <%ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");%>
 
@@ -55,8 +52,8 @@
                             <%}else{%>
                             <del><%=p.getCosto()%>€</del>
                             <%=p.getPrezzoScontato()%>
-                            <%}%>€</p>
-
+                            <%}%>€
+                        </p>
                             <img onclick="aggiungiCarrello(<%=p.getId()%>);"  src="images/iconaCarrello.png" alt="carrello">
                     </div>
 
@@ -70,7 +67,6 @@
             <p id="ricerca"><%=request.getAttribute("ricerca")%></p>
             <%}%>
         </div>
-
     </div>
 
 </main>

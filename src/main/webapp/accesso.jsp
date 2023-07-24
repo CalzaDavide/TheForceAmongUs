@@ -4,9 +4,11 @@
 <html>
 <head>
     <title>Log-in</title>
-    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" href="css/cssComune.css">
-    <link rel="stylesheet" href="css/accessoRegistrazione.css">
+    <link rel="icon"       type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" type="text/css"     href="css/cssComune.css">
+    <link rel="stylesheet" type="text/css"     href="css/accessoRegistrazione.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -22,6 +24,7 @@
 </script>
 
 <main>
+
 <div class="login">
     <% String logInStatus = (String) request.getAttribute("logInStatus");
         if (logInStatus != null && logInStatus.equals("errato")) {%>
@@ -41,6 +44,7 @@
         </form>
     </div>
 </div>
+
 </main>
 
 </body>

@@ -1,15 +1,15 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="Model.Acquisto" %>
 <%@ page import="Model.AcquistoCoinvolgimento" %>
 <%@ page import="Model.Coinvolgimento" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 
 <html>
 <head>
     <title>Mostra Acquisti</title>
-    <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" href="css/cssComune.css">
-    <link rel="stylesheet" type="text/css" href="./css/mostraAcquisti.css"/>
+    <link rel="icon"       type="image/x-icon" href="images/Icona.ico">
+    <link rel="stylesheet" type="text/css"     href="css/cssComune.css">
+    <link rel="stylesheet" type="text/css"     href="css/mostraAcquisti.css"/>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
