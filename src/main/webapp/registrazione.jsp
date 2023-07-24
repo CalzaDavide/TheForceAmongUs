@@ -18,9 +18,9 @@
         <% String status = (String)request.getAttribute("status");
         if(status != null){
             if(status.equals("errore")){%>
-                $("#errore").html("Valore non valido.");
+                $("#errore").html("VALORE NON VALIDO");
             <%}else if(status.equals("emailInUso")){%>
-                $("#errore").html("Email in uso.");
+                $("#errore").html("EMAIL GIA' IN USO");
             <%}
         }%>
     })
@@ -62,7 +62,6 @@
     }
 </script>
 <br>
-<h1 id="errore"></h1>
 
 <div class="registrazione">
 
@@ -70,7 +69,7 @@
         <a href="index.jsp">
             <img src="images/LogoSito.jpg" alt="Logo" class="logo">
         </a>
-
+        <h1 id="errore"></h1>
         <form action="registrazione" method="get" onsubmit="return validate()" id="clienteForm">
 
             <input required id="email" type="email" name="email" placeholder="Email"><br><br>

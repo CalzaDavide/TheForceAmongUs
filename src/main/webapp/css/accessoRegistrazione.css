@@ -39,11 +39,13 @@
     background: #add8e6;
     width: 85%;
     margin: 0 0 8px;
-    padding: 25px;
+    padding: 20px;
     box-sizing: border-box; /* E' una proprietà CSS che permette di gestire il calcolo della larghezza e dell'altezza totale di un elemento, considerando anche i bordi e il padding.  */
     font-size: 20px;
+    line-height: 25px;
     border-radius: 30px;    /* Arrotondare gli angoli di un elemento che sia foto/div ecc  50%= cerchio */
 }
+
 
 
 button {
@@ -51,7 +53,7 @@ button {
     width: 100%;
     padding: 15px;
     color: #ff3838;
-    font-size: 24px;
+    font-size: 30px;
     border-radius: 15px;
 }
 
@@ -76,6 +78,12 @@ a {
 
 a:hover {
     color: white;
+}
+
+#errore{
+    margin: 3% auto 3% auto;
+    color: #ff3838;
+    font-size: 40px;
 }
 
 @media screen and (max-width: 1200px){
