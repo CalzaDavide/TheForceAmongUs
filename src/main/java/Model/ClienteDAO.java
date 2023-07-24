@@ -114,19 +114,19 @@ public class ClienteDAO {
 
                 c.setEmail(resultSet.getString(4));
 
-                c.setRegione(resultSet.getString(7));
+                c.setRegione(resultSet.getString(5));
 
-                c.setProvincia(resultSet.getString(8));
+                c.setProvincia(resultSet.getString(6));
 
-                c.setIndirizzo_Via(resultSet.getString(9));
+                c.setIndirizzo_Via(resultSet.getString(7));
 
-                c.setCodice_Postale(resultSet.getInt(10));
+                c.setCodice_Postale(resultSet.getInt(8));
 
-                c.setN_Civico(resultSet.getInt(11));
+                c.setN_Civico(resultSet.getInt(9));
 
-                c.setTotale_Carrello(resultSet.getInt(12));
+                c.setTotale_Carrello(resultSet.getInt(10));
 
-                c.setAdminValue(resultSet.getBoolean(13));
+                c.setAdminValue(resultSet.getBoolean(11));
             }
 
             con.close();
