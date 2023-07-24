@@ -34,7 +34,7 @@
 <main>
 
     <div id="ultimaEspansione">
-        <h1>SCOPRI L'ULTIMA ESPANSIONE ESPANSIONE:</h1>
+        <h1>SCOPRI L'ULTIMA ESPANSIONE :</h1>
         <form action="mostra-prodotti" id="mostraProdottiForm">
             <input type="hidden" name="espansione" value="The rise of the impostor">
             <button id="mostraProdottiFormButton">
