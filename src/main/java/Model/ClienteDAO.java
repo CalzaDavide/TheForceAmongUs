@@ -190,16 +190,17 @@ public class ClienteDAO {
         }
     }
 
-    public void doDeleteByEmail(String emailCliente) throws RuntimeException{
+    public boolean doDeleteByEmail(String emailCliente) throws RuntimeException{
         try{
             Connection con = ConPool.getConnection();
             PreparedStatement ps = con.prepareStatement("DELETE FROM cliente WHERE Email =?");
             ps.setString(1, emailCliente);
 
-            if (ps.executeUpdate() != 1) {
-                throw new RuntimeException("DELETE error.");
-            }
             con.close();
+            if (ps.executeUpdate() != 1) {
+                return false;
+            }
+            return true;
 
         }catch(SQLException e){
             throw new RuntimeException(e);
