@@ -5,7 +5,7 @@
 <html>
 <head><title>Home Page</title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" href="css/CssComune.css">
+    <link rel="stylesheet" href="css/cssComune.css">
     <link rel="stylesheet" href="css/mostraProfilo.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

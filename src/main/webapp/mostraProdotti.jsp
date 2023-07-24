@@ -7,8 +7,8 @@
 <head>
     <title>Mostra prodotti</title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-    <link rel="stylesheet" href="css/CssComune.css">
-    <link rel="stylesheet" type="text/css" href="./css/Prodotti.css"/>
+    <link rel="stylesheet" href="css/cssComune.css">
+    <link rel="stylesheet" type="text/css" href="css/mostraProdotti.css"/>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

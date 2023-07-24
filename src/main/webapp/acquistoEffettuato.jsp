@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Grazie per l'acquisto!</title>
-    <link rel="stylesheet" href="css/CssComune.css">
+    <link rel="stylesheet" href="css/cssComune.css">
     <link rel="stylesheet" href="css/acquistoEffettuato.css">
 </head>
 <body>

@@ -3,8 +3,8 @@
 <html>
 <head>
     <title>footer</title>
-    <link rel="stylesheet" type="text/css" href="css/CssComune.css">
-    <link rel="stylesheet" type="text/css" href="./css/homepage.css"/>
+    <link rel="stylesheet" type="text/css" href="css/cssComune.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" type="text/css" href="./css/footer.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
