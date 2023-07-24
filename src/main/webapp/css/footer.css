@@ -3,7 +3,7 @@ body {
 }
 
 .footer {
-    padding-block: 20px 10px;   /*An element's padding-block is the space from its border to its content in the block direction, and it is a shorthand property for the following properties: padding-block-start padding-block-end*/
+    padding-block: 20px 10px;
     background-color: #151515;
 }
 
@@ -15,15 +15,14 @@ body {
 
 .footerTop {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*    1fr è un unità di misura del grid layout e indica 1 parte dello spazio disponibile (fr=fractional unit)    */
     row-gap: 20px;
     margin-bottom: 10px;
 }
 
 .footerTitolo {
     font-size: 35px;
-    color: #fff;
-    font-weight: bold;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -43,9 +42,25 @@ body {
     margin-top: 1%;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /*  Viene utilizzata per allineare gli elementi lungo l'asse principale di un contenitore flexbox. Nel caso specifico "space-between"
+                                         indica che gli elementi figli all'interno del contenitore flessibile devono essere distribuiti uniformemente lungo l'asse principale,
+                                         con uno spazio vuoto tra di essi. */
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                 /*  Questo valore fa sì che gli elementi figli vengano avvolti (wrapping) su righe o colonne aggiuntive quando il contenitore flessibile
+                                         non ha abbastanza spazio per contenerli tutti in una singola riga o colonna. In altre parole, gli elementi vengono "spostati" su una
+                                         nuova riga o colonna per evitare sovrapposizioni o ridimensionamenti eccessivi */
+}
+
+.testoFooter{
+    border: none;
+    background: none;
+    padding: 2px;
+    font-size: 20px;
+    color: #ff3838;
+    display: block;
+}
+.testoFooter:hover{
+    color: white;
 }
 
 

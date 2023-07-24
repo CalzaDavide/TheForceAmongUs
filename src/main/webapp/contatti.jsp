@@ -9,6 +9,10 @@
 
 </head>
 <body>
+<header>
+    <jsp:include page="header.jsp" />
+</header>
+
 <main>
     <div class="contenitoreInfoContatti">
         <h1>PER INFORMAZIONI AGGIUNTIVE O PER SEGNALARCI UN PROBLEMA POTETE CONTATTARCI A UNO DEI SEGUENTI INDIRIZZI EMAIL:</h1>

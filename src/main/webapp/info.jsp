@@ -9,6 +9,10 @@
 </head>
 <body>
 
+<header>
+    <jsp:include page="header.jsp"/>
+</header>
+
 <main>
 
     <div class="contenitoreInfoContatti">
@@ -28,7 +32,6 @@
                 E ORDINARLE DI ATTACCARE IL SABOTATORE, O LA SUA NAVE SUBIRA' UN DANNO. A 10 DANNI, LA NAVE E' DISTRUTTA E SI E' SCONFITTI.
                 OLTRE CHE PER ATTACCARE O SABOTARE, SI PUÒ USARE IL PROPRIO TURNO ANCHE PER ATTIVARE L' EFFETTO DI UNA CARTA.
             </p>
-
         </div>
 </main>
 

@@ -7,7 +7,6 @@
 <head>
     <title>Header </title>
     <link rel="icon" type="image/x-icon" href="images/Icona.ico">
-
     <link rel="stylesheet" href="css/CssComune.css">
     <link rel="stylesheet" type="text/css" href="./css/header.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -120,7 +119,7 @@
 
     <%-- Logo --%>
     <div>
-        <a href="#">
+        <a href="index.jsp">
             <img id="logo" src="images/LogoSito.jpg" alt="Logo">
         </a>
     </div>

@@ -27,6 +27,10 @@
 
 <%ArrayList<Prodotto> prodotti = (ArrayList<Prodotto>) request.getAttribute("prodotti");%>
 
+<header>
+    <jsp:include page="header.jsp" />
+</header>
+
 <main>
 
     <div class="prodotti">

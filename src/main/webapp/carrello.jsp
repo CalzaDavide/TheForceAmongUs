@@ -14,7 +14,9 @@
 
 <body>
 
-<header></header>
+<header>
+    <jsp:include page="header.jsp" />
+</header>
 
 <main>
     <%Double totale = Double.parseDouble(String.format(Locale.US, "%.2f", request.getAttribute("totale")));
@@ -77,6 +79,9 @@
 
 </main>
 
-<footer></footer>
+<footer>
+    <jsp:include page="footer.jsp" />
+</footer>
+
 </body>
 </html>

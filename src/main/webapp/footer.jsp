@@ -14,20 +14,6 @@
     <div class="contenitoreFooter">
         <div class="footerTop">
             <div>
-                <%Cliente cliente = (Cliente) session.getAttribute("utente");%>
-                <%if (cliente != null && cliente.isAdmin()) {%>
-                <h6 class="footerTitolo">FUNZIONI ADMIN</h6>
-                <ul class="listaFooter">
-                    <li>
-                        <a class="testoFooter" href="mostraUtenti.jsp">MOSTRA UTENTI</a>
-                    </li>
-                    <li>
-                        <a class="testoFooter" href="aggiungiProdotto.jsp">AGGIUNGI PRODOTTO</a>
-                    </li>
-                </ul>
-                <%}%>
-            </div>
-            <div>
                 <h6 class="footerTitolo">PRODOTTI</h6>
                 <ul class="listaFooter">
                     <li class="oggettoListaFooter">
@@ -62,6 +48,20 @@
                         <a class="testoFooter" href="contatti.jsp">CONTATTI</a>
                     </li>
                 </ul>
+            </div>
+            <div>
+                <%Cliente cliente = (Cliente) session.getAttribute("utente");%>
+                <%if (cliente != null && cliente.isAdmin()) {%>
+                <h6 class="footerTitolo">FUNZIONI ADMIN</h6>
+                <ul class="listaFooter">
+                    <li>
+                        <a class="testoFooter" href="mostraUtenti.jsp">MOSTRA UTENTI</a>
+                    </li>
+                    <li>
+                        <a class="testoFooter" href="aggiungiProdotto.jsp">AGGIUNGI PRODOTTO</a>
+                    </li>
+                </ul>
+                <%}%>
             </div>
         </div>
 

@@ -1,13 +1,11 @@
-body{
-    overflow: hidden;
+body {
     padding: 5px;
-    position:fixed;
     font-size: 35px;
 }
 
-.barra{
+.barra {
     display: grid;
-    grid-template-columns: 8% 10% 33% 0 14% 25% 10%;  /* Menù laterale / Logo / Barra di ricerca / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
+    grid-template-columns: 8% 10% 33% 0 14% 25% 10%; /* Menù laterale / Logo / Barra di ricerca  / Sezione vuota  / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
     grid-template-rows: auto;
     background-color: #151515;
 }
@@ -27,34 +25,32 @@ body{
     padding-top: 60px;
 }
 
-#menu{
-    font-size:60px;
-    float:left;
+#menu {
+    font-size: 60px;
+    float: left;
     color: white;
     width: auto;
 }
 
-.sidenav a  {
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 40px;
     color: #ff3838;
     display: block;
-    font-weight: bold;
 }
 
 .sidenav a:hover {
     color: white;
 }
 
-.sidenav input  {
+.sidenav input {
     padding: 8px 8px 8px 32px;
     border: none;
     background: none;
     font-size: 40px;
     color: #ff3838;
     display: block;
-    font-weight: bold;
 }
 
 .submit:hover {
@@ -76,18 +72,17 @@ body{
 /*    Logo    */
 
 #logo {
-    float: left;
     border-radius: 10%;
     width: 80%;
-    padding: 2%;
     margin: auto;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
+
 /*    Search bar    */
 
-#searchbar{
+#searchbar {
     margin: 25px auto 10px auto;
     float: left;
     width: 350px;
@@ -107,34 +102,35 @@ body{
     letter-spacing: 1.5px;
 }
 
-#searchbar #cerca{
-    float:right;
+#searchbar #cerca {
+    float: right;
     margin: 7px 3px 3px 5px;
     border: none;
     background-color: rgba(255, 255, 255, 0);
 }
 
-#searchbar{
+#searchbar {
     width: 400px;
 }
 
-#cercaForm{
+#cercaForm {
     display: flex;
 }
 
-#cercaInput{
-    flex:1;
+#cercaInput {
+    flex: 1;
 }
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
 /*    Search bar    */
 
-.nomeUtenteAccediRegistrati{
+.nomeUtenteAccediRegistrati {
     margin: 17% auto 13% auto;
 }
 
-#nomeUtente, #nomeUtenteAccediRegistrati a{
+#nomeUtente, #nomeUtenteAccediRegistrati a {
     color: #ff3838;
     font-size: 30px;
     margin: auto;
@@ -145,7 +141,7 @@ body{
     color: white;
 }
 
-#accountHeader{
+#accountHeader {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
@@ -156,29 +152,29 @@ body{
     border-radius: 12px;
 }
 
-#accountHeader button{
+#accountHeader button {
     background: none;
     border: none;
 }
 
-#accountHeader img{
+#accountHeader img {
     width: 65%;
     margin: auto;
 }
 
-#mostraProfiloHeader a{
-    margin:auto;
+#mostraProfiloHeader a {
+    margin: auto;
 }
 
-@media screen and (max-width: 1200px){
-    .barra{
-        grid-template-columns: 15% 20% 65%;  /* Menù laterale / Logo / Barra di ricerca / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
+@media screen and (max-width: 1200px) {
+    .barra {
+        grid-template-columns: 15% 20% 65%; /* Menù laterale / Logo / Barra di ricerca / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
         grid-template-rows: auto auto;
     }
 }
 
-@media screen and (max-width: 600px){
-    #searchbar{
+@media screen and (max-width: 600px) {
+    #searchbar {
         width: 250px;
     }
 }

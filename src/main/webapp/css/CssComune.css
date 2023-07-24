@@ -22,14 +22,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-
-
-a:visited, a:link, a:active{
-    text-decoration: none;
-    font-weight: bold;
-    color: #ff3838;
+    overflow: auto;
 }
 
 a{
@@ -37,25 +30,13 @@ a{
     color: white;
 }
 
-
-
-
-
-/*--------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-/*    Footer    */
-
-.testoFooter{
-    border: none;
-    background: none;
-    padding: 2px;
-    font-size: 20px;
-    color: #ff3838;
-    display: block;
+a:visited, a:link, a:active{
+    text-decoration: none;
     font-weight: bold;
+    color: #ff3838;
 }
-.testoFooter:hover{
-    color: white;
-}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+
 

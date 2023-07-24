@@ -1,21 +1,9 @@
-*{
-    font-weight: bold;
-}
-
 .contenitoreOrdini {
     width: 50%;
     height: 70%;
-    padding: 8% 0 0;
+    padding: 5% 0 5% 0;
     margin: auto;
 }
-
-.logo {
-    max-width: 55%;
-    border-radius: 6%;
-    margin-bottom: 10%;
-    margin-top: 15px;
-}
-
 
 .ordini {
     position: relative;
@@ -35,13 +23,11 @@
 #idOrdine{
     font-size: 50px;
     margin: 2% auto 2% auto;
-
 }
 
 #data, #prezzo {
     font-size: 35px;
     padding-bottom: 2%;
-
 }
 
 #oggettoListaAcquisto{

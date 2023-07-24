@@ -1,4 +1,4 @@
-.login, .registrazione {
+.login{
     width: 35%;
     height: 70%;
     padding: 8% 0 0;
@@ -6,10 +6,18 @@
 
 }
 
+.registrazione {
+    width: 40%;
+    height: 80%;
+    padding: 8% 0 0;
+    margin: 1% auto 5% auto;
+
+}
+
 .logo {
     position: relative;
     max-width: 55%;
-    border-radius: 6%;
+    border-radius: 15px;
     margin-bottom: 15px;
     margin-top: 15px;
 }

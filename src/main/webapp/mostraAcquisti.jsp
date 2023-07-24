@@ -14,16 +14,15 @@
 </head>
 <body>
 
-<main>
+<header>
+    <jsp:include page="header.jsp" />
+</header>
 
+<main>
 
     <div class="contenitoreOrdini">
         <div class="ordini">
-            <a href="index.jsp">
-                <img style="margin: 2% 20% 10% 20%" src="images/LogoSito.jpg" alt="Logo" class="logo">
-            </a>
-            <br>
-            <hr class="linea">
+
             <%
                 ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = (ArrayList<AcquistoCoinvolgimento>) request.getAttribute("acquisti");
                 for (AcquistoCoinvolgimento ac : acquistoCoinvolgimentoLista) {
