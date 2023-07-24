@@ -26,19 +26,21 @@ public class LogInServlet extends HttpServlet {
         ClienteDAO cd = new ClienteDAO();
         Cliente utente = cd.doRetrieveByEmailPassword(email, pswd);
 
+        //Controllo email
         Pattern pattern = Pattern.compile("[^\\s@]+@[^\\s@]+\\.[^\\s@]+");
         Matcher matcher = pattern.matcher(email);
 
         String address;
         String logInStatus;
 
-
+        //L'accesso verrà effettuato se email e password corrispondono a un account
         if (utente != null && matcher.find()) {
             address = "index.jsp";
             sessioneAttuale.setAttribute("utente", utente);
             logInStatus = "accesso";
 
         } else {
+            //altrimenti si viene rispediti alla schermata di login con un messaggio di errore
             address = "accesso.jsp";
             logInStatus = "errato";
         }

@@ -3,6 +3,9 @@ package Model;
 import java.util.ArrayList;
 
 public class AcquistoCoinvolgimento {
+
+    //Questa classe serve per contenere un acquisto e una lista dei prodotti coinvolti, ciascuno
+    //con la propria quantità
     Acquisto acquisto;
     ArrayList<Coinvolgimento> prodottiCoinvolti;
 

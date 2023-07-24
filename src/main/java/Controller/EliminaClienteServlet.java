@@ -26,6 +26,7 @@ public class EliminaClienteServlet extends HttpServlet {
         ClienteDAO clienteDAO = new ClienteDAO();
         AcquistoDAO acquistoDAO = new AcquistoDAO();
 
+        //Se il cliente da eliminare esiste, vengnono anche eliminati anche gli acquisti
         if(clienteDAO.doDeleteByEmail(emailCliente))
             acquistoDAO.doDeleteByEmail(emailCliente);
 

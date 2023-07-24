@@ -27,11 +27,14 @@ public class CarrelloServlet extends HttpServlet {
         Cliente utente = (Cliente) req.getSession().getAttribute("utente");
         int idProdotto = Integer.parseInt(req.getParameter("prodotto"));
 
+        //Se l'utente non ha eseguito l'accesso, utilizza un carrello provvisorio salvato nella sessione
         if(utente == null){
+            //Controlla se esiste già un carrello provvisorio nella sessione, altrimenti lo crea.
             ArrayList<OggettoQuantita> carrelloProvvisorio = (ArrayList<OggettoQuantita>)req.getSession().getAttribute("carrelloProvvisorio");
             if(carrelloProvvisorio == null)
                 carrelloProvvisorio = new ArrayList<>();
 
+            //Se il prodotto da aggiungere esiste già nel carrello provvisorio ne aumenta la quantità...
             for(OggettoQuantita oq : carrelloProvvisorio)
             {
                 if(oq.getProdotto().getId() == idProdotto) {
@@ -40,15 +43,20 @@ public class CarrelloServlet extends HttpServlet {
                     return;
                 }
             }
+
+            // ...altrimenti lo aggiunge
             OggettoQuantita oggettoQuantita = new OggettoQuantita();
             ProdottoDAO pd = new ProdottoDAO();
 
             oggettoQuantita.setProdotto(pd.doRetrieveById(idProdotto));
             oggettoQuantita.setQuantita(1);
             carrelloProvvisorio.add(oggettoQuantita);
+
+            //e aggiorna la sessione con il carrello provvisorio modificato o creato
             req.getSession().setAttribute("carrelloProvvisorio", carrelloProvvisorio);
 
         }else{
+        //Altrimenti aggiunge il prodotto al carrello direttamente nel database
             CarrelloDAO carrelloDAO = new CarrelloDAO();
             carrelloDAO.doSave(utente.getEmail(), idProdotto);
         }

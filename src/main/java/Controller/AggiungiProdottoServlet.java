@@ -22,9 +22,13 @@ public class AggiungiProdottoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProdottoDAO pd = new ProdottoDAO();
         Prodotto prodotto = new Prodotto();
+
+        //continua a generare id finchè non ne genera uno libero
         do {
             prodotto.setId(Prodotto.generateID());
         }while(pd.doRetrieveById(prodotto.getId()) != null);
+
+        //Imposta i vari parametri del nuovo prodotto
         prodotto.setNome(request.getParameter("nome"));
         prodotto.setPercentuale_sconto(Double.parseDouble(request.getParameter("percentuale_sconto")));
         prodotto.setCosto(Double.parseDouble(request.getParameter("costo")));
@@ -32,6 +36,7 @@ public class AggiungiProdottoServlet extends HttpServlet {
         prodotto.setTipologia(request.getParameter("tipologia"));
         prodotto.setImmagine(request.getParameter("immagine"));
 
+        //salva il prodotto nel database e ritorna alla homepage
         ProdottoDAO prodottoDAO = new ProdottoDAO();
         prodottoDAO.doSave(prodotto);
 
