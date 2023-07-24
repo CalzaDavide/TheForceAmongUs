@@ -1,3 +1,4 @@
+<%@ page import="Model.Cliente" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,8 +11,11 @@
 </head>
 
 <body>
-
-<main>
+    <% Cliente utente = (Cliente)session.getAttribute("utente");
+        if(utente==null || !utente.isAdmin()){%>
+    <jsp:forward page="index.jsp"></jsp:forward>
+    <%}%>
+    <main>
 
     <div id="aggiungiProdotto">
 

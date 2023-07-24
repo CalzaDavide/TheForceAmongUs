@@ -11,6 +11,11 @@
 </head>
 
 <body>
+<% Cliente utente = (Cliente)session.getAttribute("utente");
+    if(utente==null || !utente.isAdmin()){%>
+<jsp:forward page="index.jsp"></jsp:forward>
+<%}%>
+
 <%ArrayList<Cliente> clienti = (ArrayList<Cliente>) request.getAttribute("clienti");%>
 <table>
     <tr>

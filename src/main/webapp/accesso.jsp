@@ -14,7 +14,6 @@
     function validate(){
         if(/[^\s@]+@[^\s@]+\.[^\s@]+/.test($("#email").val()) == false)
         {
-            alert("Email non valida!");
             return false;
         }else{
             return true;
