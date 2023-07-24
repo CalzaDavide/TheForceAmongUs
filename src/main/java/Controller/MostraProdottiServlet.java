@@ -34,10 +34,13 @@ public class MostraProdottiServlet extends HttpServlet {
 
         ArrayList<Prodotto> prodotti;
 
+        //Controlla prima se la ricerca è per espansione
         if(espansione!= null)
             prodotti = pd.doRetrieveByEspansione(espansione);
+        //Se non lo è, controlla se è per tipologia di prodotto
         else if (tipologia!= null)
             prodotti = pd.doRetrieveByTipologia(tipologia);
+        //In fine controlla la stringa nella barra di ricerca
         else
             prodotti = pd.doRetrieveByNome(ricerca);
         request.setAttribute("prodotti", prodotti);

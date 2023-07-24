@@ -24,7 +24,10 @@ public class MostraAcquistiServlet extends HttpServlet {
         CoinvolgimentoDAO coinvolgimentoDAO = new CoinvolgimentoDAO();
         String utente = ((Cliente)req.getSession().getAttribute("utente")).getEmail();
 
+        //Crea una lista di AcquistoCoinvolgimento, ovvero una lista di acquisti
+        // ciascuno con una lista di prodotti coinvolti.
         ArrayList<AcquistoCoinvolgimento> acquistoCoinvolgimentoLista = new ArrayList<>();
+
         ArrayList<Acquisto> acquisti = acquistoDAO.doRetriveByEmailCliente(utente);
         for(Acquisto a : acquisti){
             AcquistoCoinvolgimento ac = new AcquistoCoinvolgimento();

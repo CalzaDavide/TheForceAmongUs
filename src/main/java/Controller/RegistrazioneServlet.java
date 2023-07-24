@@ -29,6 +29,9 @@ public class RegistrazioneServlet extends HttpServlet {
         String email = request.getParameter("email");
 
         ClienteDAO dao = new ClienteDAO();
+
+        //Se l'email inserita è già in uso, si viene reindirizzati nuovamente alla
+        //schermata di registrazione, con un messaggio di avvertenza
         if(dao.doRetrieveByEmail(email) != null){
             request.setAttribute("status", "emailInUso");
             RequestDispatcher dispatcher =
@@ -44,8 +47,8 @@ public class RegistrazioneServlet extends HttpServlet {
 
         // instantiating the javabean to be given in input to doSave
         Cliente cliente = new Cliente();
-        ClienteDAO cd = new ClienteDAO();
 
+        //Controlli lato server sui parametri inseriti
         Pattern nomePattern = Pattern.compile("[a-zA-Z\\s]+");
         Matcher nomeMatcher = nomePattern.matcher(nome);
         Matcher cognomeMatcher = nomePattern.matcher(cognome);
@@ -65,6 +68,8 @@ public class RegistrazioneServlet extends HttpServlet {
                 || provincia.equals("")
                 || provincia == null)
         {
+        //Se uno dei parametri è errato, si viene reindirizzati nuovamente alla
+        //schermata di registrazione, con un messaggio di errore
             request.setAttribute("status", "errore");
             RequestDispatcher dispatcher =
                     request.getRequestDispatcher("registrazione.jsp");
@@ -82,12 +87,11 @@ public class RegistrazioneServlet extends HttpServlet {
         cliente.setN_Civico(Integer.parseInt(n_civico));
         cliente.setAdminValue(false);
 
-
-        // instantiating a Model class to interact with the db
         ClienteDAO clienteDAO = new ClienteDAO();
-        // invocating the Model clienteDAO to store the "customer" in the db
         clienteDAO.doSave(cliente);
 
+        //Se esisteva un carrello provvisorio nella sessione, viene salvato come carrello
+        //dell'utente appena registrato
         ArrayList<OggettoQuantita> carrelloProvvisorio =(ArrayList<OggettoQuantita>) request.getSession().getAttribute("carrelloProvvisorio");
         if(carrelloProvvisorio != null)
         {
