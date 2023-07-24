@@ -4,7 +4,7 @@ body {
 }
 
 .barra {
-    display: grid;
+    display: grid;      /* Viene utilizzata per creare un container di tipo griglia, ovvero un contenitore flessibile che permette di organizzare gli elementi al suo interno in una griglia bidimensionale. */
     grid-template-columns: 8% 10% 33% 0 14% 25% 10%; /* Menù laterale / Logo / Barra di ricerca  / Sezione vuota  / Benvenuto nome utente o Accedi Registrati / Mostra Profilo , Visualizza acquisti passati , Carrello , Log Out  / Sezione vuota*/
     grid-template-rows: auto;
     background-color: #151515;
@@ -34,10 +34,13 @@ body {
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
-    text-decoration: none;
+    text-decoration: none;  /* Togli gli effetti di base dei link ad esempio hover, visited ecc  */
     font-size: 40px;
     color: #ff3838;
-    display: block;
+    display: block;  /* Display: block; trasforma un elemento in un blocco di livello. Gli elementi di blocco  vengono visualizzati su una nuova riga e occupano l'intera larghezza
+                        disponibile del loro contenitore. Vengono ignorati eventuali tentativi di impostare larghezza e altezza tramite le proprietà width e height. La larghezza viene
+                         automaticamente impostata al 100% del contenitore padre. Gli elementi di blocco consentono l'utilizzo di altre proprietà di layout come margin, padding e border.
+                     */
 }
 
 .sidenav a:hover {
@@ -67,7 +70,6 @@ body {
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-
 
 /*    Logo    */
 
@@ -99,7 +101,7 @@ body {
     width: 80%;
     height: 90%;
     background-color: rgba(255, 255, 255, 0);
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5px;  /* Spazio tra i caratteri */
 }
 
 #searchbar #cerca {
@@ -118,7 +120,7 @@ body {
 }
 
 #cercaInput {
-    flex: 1;
+    flex: 1; /* E'utilizzato per far sì che un elemento flessibile si espanda e si contragga in modo dinamico all'interno del flex container, occupando tutto lo spazio disponibile*/
 }
 
 /*--------------------------------------------------------------------------------------------------------------------*/

@@ -20,18 +20,19 @@
 
 
 .listaProdotti {
-    position: relative;
-    z-index: 1;
+    position: relative;  /* è utile per spostare un elemento all'interno del suo contenitore senza influenzare il layout degli altri elementi. top, right, bottom e left*/
+    float: left;
+    z-index: 1;          /* Layer pagina web */
     background: #06051F;
     margin: 0 auto 100px;
     padding: 10px 45px 45px 45px;
     font-size: 30px;
-    float: left;
     border-radius: 10%;
 }
 
 p {
-    display: inline-block;
+    display: inline-block; /* è utilizzata per rendere un elemento sia inline e un elemento block. Con questa proprietà, l'elemento viene visualizzato nello stesso
+                              flusso del testo (come un elemento inline), ma è possibile specificare larghezza, altezza e margini (come un elemento block).     */
     color: #ff3838;
 }
 
@@ -42,7 +43,6 @@ p {
 }
 
 #rimuovi {
-
     background: #00295b;
     color: #ff3838;
     font-size: 13px;

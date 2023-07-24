@@ -3,7 +3,7 @@ body {
 }
 
 .footer {
-    padding-block: 20px 10px;
+    padding: 20px 10px;
     background-color: #151515;
 }
 
@@ -16,7 +16,7 @@ body {
 .footerTop {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*    1fr è un unità di misura del grid layout e indica 1 parte dello spazio disponibile (fr=fractional unit)    */
-    row-gap: 20px;
+    row-gap: 20px;   /*    distanza tra le colonne di un grid layout */
     margin-bottom: 10px;
 }
 
@@ -27,7 +27,8 @@ body {
 }
 
 .listaFooter {
-    display: flex;
+    display: flex;  /*  trasforma un elemento in un container flessibile. Gli oggetti all'interno possono essere disposti in modo orizzontale o verticale,
+                        a seconda dell'orientamento specificato con la proprietà flex-direction..*/
     flex-direction: column;
     gap: 20px;
 }
