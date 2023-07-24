@@ -181,6 +181,7 @@
     <div id="nomeUtenteAccediRegistrati">
         <a href="accesso.jsp">ACCEDI &nbsp;</a>
         <a href="registrazione.jsp">REGISTRATI</a>
+        <a href="mostra-carrello">CARRELLO</a>
     </div>
         <%}%>
 
