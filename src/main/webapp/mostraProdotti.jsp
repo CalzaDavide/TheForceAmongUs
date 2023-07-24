@@ -56,9 +56,8 @@
                             <del><%=p.getCosto()%>€</del>
                             <%=p.getPrezzoScontato()%>
                             <%}%>€</p>
-                        <div id="carrello">
-                            <img onclick="aggiungiCarrello(<%=p.getId()%>)" src="images/iconaCarrello.png" alt="carrello">
-                        </div>
+
+                            <img onclick="aggiungiCarrello(<%=p.getId()%>);"  src="images/iconaCarrello.png" alt="carrello">
                     </div>
 
                 </div>
